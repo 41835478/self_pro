@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link href="http://sy.3dmgame.com/home/tpl/pc/css/index/lrzj.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/index/index_fix.min.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/index/3DMgame1.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/index/shouyouwangyou.css" />
+		<script src="http://sy.3dmgame.com/home/tpl/pc/js/index/shouyounav.js"></script>
+		<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/ZoomPic.js"></script>
+		<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<title>好玩的手机游戏_最好玩的手游排行榜_手机游戏门户-3DM手机游戏</title>
+		<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/common_fix.min.js"></script>
+		
+	</head>
+	
+	<body id="body">
+	
+			<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/header/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/header/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="g/" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="g/"><li>找游戏</li></a>
+                <a href="news/"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="gl/"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>		<div id="tp-navs" >
+			<div id="tp-all">
+				<div class="tp-left">
+					<ul>
+						<li>
+							<a href="javascript:void(0);"  style="color:#26afdc;">首页</a>
+						</li>
+						<li>
+							<a href="/g/">找手游</a>
+						</li>
+						<li>
+							<a href="/news/">新闻</a>
+						</li>
+						<li>
+							<a href="/gl/">攻略</a>
+						</li>
+						<li>
+							<a href="#">汉化</a>
+						</li>
+						<!--<li>
+							<a href="#">礼包</a>
+						</li>-->
+						<li>
+							<a href="#">论坛</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tp-right">
+					<!--搜索-->
+					
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>				</div>
+			</div>
+		</div>
+		<!--主题内容-->
+		<div id="contents">
+			<div class="lbpicture" >
+				<!--轮播图-->
+				<div id="focus_Box" >
+					<span class="prev"></span>
+					<span class="next"></span>
+					<ul><li><a href="http://sy.3dmgame.com/g/jb/" target="_blank"><img width="445" height="308" alt="" src="http://sy.3dmgame.com/uploads/adv/adv_20160812153422_1390.jpg" /></a><p class="lb-shadow"><span style="float: left;">聚爆</span><span style="float:right; margin-right: 40px;"> <b>评分：</b><b class="pf-color">0.0</b></span></p></li><li><a href="http://sy.3dmgame.com/g/limbo/" target="_blank"><img width="445" height="308" alt="" src="http://sy.3dmgame.com/uploads/adv/adv_20160812154345_7530.jpg" /></a><p><span style="float: left;">地狱边境</span><span style="float:right; margin-right: 40px;"> <b>评分：</b><b class="pf-color">0.0</b></span></p></li><li><a href="http://sy.3dmgame.com/g/ndnd/" target="_blank"><img width="445" height="308" alt="" src="http://sy.3dmgame.com/uploads/adv/adv_20160812154636_2847.jpg" /></a><p><span style="float: left;">纳豆纳豆</span><span style="float:right; margin-right: 40px;"> <b>评分：</b><b class="pf-color">0.0</b></span></p></li><li><a href="http://sy.3dmgame.com/g/wzry/" target="_blank"><img width="445" height="308" alt="" src="http://sy.3dmgame.com/uploads/adv/adv_20160812154703_6146.jpg" /></a><p><span style="float: left;">王者荣耀</span><span style="float:right; margin-right: 40px;"> <b>评分：</b><b class="pf-color">0.0</b></span></p></li><li><a href="http://sy.3dmgame.com/g/bwlb3/" target="_blank"><img width="445" height="308" alt="" src="http://sy.3dmgame.com/uploads/adv/adv_20160812154735_3284.jpg" /></a><p><span style="float: left;">保卫萝卜3</span><span style="float:right; margin-right: 40px;"> <b>评分：</b><b class="pf-color">0.0</b></span></p></li>					</ul>
+				</div>
+			</div>
+			<div id="content-img">
+				<div class="lbp" id="one">
+					<!--手游新闻-->
+					<div class="lbp-nav" style="height: 54px; margin-bottom: 16px;" id="night">
+						<div class="move-more1">
+                        	<span class="bttxt">手游新闻</span>
+							<img src="/home/tpl/pc/images/index/datuxinwen.png" />
+							<a href="index.php?act=news" target="_blank" class="more1">更多
+								<div class="gd-btn">
+									<div class="gd-btn1">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<hr />
+					</div>
+					<div class="lbp-left" style="margin: 0px; padding: 0px;">
+						<div class="head-pic"><div class="big-pic" id="showCon0"><a href="1" target="_blank"><img alt="" src="/uploads/adv/adv_20160812155544_7886.jpg" /></a><div class="gray-bg">&nbsp;</div><div class="to-describe"><p>“污”一点的妹子更招人爱 动漫中那些没节操少女</p></div></div><div class="big-pic" id="showCon1" style="display:none"><a href="2" target="_blank"><img alt="" src="/uploads/adv/adv_20160812155809_9965.jpg" /></a><div class="gray-bg">&nbsp;</div><div class="to-describe"><p> 俄罗斯玩家欲娶百变怪为妻</p></div></div><div class="big-pic" id="showCon2" style="display:none"><a href="3" target="_blank"><img alt="" src="/uploads/adv/adv_20160812160055_5550.jpg" /></a><div class="gray-bg">&nbsp;</div><div class="to-describe"><p>日本超奇葩iPhone充电器！这是充电还是充翔？</p></div></div><div class="big-pic" id="showCon3" style="display:none"><a href="4" target="_blank"><img alt="" src="/uploads/adv/adv_20160812160055_2255.jpg" /></a><div class="gray-bg">&nbsp;</div><div class="to-describe"><p>那些敢于票房保底的国产电影</p></div></div><div class="big-pic" id="showCon4" style="display:none"><a href="5" target="_blank"><img alt="" src="/uploads/adv/adv_20160812160055_3159.jpg" /></a><div class="gray-bg">&nbsp;</div><div class="to-describe"><p>女司机面前公然劈腿？在外就看柔韧性的动态图</p></div></div>							<ul class="small-pic"><li class="on" id="list0" onmouseover="showContent(0)"><a><img src="/uploads/adv/adv_20160812155544_7886.jpg" /></a></li><li class="" id="list1" onmouseover="showContent(1)"><a><img src="/uploads/adv/adv_20160812155809_9965.jpg" /></a></li><li class="" id="list2" onmouseover="showContent(2)"><a><img src="/uploads/adv/adv_20160812160055_5550.jpg" /></a></li><li class="" id="list3" onmouseover="showContent(3)"><a><img src="/uploads/adv/adv_20160812160055_2255.jpg" /></a></li><li class="" id="list4" onmouseover="showContent(4)"><a><img src="/uploads/adv/adv_20160812160055_3159.jpg" /></a></li></ul>
+						</div>
+					</div>
+					<div class="lbp-lefts">
+						<ul class="lbp-lefts-top">
+												<li style="text-align: center;"><a href="大" class="sp" target="_blank">硬核向暗黑情怀大作《流放之路》今日国服首测</a></li>
+																		<li>
+																		<div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;"><a  href="大" class="sd" target="_blank">《万古至尊》公测</a></div>
+																		<div style="float:left;line-height:30px;">丨</div> <div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;"><a  href="打" class="sd" target="_blank">御姐玫瑰Z2登陆PC</a></div>
+																		<div style="float:left;line-height:30px;">丨</div> <div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;"><a  href="6月PC游戏预览" class="sd" target="_blank">6月PC游戏预览</a></div>
+																														</li>
+												
+												<div><li style="text-align: center;"><a href="的啊" class="sp" target="_blank">《剑侠情缘手游》安卓不删档测试今日开启</a></li></div>
+												
+												<li>
+																																				<div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;" ><a  href="6月XBOX游戏预览" class="sd" target="_blank">6月XBOX游戏预览</a></div>
+																		<div style="float:left;line-height:30px;">丨</div> <div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;" ><a  href="GTX&nbsp1060或将马上推出" class="sd" target="_blank">皇室战争专区</a></div>
+																		<div style="float:left;line-height:30px;">丨</div> <div style="width:119px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;text-align: center;" ><a  href="GTX&nbsp1060或将马上推出" class="sd" target="_blank">GTX&nbsp1060即将推出</a></div>
+												</li>
+												</ul>
+						<ul class="lbp-lefts-down">
+						<li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/95.html" target="_blank">二次元卡牌游戏《妖怪百姬》 国服今年秋季正式上线</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/94.html" target="_blank">7月27日体验服停机更新公告</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/93.html" target="_blank">暑期奥运积分冲冲冲强力来袭</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/92.html" target="_blank">新英雄-蔡文姬&nbsp最萌奶妈登场</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/91.html" target="_blank">王者荣耀-QQ钱包暑期专享福利</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/90.html" target="_blank">未实名注册，将不能进入游戏</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/89.html" target="_blank">张飞皮肤【乱世虎臣】霸气来袭</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/88.html" target="_blank">《王者荣耀》20160811&nbsp消极比赛惩罚公告</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/87.html" target="_blank">妖女哪里走&nbsp《大唐仙妖劫》妖族角色抢先看</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/86.html" target="_blank">《少年群英传》8月17首次封测 带你领略不一样的三国乱世</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/85.html" target="_blank">解谜冒险游戏《Rusty&nbspLake》系列新作首度曝光</a></li><li><div class="news_title_list">新闻|</div><a href="http://sy.3dmgame.com/g/84.html" target="_blank">《诛仙手游》：拿捏得当的动作元素，使其更像传统端游</a></li>						</ul>
+					</div>
+				</div>
+				<div class="lbp-game lbp" id="tow">
+					<div class="lbp-nav" >
+						<div class="move-more">
+                            <span class="bttxt" style="top:34px;">手机网游</span>
+							<a href="http://sy.3dmgame.com/index.php?act=game_lib&v=2_0_0_0_0_0_0_0" class="more2">更多
+								<div class="gd-btn2">
+									<div class="gd-btn3">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<img src="/home/tpl/pc/images/index/shoujiwangyou.png" />
+						<hr/>
+					</div>
+					<center>
+						<div class="blk_18">
+							<a class="LeftBotton" href="javascript:void(0);" target="_self"></a>
+							<div class="pcont" id="ISL_Cont_1">
+								<div class="ScrCont">
+									<div id="List1_1">
+										<!-- piclist begin --><a class="pl" href="http://sy.3dmgame.com/g/bwlb3/" target="_blank"><span><img src="/home/tpl/pc/images/index/frame10.png"></span><img src="http://sy.3dmgame.com/uploads/special/special_20160817105044_7335.jpg" alt="保卫萝卜3" />保卫萝卜3</a><a class="pl" href="http://sy.3dmgame.com/g/wzry/" target="_blank"><span><img src="/home/tpl/pc/images/index/frame10.png"></span><img src="http://sy.3dmgame.com/uploads/special/special_20160813141217_1791.jpg" alt="王者荣耀" />王者荣耀</a><a class="pl" href="http://sy.3dmgame.com/g/xhm2/" target="_blank"><span><img src="/home/tpl/pc/images/index/frame10.png"></span><img src="http://sy.3dmgame.com/uploads/special/special_20160803111901_8543.jpg" alt="红色故事—小红帽2" />红色故事—小红帽2</a><a class="pl" href="http://sy.3dmgame.com/g/xhm/" target="_blank"><span><img src="/home/tpl/pc/images/index/frame10.png"></span><img src="http://sy.3dmgame.com/uploads/special/special_20160803111808_3274.jpg" alt="红色故事—小红帽" />红色故事—小红帽</a>										<!-- piclist end -->
+									</div>
+									<div id="List2_1"></div>
+								</div>
+							</div>
+							<a class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></a>
+						</div>
+						<div class="c"></div>
+						<script type="text/javascript">
+							<!--
+							picrun_ini()
+							//-->
+						</script>
+					</center>
+				</div>
+				<!--文字图片区-->
+				<div class="wd-img lbp">
+									<div class="img-left">
+						<div class="img-left-l">
+							<div class="all-img">
+								<img src="http://sy.3dmgame.com/uploads/special/special_20160811184338_9748.png" width="270" height="146">
+								<div class="open">
+									<p>部落冲突</p>
+									<div class="open-game">
+										<a href="http://sy.3dmgame.com/g/coc/" target="_blank">进入游戏</a>
+									</div>
+								</div>
+							</div>
+							<div class="img-dowon">
+															<hr class="hr-line" />
+								<div class="big-box">
+									<!--
+									<div class="sm-box">推荐理由：</div>
+									-->
+									<a href="http://sy.3dmgame.com/g/coc/" target="_blank">
+										<p class="last-p">
+											《部落冲突》（部落战争）是为芬兰游戏公司Supercell所推出的策略类手机游戏，于2012年8月2日在苹果应用商店发布。										</p>
+									</a>
+								</div>
+								<hr class="hr-line" />
+								<div class="list-wld">
+									<ul>
+																												<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">部落冲突8本部落战阵&nbspX型风车阵与大本外置阵</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">部落冲突8本部落战阵推荐</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">野猪骑士必须增强《部落冲突》玩家提修改意见</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">部落冲突8本部落战阵&nbspX型风车阵与大本外</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">部落冲突8本部落战阵型推荐!8本防龙阵型分</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">性感比基尼泳衣！部落冲突夏日创意趣味阵型</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">老司机带你上路！《部落冲突》9本刷墙技巧</a></li>
+																											</ul>
+								</div>
+							</div>
+						</div>
+						<div class="img-left-r">
+							<div class="all-img">
+								<img src="http://sy.3dmgame.com/uploads/special/special_20160812090254_1201.jpg" width="270" height="146"/>
+								<div class="open">
+									<p>保卫萝卜3</p>
+									<div class="open-game">
+										<a href="http://sy.3dmgame.com/g/bwlb3/">进入游戏</a>
+									</div>
+								</div>
+							</div>
+							<div class="img-dowon">
+															<hr class="hr-line" />
+								<div class="big-box">
+								<!--
+									<div class="sm-box">推荐理由：</div>
+									-->
+									<a href="http://sy.3dmgame.com/g/bwlb3/" target="_blank">
+										<p class="last-p">《保卫萝卜3》是经典塔防手游《保卫萝卜》、《保卫萝卜2》系列续作是继《保卫萝卜》系列游戏的第三作。</p>
+									</a>
+								</div>
+								<hr class="hr-line" />
+								<div class="list-wld">
+									<ul>
+																												<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">新地图新萝卜《保卫萝卜3》公园主题即将上线</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》版本更新公告 新增全新道具时间旅行</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》城市对抗赛赛况火爆&nbsp各地区捍卫荣誉战不停</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">武林萌主就是你《保卫萝卜3》城市争霸赛上线</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">保卫萝卜3糖果赛使用角色介绍</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》集市第1关攻略</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》毒气瓶搭配组合</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》雷达组合赏金赛威力实测</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《保卫萝卜3》糕点师在糖果赛适用性实测</a></li>
+																											</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="img-right">
+						<div class="img-right-l">
+							<div class="all-img">
+								<img src="http://sy.3dmgame.com/uploads/special/special_20160812090433_1796.jpg" width="270" height="146"/>
+								<div class="open">
+									<p>王者荣耀</p>
+									<div class="open-game">
+										<a href="http://sy.3dmgame.com/g/wzry/" target="_blank">进入游戏</a>
+									</div>
+								</div>
+							</div>
+							<div class="img-dowon">
+															<hr class="hr-line" />
+								<div class="big-box">
+									<!--
+									<div class="sm-box">推荐理由：</div>
+									-->
+										<a href="http://sy.3dmgame.com/g/wzry/" target="_blank">
+											<p class="last-p">腾讯旗下的MOBA类手游，以竞技对战为主，玩家之间进行1V1、3V3、5V5等多种方式的PVP对战。</p>
+										</a>
+								</div>
+								<hr class="hr-line" />
+								<div class="list-wld">
+									<ul>
+																											<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《王者荣耀》无限火力在哪里设置</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀无限火力疑似开放 无限技能亮瞎眼球</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀英雄隐藏属性</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《王者荣耀》校园争霸赛计划公布！全国高校，团起来</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀自定义出装怎么弄&nbsp操作步骤详解</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《王者荣耀》无限火力在哪里设置</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《王者荣耀》无限火力开放 技能亮瞎眼球</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀英雄隐藏属性</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀无限火力在哪里设置</a></li>
+																			<i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">王者荣耀七夕花束可兑换什么 全物品一览</a></li>
+																										</ul>
+								</div>
+							</div>
+						</div>
+						<div class="img-right-r">
+							<div class="all-img">
+								<img src="http://sy.3dmgame.com/uploads/special/special_20160812091233_7568.jpg" width="270" height="146" />
+								<div class="open">
+									<p>天天酷跑</p>
+									<div class="open-game">
+										<a href="http://sy.3dmgame.com/g/ttkp/" target="_blank">进入游戏</a>
+									</div>
+								</div>
+							</div>
+							<div class="img-dowon">
+															<hr class="hr-line" />
+								<div class="big-box">
+									<!--
+									<div class="sm-box">推荐理由：</div>
+									-->
+									<a href="http://sy.3dmgame.com/g/ttkp/" target="_blank">
+										<p class="last-p">
+											专为微信和手机QQ用户量身打造的一款精品手机游戏。在沿袭传统玩法的基础上，特别加入了闪靓坐骑、萌动宠物等一系列心动设计。										</p>
+									</a>
+								</div>
+								<hr class="hr-line" />
+								<div class="list-wld">
+									<ul>
+																												 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》始祖牦牛和九色鹿美化图欣赏</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》克隆战限定名单整理&nbsp为限定做好最佳搭配</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》克隆战盛大开幕 九色鹿和貂蝉前来助阵</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》三周年庆或将疯狂送福利</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》克隆战限定名单图片版本</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》九色鹿和貂蝉怎么同时获得</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》里约趣味赛组合参考</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》降妖秘境蟠桃怎么得</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">《天天酷跑》酷夏距离冲刺赛高分组合推荐</a></li>
+																			 <i><img src="/home/tpl/pc/images/index/disc.png"></i><li><a href="" target="_blank">备战8.17克隆战《天天酷跑》猪八戒两套万米爆分搭配</a></li>
+																											</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+								</div>
+				<div class="lbp-nav lbp" style="height: 54px; width:1140px ; margin-bottom: 8px; margin-top: 30px;" id="four">
+					<div>
+						<div class="move-more">
+                           	<span class="bttxt" style="top:14px;">游戏视频</span>
+							<a href="http://v.3dmgame.com" class="more3">更多
+								<div class="gd-btn">
+									<div class="gd-btn1">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<img src="/home/tpl/pc/images/index/youxishipin.png" />
+					</div>
+					<hr />
+				</div>
+				<!--游戏视频-->
+				<div class="lbp-img lbp" style="height: 263px; width: 1140px;">
+									<div class="img-left">
+						<div class="img-left" style="width:270px; height: 263px;  float: left;">
+							<div class="video">
+								<div class="video-img">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" target="_blank"><img src="http://img05.3dmgame.com//uploads/video/201607/r_1469424387KHpM.jpg" width="270" height="188"/></a>
+								</div>
+								<div class="img-shadow">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" target="_blank"></a>
+								</div>
+								<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" target="_blank" class="img-lj">
+									<p class="img-title">《戴斯班克：雪山地牢》流程视频攻略第46集</p>
+									<p class="img-zt">戴斯班克：雪山地牢</p>
+								</a>
+							</div>
+						</div>
+						<div style="width: 270px; height: 263px; float: right;">
+							<div class="video">
+								<div class="video-img">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html" target="_blank"><img src="http://img05.3dmgame.com//uploads/video/201607/r_1469424387KHpM.jpg" width="270" height="188"/></a>
+								</div>
+								<div class="img-shadow">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html" target="_blank"></a>
+								</div>
+								<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" target="_blank" class="img-lj">
+									<p class="img-title">传侠仙龙</p>
+									<p class="img-zt">将于今春上架新游《大召唤师》大厂有货脱离依旧 。。。。 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="img-left" style="width:560px; height: 263px;  float: right;">
+						<div style="width: 270px; height: 263px; float: left; ">
+							<div class="video">
+								<div class="video-img">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html" target="_blank"><img src="http://img05.3dmgame.com//uploads/video/201607/r_1469424387KHpM.jpg" width="270" height="188" /></a>
+								</div>
+								<div class="img-shadow">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html" target="_blank"></a>
+								</div>
+								<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html" target="_blank" class="img-lj">
+									<p class="img-title">龙仙侠传</p>
+									<p class="img-zt">将于今春上架新游《大召唤师》大厂有货脱离依旧。。。。 脱离大厂依旧有货 新游《大召唤师》将于今春上架。。。</p>
+								</a>
+							</div>
+						</div>
+						<div style="width: 270px; height: 263px; float: right;">
+							<div class="video">
+								<div class="video-img">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/128.html" target="_blank"><img src="http://img05.3dmgame.com//uploads/video/201607/r_1469424387KHpM.jpg" width="270" height="188"/></a>
+								</div>
+								<div class="img-shadow">
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/128.html" target="_blank"></a>
+								</div>
+								<a href="http://v.3dmgame.com/shouyoushipin/201607/128.html" target="_blank" class="img-lj">
+									<p class="img-title">龙传仙侠</p>
+									<p class="img-zt">将于今春上架新游《大召唤师》大厂有货脱离依 旧 脱离大厂依旧有货 新游《大召唤师》将于今春上架。。。。 脱离大厂依旧有货 新游《大召唤师》将于今春上架。。。。</p>
+								</a>
+							</div>
+						</div>
+					</div>
+								</div>
+				<div class="lbp-nav lbp" style="height: 54px; margin-bottom: 16px;" id="five">
+					<div style="margin-top:28px;">
+						<div class="move-more">
+                            <span class="bttxt" style="top:14px;">每日推荐单机</span>
+							<!--
+							<a href="#" class="more5">更多
+								<div class="gd-btn">
+									<div class="gd-btn1">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+							-->
+						</div>
+						<img src="/home/tpl/pc/images/index/meirituijiandanji_03.png" />
+					</div>
+					<hr />
+				</div>
+				<!--每日推荐单机游戏-->
+				<div class="lbp-imgs lbp">
+									<div class="imgs-left">
+						<div class="imgs-left-l">
+							<div>
+								<img src="http://sy.3dmgame.com/uploads/adv/adv_20160816140942_3183.jpg" width="270" height="159"/>
+							</div>
+							<img src="/home/tpl/pc/images/index/jian0.png" class="jian" />
+							<div class="pingfen">
+								<img src="/home/tpl/pc/images/index/pingfen.png" />
+								<p>9.8</p>
+								<a href="#"></a>
+							</div>
+							<span> &nbsp;诛仙手游</span>
+							<p>游戏忠于《诛仙》原著剧情，游戏中展现的御空飞行、法宝炼器、天书系统等完美还原端游经典玩法，无差别延续热血情怀。游戏采用代表未来趋势的Unity5引擎，首度实现手游领域的真3D全景飞翔，支持千人同屏快意PK，为玩家展现极尽唯美的仙侠画面与深度自由的社交体验。</p>	
+							<div class="video-button">
+							<a href="http://sy.3dmgame.com/g/zxsy/"  target="_blank"><img src="/home/tpl/pc/images/index/video-button.png"/></a>	
+							</div>
+						</div>
+						<div class="imgs-left-r">
+							<div>
+								<img src="http://sy.3dmgame.com/uploads/adv/adv_20160816140942_8029.jpg" width="270" height="159"/>
+							</div>
+							<img src="/home/tpl/pc/images/index/jian0.png" class="jian" />
+							<div class="pingfen">
+								<img src="/home/tpl/pc/images/index/pingfen.png" />
+								<p>9.8</p>
+								<a href="#"></a>
+							</div>
+							<span> &nbsp;贪婪洞窟</span>
+							<p>游戏画面阴森却不失神秘，宝箱与陷阱，危险与惊喜，探险与解谜并存，2种不同难度，100层随机地形迷宫，60多种不同的怪物和BOSS，300多件随机属性的可收集装备，20000多字的丰富剧情供您体验和探索！独特有趣的玩法，丰富多彩的游戏内容，不容错过的精品独立手游！</p>
+							<div class="video-button">
+								<a href="http://sy.3dmgame.com/g/tgc/" target="_blank"><img src="/home/tpl/pc/images/index/video-button.png"  /></a>	
+							</div>
+						</div>
+					</div>
+					<div class="imgs-right">
+						<div class="imgs-right-l">
+							<div>
+								<img src="http://sy.3dmgame.com/uploads/adv/adv_20160816141355_6915.jpg" width="270" height="159"/>
+							</div>
+							<img src="/home/tpl/pc/images/index/jian0.png" class="jian" />
+							<div class="pingfen">
+								<img src="/home/tpl/pc/images/index/pingfen.png" />
+								<p>9.8</p>
+								<a href="#"></a>
+							</div>
+							<span> &nbsp;地铁跑酷</span>
+							<p>该游戏是一款堪比神庙逃亡的经典跑酷游戏。游戏的画面绚丽精致，色彩繁多让人感觉很舒服，在操作上非常顺畅，并且干净利落。通过简单的向上划，向下划，向左向右划来躲避障碍和迎面而来的火车，帮助主人公躲避脾气暴躁的警察和他的狗的追捕。</p>
+							<div class="video-button">
+							<a href="http://sy.3dmgame.com/g/ss/" target="_blank"><img src="/home/tpl/pc/images/index/video-button.png"  /></a>	
+							</div>
+						</div>
+						<div class="imgs-right-r">
+							<div>
+								<img src="http://sy.3dmgame.com/uploads/adv/adv_20160816141444_3196.jpg" width="270" height="159"/>
+							</div>
+							<img src="/home/tpl/pc/images/index/jian0.png" class="jian" />
+							<div class="pingfen">
+								<img src="/home/tpl/pc/images/index/pingfen.png" />
+								<p>9.8</p>
+								<a href="#"></a>
+							</div>
+							<span> &nbsp;御龙在天手游</span>
+							<p>腾讯第一国战手游《御龙在天》，传承端游经典的玩法，依托于群体GVG的核心，在手机端延续激情经典的国战战火！半架空的三国历史，真实社会体系，多维度的立体社交，端游级3D画面，五国纷争一统天下，王权由你掌握！</p>
+							<div class="video-button">
+							<a href="http://sy.3dmgame.com/g/ylztsy/" target="_blank"><img src="/home/tpl/pc/images/index/video-button.png"  /></a>	
+							</div>
+						</div>
+					</div>
+								</div>
+				<div class="lbp-nav lbp" style="height: 54px; margin-bottom: -3px; margin-top: 27px;" id="six">
+					<div>
+						<div class="move-more">
+                            <span class="bttxt" style="top:6px;">游戏美图</span>
+							<a href="http://tu.3dmgame.com" class="more6">更多
+								<div class="gd-btn">
+									<div class="gd-btn1">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<img src="/home/tpl/pc/images/index/zhubomeitu.png" />
+					</div>
+						<hr/>
+				</div>
+				<div class="girl lbp">
+				<div class="girl_pic_l fl girl_pic">
+                          <img src="/uploads/adv/adv_20160812152455_8284.jpg">
+              <a href="http://sy.3dmgame.com/?act=game_lib&op=game_desc&game_id=3"><p class="shod">就稀罕这双腿 一周大师级CosPlay欣赏</p></a>
+                        </div>
+                        <div class="girl_pic_m_l fl">
+                          <div class="girl_pic_m_l_t girl_pic">
+                              <img src="/uploads/adv/adv_20160812152559_3591.jpg"/>
+                <a href="2" ><p class="shod">当年表情包里的网红们</p></a>
+                            </div>
+                            <div class="girl_pic_m_l_b girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_7122.jpg"/>
+                <a href="3"><p class="shod">3</p></a>
+                            </div>
+                        </div>
+                        <div class="girl_pic_m_r fl">
+                            <div class="girl_pic_m_r_c girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_6728.jpg"/>
+                <a href="4" ><p class="shod">4</p></a>
+                            </div>
+                            <div class="girl_pic_m_r_c mag girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_2070.jpg"/>
+                <a href="5" ><p class="shod">5</p></a>
+                            </div>
+                            <div class="girl_pic_m_r_c mag girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_1108.jpg"/>
+                <a href="6" ><p class="shod">6</p></a>
+                            </div>
+                        </div>
+                        <div class="girl_pic_r fl">
+                          <div class="girl_pic_r_c girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_2946.jpg"/>
+                <a href="7" ><p class="shod">7</p></a>
+                            </div>
+                            <div class="girl_pic_r_c mag girl_pic">
+                              <img src="/uploads/adv/adv_20160812135348_7628.jpg"/>
+                <a href="8" ><p class="shod">8</p></a>
+                            </div>
+                        </div>
+				</div>
+				<script>
+                 $('.girl_pic').mouseenter(function(){
+					  $(this).find('.shod').show();
+					  }).mouseleave(function(){
+						$('.shod').hide()
+                })
+                    </script>
+				<div class="lbp-nav lbp" style="height: 54px; margin-bottom: 16px; margin-top: 12px;" id="seven">
+					<div>
+						<div class="move-more">
+                            <span class="bttxt" style="top:22px;">手游排行榜单</span>
+							<a href="http://sy.3dmgame.com?act=ranking" class="more7">更多
+								<div class="gd-btn">
+									<div class="gd-btn1">
+										<img src="/home/tpl/pc/images/index/gd-btn.png" />
+									</div>
+								</div>
+							</a>
+						</div>
+						<img src="/home/tpl/pc/images/index/shouyoupaihangbao.png" />
+					</div>
+					<hr/>
+				</div>
+				<!--手游排行榜单排列区-->
+				<div class="lbt-change lbp">
+					<img src="/home/tpl/pc/images/index/daohang3.png" style="cursor:pointer " />
+					<!--
+					<a href="#" class="lbt-more1">更多+</a>
+					<a href="#" class="lbt-more2">更多+</a>
+					<a href="#" class="lbt-more3">更多+</a>
+					<a href="#" class="lbt-more4">更多+</a>
+					-->
+					<div class="lbt-change-l">
+						<div class="lbt-change-ll"><div class="pics"><span class="order ">01</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/limbo/" target="_blank">地狱边境</a><span class="hide"> - 游戏库</span><div class="pic1 act"><a href="http://sy.3dmgame.com/g/limbo/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" style="float: left;" /><p>地狱边境</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="order ">02</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/wzry/" target="_blank">王者荣耀</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/wzry/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" style="float: left;" /><p>王者荣耀</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="order ">03</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank">全民飞机大战</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/10/logo_20160809172711_9971.jpg" style="float: left;" /><p>全民飞机大战</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">04</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/coc/" target="_blank">部落冲突</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/coc/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" style="float: left;" /><p>部落冲突</p><p><img src="/home/tpl/pc/images/index/xingxing1.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">05</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/nba2k13/" target="_blank">NBA&nbsp2K13</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/nba2k13/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/70/logo_20160817145338_4652.jpg" style="float: left;" /><p>NBA&nbsp2K13</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">06</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/tr2/" target="_blank">神庙逃亡2</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/tr2/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/63/logo_20160817134514_9330.png" style="float: left;" /><p>神庙逃亡2</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">07</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/a7h/" target="_blank">狂野飙车7：极速热力</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/a7h/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/65/logo_20160817142752_1523.jpg" style="float: left;" /><p>狂野飙车7：极速热力</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">08</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/dmmr/" target="_blank">神偷奶爸：小黄人快跑</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/dmmr/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/73/logo_20160817152242_4335.jpg" style="float: left;" /><p>神偷奶爸：小黄人快跑</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">09</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/hhow/" target="_blank">炉石传说</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/hhow/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/36/logo_20160810091708_5495.jpg" style="float: left;" /><p>炉石传说</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+									<div class="pics"><span class="orders">10</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/jstw/" target="_blank">极速逃亡</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/jstw/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/61/logo_20160816102422_3531.png" style="float: left;" /><p>极速逃亡</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>
+																							</div>
+						<div class="lbt-change-lr"><div class="pics"><span class="order ">01</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/coc/" target="_blank">部落冲突</a><span class="hide"> - 游戏库</span><div class="pic1 act"><a href="http://sy.3dmgame.com/g/coc/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" style="float: left;" /><p>部落冲突</p><p><img src="/home/tpl/pc/images/index/xingxing1.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="order ">02</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/limbo/" target="_blank">地狱边境</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/limbo/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" style="float: left;" /><p>地狱边境</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="order ">03</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/wzry/" target="_blank">王者荣耀</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/wzry/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" style="float: left;" /><p>王者荣耀</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">04</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/ssdzz/" target="_blank">蛇蛇大作战</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/ssdzz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/9/logo_20160810170814_6803.jpg" style="float: left;" /><p>蛇蛇大作战</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">05</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank">全民飞机大战</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/10/logo_20160809172711_9971.jpg" style="float: left;" /><p>全民飞机大战</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">06</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/hshdanjl/" target="_blank">会说话的安吉拉</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/hshdanjl/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/19/logo_20160812085715_9584.jpg" style="float: left;" /><p>会说话的安吉拉</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">07</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/qqhlddz/" target="_blank">QQ欢乐斗地主</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/qqhlddz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/21/logo_20160812085850_5427.jpg" style="float: left;" /><p>QQ欢乐斗地主</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">08</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/yydzpk/" target="_blank">遇悦德州扑克</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/yydzpk/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/24/logo_20160812085940_6867.png" style="float: left;" /><p>遇悦德州扑克</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">09</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/djddz/" target="_blank">单机斗地主</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/djddz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/25/logo_20160809172331_5435.jpg" style="float: left;" /><p>单机斗地主</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>							</div>
+						</div>
+					<div class="lbt-change-r">
+						<div class="lbt-change-lll"><div class="pics"><span class="order ">01</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/coc/" target="_blank">部落冲突</a><span class="hide"> - 游戏库</span><div class="pic1 act"><a href="http://sy.3dmgame.com/g/coc/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" style="float: left;" /><p>部落冲突</p><p><img src="/home/tpl/pc/images/index/xingxing1.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="order ">02</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/limbo/" target="_blank">地狱边境</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/limbo/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" style="float: left;" /><p>地狱边境</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="order ">03</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/wzry/" target="_blank">王者荣耀</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/wzry/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" style="float: left;" /><p>王者荣耀</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">04</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/ssdzz/" target="_blank">蛇蛇大作战</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/ssdzz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/9/logo_20160810170814_6803.jpg" style="float: left;" /><p>蛇蛇大作战</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">05</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank">全民飞机大战</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/qmfjdz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/10/logo_20160809172711_9971.jpg" style="float: left;" /><p>全民飞机大战</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">06</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/hshdanjl/" target="_blank">会说话的安吉拉</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/hshdanjl/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/19/logo_20160812085715_9584.jpg" style="float: left;" /><p>会说话的安吉拉</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">07</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/qqhlddz/" target="_blank">QQ欢乐斗地主</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/qqhlddz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/21/logo_20160812085850_5427.jpg" style="float: left;" /><p>QQ欢乐斗地主</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">08</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/yydzpk/" target="_blank">遇悦德州扑克</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/yydzpk/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/24/logo_20160812085940_6867.png" style="float: left;" /><p>遇悦德州扑克</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">09</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/djddz/" target="_blank">单机斗地主</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/djddz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/25/logo_20160809172331_5435.jpg" style="float: left;" /><p>单机斗地主</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div><div class="pics"><span class="orders">10</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/njmj/" target="_blank">南京麻将</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/njmj/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/26/logo_20160809180249_1826.jpg" style="float: left;" /><p>南京麻将</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>						</div>
+						<div class="lbt-change-lrl">															<div class="pics"><span class="order ">01</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/mmihoyo/" target="_blank">崩坏学园2</a><span class="hide"> - 游戏库</span><div class="pic1 act">
+										<a href="http://sy.3dmgame.com/g/mmihoyo/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/30/logo_20160809182115_5519.jpg" style="float: left;" /><p>崩坏学园2</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="order ">02</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/hlpsz/" target="_blank">欢乐拼三张</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/hlpsz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/33/logo_20160809183858_6740.jpg" style="float: left;" /><p>欢乐拼三张</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="order ">03</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/bwlb3/" target="_blank">保卫萝卜3</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/bwlb3/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/8/logo_20160810184207_9044.jpg" style="float: left;" /><p>保卫萝卜3</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">04</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/bcfdgs/" target="_blank">被尘封的故事</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/bcfdgs/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/91/logo_20160818160556_3773.jpg" style="float: left;" /><p>被尘封的故事</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">05</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/dmxqhdmx/" target="_blank">倒霉熊奇幻大冒险</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/dmxqhdmx/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/66/logo_20160817142809_1536.jpg" style="float: left;" /><p>倒霉熊奇幻大冒险</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">06</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/sklr/" target="_blank">时空猎人</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/sklr/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/77/logo_20160817160554_2046.jpg" style="float: left;" /><p>时空猎人</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">07</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/atmrxgd/" target="_blank">奥特曼热血格斗</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/atmrxgd/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/89/logo_20160818154356_3520.jpg" style="float: left;" /><p>奥特曼热血格斗</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">08</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/kdygcz/" target="_blank">口袋妖怪重制</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/kdygcz/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/62/logo_20160817102439_2402.jpg" style="float: left;" /><p>口袋妖怪重制</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">09</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/kxxxl/" target="_blank">开心消消乐</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/kxxxl/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/72/logo_20160817150801_7058.jpg" style="float: left;" /><p>开心消消乐</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>									<div class="pics"><span class="orders">10</span>&nbsp;&nbsp;<a href="http://sy.3dmgame.com/g/gbsg/" target="_blank">果宝三国</a><span class="hide"> - 游戏库</span><div class="pic1"><a href="http://sy.3dmgame.com/g/gbsg/" target="_blank"><img src="http://sy.3dmgame.com/uploads/games/game_logo/74/logo_20160817153424_4183.jpg" style="float: left;" /><p>果宝三国</p><p><img src="/home/tpl/pc/images/index/xingxing0.png" /></p><p>类型：游戏库</p></a></div></div>						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lbt-changes" style="height:200px ; margin-bottom: 16px; background-color: #FFFFFF;">
+				<div>
+					<img src="/home/tpl/pc/images/index/youqinglianjie.png" />
+				</div>
+				<div class="lbt-change-lianjie">
+					<ul><li><a href="范德萨">范德萨</a></li>					</ul>
+				</div>
+			</div>
+						<div class="lbt-footers">
+				<p>
+					<a href="http://www.3dmgame.com/s/about.html" target="_blank">关于3DMGAME</a>丨
+					<a href="http://www.3dmgame.com/s/joinus.html" target="_blank">招聘信息</a>丨
+					<a href="http://www.3dmgame.com/s/sitemap.html" target="_blank">网站地图</a>丨
+					<a href="http://www.3dmgame.com/s/contact.html" target="_blank">联系我们</a>丨
+					<a href="http://www.3dmgame.com/s/prevent.html" target="_blank">家长监护工程</a>丨
+					<a href="http://www.3dmgame.com/s/links.html" target="_blank">友情链接</a>
+				</p>
+				<p>
+					CopyRight &copy;3DMGAME-单机游戏 2013-2033,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+					<a href="http://www.miibeian.gov.cn/">京ICP证14006952号 京网文（2016）1650-207号</a> 服务电话：(010-84920551)
+				</p>
+				<p class="footers-p">
+					<a target=blank href="tencent://message/?uin=21143517&Site=3DMGAME&Menu=yes">商务合作/友情链接<img src="/home/tpl/pc/images/common/button_old_71.gif" /></a>
+					<a target="_blank" href="tencent://message/?uin=475764057&Site=3DMGAME&Menu=yes">广告合作<img src="/home/tpl/pc/images/common/button_old_71.gif" /></a>
+					<a target="_blank" href="tencent://message/?uin=2116143&Site=3DMGAME&Menu=yes">联运合作<img src="/home/tpl/pc/images/common/button_old_71.gif" /></a>
+				</p>
+				<img src="/home/tpl/pc/images/common/xyqy.jpg" class="footer-img" />
+				<hr />
+			</div>		</div>
+		<div class="side_bar hide">
+			<div class="bggcl">
+			<ul>
+				<div class="li">
+					<a href="#one">
+                    	<li>新闻</li>
+                    </a>
+				</div>
+				<div class="li">
+					<a href="#tow">
+                    	<li>网游</li>
+                    </a>
+				</div>
+				
+				<div class="li">
+					<a href="#four">
+                    	<li>视频</li>
+                    </a>
+				</div>
+				<div class="li">
+					<a href="#five">
+                    	<li>推荐</li>
+                    </a>
+				</div>
+				<div class="li">
+					<a href="#six">
+                    	<li>美图</li>
+                    </a>
+				</div>
+				<div class="li">
+					<a href="#seven">
+                    	<li>排行</li>
+                    </a>
+				</div>
+
+				<div class="li">
+					<a href="#header">
+                    	<li>&and;</li>
+                    </a>
+				</div>
+			</ul>
+			</div>
+		</div>
+	</body>
+	<!--<script type="text/javascript " src="http://sy.3dmgame.com/home/tpl/pc/js/index/bootstrap.min.js "></script>-->
+	<!--<script type="text/javascript " src="http://sy.3dmgame.com/home/tpl/pc/js/index/npm.js "></script>-->
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/Game.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/navsearch.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/shouyoubangdan.js"></script>
+		<script>
+			$(window).scroll(function() {
+				var scroll_len = $(window).scrollTop();
+				if(scroll_len > 0) {
+					$('.side_bar').fadeIn();
+				} else {
+					$('.side_bar').fadeOut();
+				};
+			});
+		</script>
+
+</html>

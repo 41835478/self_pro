@@ -1,0 +1,111 @@
+a {color:#666;text-decoration:none;}
+
+ul {margin:0; padding:0; list-style-type:none;}
+ul li  {list-style-type:none; vertical-align:bottom;}
+.Menu div,ul,li {overflow:hidden;}
+input {outline:0;}
+.Menu {
+	margin-bottom: 15px;
+	width: 842px;
+	margin-top: 15px;
+	height: auto;
+}
+
+.Menu .Menu_1 {
+	width: 842px;
+	height: 50px;
+}
+
+.Menu .Menu_1 .Menu1_1 {
+	float: left;
+	width: 160px;
+	height: 50px;
+}
+
+.Menu .Menu_2 {
+	width: 842px;
+	height: auto;
+}
+
+.Menu .Menu_2 .Menu2_1 {
+	width: 842px;
+	height: auto;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_1 {
+	float: left;
+	width: 45px;
+	height: 30px;
+	line-height: 30px;
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 {
+	float: left;
+	width: auto;
+	height: 30px;
+	position: relative;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 .Menu212 {
+	width: 100%;
+	height: auto;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 .Menu212 a {
+	float: left;
+	font-size: 12px;
+	margin-right: 20px;
+	display: inline-block;
+	width: auto;
+	text-align: center;
+	width: 68px;
+	height: 25px;
+	line-height: 22px;
+	border: 1px solid #f0f0f0;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 .Menu212 a.m {
+	margin-bottom: 8px;
+	color: #333;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 .Menu212 a.m:hover,
+.Menu .Menu_2 .Menu2_1 .Menu21_2 a.n {
+	color: #fff;
+	background: #26afdc;
+	text-decoration: none;
+	text-align: center;
+}
+
+.Menu .Menu_2 .Menu2_1 .Menu21_2 .YN {
+	position: absolute;
+	left:724px;
+	right: 0;
+	font-size: 12px;
+	bottom: 5px;
+	width: 68px;
+	height: 25px;
+	line-height: 25px;
+	color: #26AFDC;
+	top: 0px;
+	border: 1px solid #f0f0f0;
+	text-align: center;
+	cursor: pointer;
+}
+
+.Menu .Menu_2 .Menu2_1 .Mh0 {
+	/*padding-right: 45px;*/
+	width: 794px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.Menu .Menu_2 .Menu2_1 .Mh1 {
+	/*padding-right: 45px;*/
+	width: 794px;
+	height: auto;
+}

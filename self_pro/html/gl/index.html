@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<title></title>
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/raiders_home/3DMgame5.0.css" />
+		<link rel="shortcut icon" href="img/logo.png"/>
+		<link href="http://sy.3dmgame.com/home/tpl/pc/css/raiders_home/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/raiders_home/pagination.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/raiders_home/carousel-figure.css" />
+	</head>	
+
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/header/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/header/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="g/" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="g/"><li>找游戏</li></a>
+                <a href="news/"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="gl/"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+							<li>
+								<a href="http://sy.3dmgame.com" style=" color:#26AFDC;">首页</a>
+							</li>
+							<li>
+								<a href="index.php?act=raiders&op=raiders_class&class_id=31">攻略</a>
+							</li>
+							<li>
+								<a href="index.php?act=raiders&op=raiders_class&class_id=29">心得</a>
+							</li>
+							<li>
+								<a href="index.php?act=raiders&op=raiders_class&class_id=30">问答</a>
+							</li>
+							<!--<li>
+								<a href="#">人物</a>
+							</li>
+							<li>
+								<a href="#">动态</a>
+							</li>
+							<li>
+								<a href="#">评测</a>
+							</li>-->
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<a href="#">当前位置</a>:
+				<a href="#">游戏主题</a>&gt;
+				<a href="#">首页</a>
+                &gt;
+				<a href="#"> 手游攻略中心</a>
+			</div>			
+			<div class="bodyer">
+				<div class="bodyer-b">
+					<div class="bodyer-left" id="one">
+						
+						<div id="demo2" class="slideBox">
+							<ul class="items">
+																								<li>
+									<a href="" title="《战地1》简短预告热血拼杀 纯爷们玩冷兵器"><img src="/uploads/adv/adv_20160815100901_3695.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="" title="国产“黄油”Steam被怒喷"><img src="/uploads/adv/adv_20160815100901_3973.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="" title="《Dota2》Ti6总冠军诞生"><img src="/uploads/adv/adv_20160815100901_9488.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="" title="当《哈利波特》遇见宝可梦GO"><img src="/uploads/adv/adv_20160815100901_7587.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="" title="史上最亏本的十届奥运会"><img src="/uploads/adv/adv_20160815100901_8884.jpg" width="844" height="378"></a>
+								</li>
+																							</ul>
+						</div>
+						<div class="bd-left-c" id="tow">
+							<div class="bodyer-top-name" style="margin-top:30px;">
+                                <p>最新攻略</p>
+                            </div>
+																					
+							<div class="Grandson-left">
+								<a href="http://sy.3dmgame.com/gl/109.html"><img src="/uploads/raiders/raiders_20160817113148_5650.jpg"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="http://sy.3dmgame.com/gl/109.html">《爱养成4》黎宫恋曲结局攻略 怎么达成黎宫恋曲结局</a>
+									</p>
+									<span class="Notes-world">爱养成4黎宫恋曲结局攻略，怎么达成黎宫恋曲结局?下面继续为大家带来的是爱养成4之妖乱我心黎宫恋曲结局的攻略，那么这个结局怎么达成呢?一起来看看吧。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-17										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="http://sy.3dmgame.com/gl/108.html"><img src="/uploads/raiders/raiders_20160816164854_4369.jpg"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="http://sy.3dmgame.com/gl/108.html">备战8.17克隆战《天天酷跑》猪八戒两套万米爆分搭配</a>
+									</p>
+									<span class="Notes-world">备战8.17克隆战，天天酷跑猪八戒两套万米爆分搭配。今天小编为大家带来天天酷跑猪八戒的两套万米爆高分组合，告诉大家猪八戒怎么搭配比较强，下面大家就一起来看下吧。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="http://sy.3dmgame.com/gl/107.html"><img src="/uploads/raiders/raiders_20160816164002_9107.jpg"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="http://sy.3dmgame.com/gl/107.html">《饥荒手机版》新手攻略 手机版玩家初期心得分享</a>
+									</p>
+									<span class="Notes-world">饥荒的游戏世界相对比较残酷，这里对于新手玩家来讲，生存成了奢侈的希望，今天小编跟大家分享下手机版玩家初期的游戏心得，帮助玩家安全度过前期。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="http://sy.3dmgame.com/gl/106.html"><img src="/uploads/raiders/raiders_20160816160303_4976.jpg"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="http://sy.3dmgame.com/gl/106.html">《王者荣耀》马可波罗和关羽哪个好&nbsp哪个值得入手</a>
+									</p>
+									<span class="Notes-world">王者荣耀新英雄马可波罗即将和大家见面，作为一个射手英雄，和当下版本的大哥关羽相比，究竟哪个英雄更好呢？一起来看看王者荣马可波罗和关羽对比吧！									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+																				</div>
+						                         	<div class="pages" style="float:left">
+                                <div id="Pagination" class="Pagination"></div>
+                                <div class="searchPage">
+                                    <span class="page-sum">共<strong class="allPage">21</strong>页</span>
+                                    <span class="page-go">到第<input type="text">页</span>
+                                    <a href="javascript:;" class="page-btn">GO</a>
+                                </div>
+                            </div>
+													<div class="bodyer-top-name" style="margin-top:100px;">
+                            <p>图文攻略</p>
+                        </div>
+						<div class="picture-world-show" style="margin-top: 15px; height: 320px; width: 844px;">
+							<div class="picture-world-show-top">
+																								
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160813165147_3780.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《王者荣耀》橘右京技能介绍 完全同步侍魂技能英雄</span>
+									</div>
+								</div>
+								
+																
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160813154649_5640.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《王者荣耀》可波罗激情绿茵皮肤上线时间介绍</span>
+									</div>
+								</div>
+								
+																
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160812103116_8623.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《天天酷跑》酷夏距离冲刺赛高分组合推荐</span>
+									</div>
+								</div>
+								
+																
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160813160025_3358.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《王者荣耀》8.10号体验服英雄调整：马可波罗露娜削弱</span>
+									</div>
+								</div>
+								
+																
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160813163517_6713.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《王者荣耀》马可波罗下周二上线 急速收益超高的射手</span>
+									</div>
+								</div>
+								
+																
+								<div class="picture-show" style="margin-right: 11px;">
+									<img src="/uploads/raiders/raiders_20160813164401_4428.jpg"  width="268" height="150"/>
+									<div class="picture-shadow">
+										<span>《王者荣耀》妲己热情桑巴皮肤什么时候出</span>
+									</div>
+								</div>
+								
+																							</div>
+						</div>
+						<div class="bodyer_3" >
+							<div class="bd3-left">
+                                <div class="bodyer-top-name">
+                                    <p>视频攻略</p>
+                                </div>
+							</div>
+																					
+							<div class="img-left" style="margin-right: 14px;">
+								<div class="video">
+									<div class="video-img">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html"><img src="/home/tpl/pc/images/raiders_home/12315641561hl.png" width="270" height="188"/></a>
+									</div>
+									<div class="img-shadow">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html"></a>
+									</div>
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" class="img-lj">
+										<span style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">《戴斯班克：雪山地牢》流程视频攻略第46集</span>
+										<p class="img-zt" >戴斯班克：雪山地牢</p>
+									</a>
+								</div>
+							</div>
+							
+														
+							<div class="img-left" style="margin-right: 14px;">
+								<div class="video">
+									<div class="video-img">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html"><img src="/home/tpl/pc/images/raiders_home/12315641561hl.png" width="270" height="188"/></a>
+									</div>
+									<div class="img-shadow">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html"></a>
+									</div>
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html" class="img-lj">
+										<span style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">传侠仙龙</span>
+										<p class="img-zt" >将于今春上架新游《大召唤师》大厂有货脱离依旧 。。。。 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架 脱离大厂依旧有货 新游《大召唤师》将于今春上架</p>
+									</a>
+								</div>
+							</div>
+							
+														
+							<div class="img-left" style="margin-right: 14px;">
+								<div class="video">
+									<div class="video-img">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html"><img src="/home/tpl/pc/images/raiders_home/12315641561hl.png" width="270" height="188"/></a>
+									</div>
+									<div class="img-shadow">
+										<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html"></a>
+									</div>
+									<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html" class="img-lj">
+										<span style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">龙仙侠传</span>
+										<p class="img-zt" >将于今春上架新游《大召唤师》大厂有货脱离依旧。。。。 脱离大厂依旧有货 新游《大召唤师》将于今春上架。。。</p>
+									</a>
+								</div>
+							</div>
+							
+														
+						</div>
+					</div>
+					<div class="bodyer-right">
+						<div class="hot-comment" id="three">
+                        	
+							<div class="bodyer-top-name" style=" margin-top:4px;">
+                                <p>今日热评</p>
+                            </div>
+							<ul>
+								<!--gl4 是4条， gl8是8条-->
+								<!--1条红色的。2条白色的 -->
+								<!--规律是三条key值是0,0,1   1,2,3   2,4,5   3,6,7-->
+								
+								  
+																<li class="world-bg">
+									<a href="http://sy.3dmgame.com/gl/102.html">《火星：火星》宇航员在火星陡峭的山坡上着陆</a>
+								</li>
+								 <!--因为0乘以2还是零-->
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/109.html">《爱养成4》黎宫恋曲结局攻略 怎么达成黎宫恋曲结局</a>
+								</li>
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/108.html">备战8.17克隆战《天天酷跑》猪八戒两套万米爆分搭配</a>
+								</li>
+																								<li class="world-bg">
+									<a href="http://sy.3dmgame.com/gl/101.html">赛车竞速游戏《极速逃亡》近日新版本全面上线</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/107.html">《饥荒手机版》新手攻略 手机版玩家初期心得分享</a>
+								</li>
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/106.html">《王者荣耀》马可波罗和关羽哪个好&nbsp哪个值得入手</a>
+								</li>
+																								<li class="world-bg">
+									<a href="http://sy.3dmgame.com/gl/100.html">《王者荣耀》橘右京技能介绍 完全同步侍魂技能英雄</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/105.html">《贪婪洞窟》装备哪个好 全装备品质属性详解</a>
+								</li>
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/104.html">《诛仙手游》鬼王宝石推荐&nbsp鬼王首饰宝石用什么好</a>
+								</li>
+																								<li class="world-bg">
+									<a href="http://sy.3dmgame.com/gl/98.html">《王者荣耀》橘右京铭文搭配攻略 橘右京用什么铭文</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/103.html">《贪婪洞窟》你不知道的玩法&nbsp城镇隐藏玩法攻略</a>
+								</li>
+								<li class="world-sm">
+									<a href="http://sy.3dmgame.com/gl/102.html">《火星：火星》宇航员在火星陡峭的山坡上着陆</a>
+								</li>
+																															</ul>
+						</div>
+						<div class="game-evaluating">
+							<div id="pstion">
+								<div class="gd-btn0" style="top:14px;">
+									<div class="gd-btn1">
+										<a href="index.php?act=raiders&op=raiders_class&class_id=31"><img src="/home/tpl/pc/images/raiders_home/gd-btn.png" /></a>
+									</div>
+								</div>
+							</div>
+                            <div class="bodyer-top-name" style=" margin-top:-24px;">
+                                <p>手游攻略</p>
+                            </div>
+							<ul>
+																								
+								<li>
+									<a href="http://sy.3dmgame.com/gl/109.html" class="medium-size">《爱养成4》黎宫恋曲结局攻略 怎么达成黎宫恋曲结局</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/108.html" class="medium-size">备战8.17克隆战《天天酷跑》猪八戒两套万米爆分搭配</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/106.html" class="medium-size">《王者荣耀》马可波罗和关羽哪个好&nbsp哪个值得入手</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/104.html" class="medium-size">《诛仙手游》鬼王宝石推荐&nbsp鬼王首饰宝石用什么好</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/103.html" class="medium-size">《贪婪洞窟》你不知道的玩法&nbsp城镇隐藏玩法攻略</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/99.html" class="medium-size">《王者荣耀》橘右京出装顺序推荐 橘右京怎么出装</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/98.html" class="medium-size">《王者荣耀》橘右京铭文搭配攻略 橘右京用什么铭文</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/97.html" class="medium-size">《王者荣耀》七夕活动曝光 小乔周瑜皮肤五折出售？</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/80.html" class="medium-size">《精灵宝可梦GO》成就大全&nbsppokemon&nbspgo勋章获得方法</a>
+								</li>
+								
+																
+								<li>
+									<a href="http://sy.3dmgame.com/gl/77.html" class="medium-size">《天天酷跑》酷夏距离冲刺赛高分组合推荐</a>
+								</li>
+								
+																							</ul>
+						</div>
+						<div class="game-evaluating">
+							<div id="pstion">
+								<div class="gd-btn0" style="top:14px;">
+									<div class="gd-btn1">
+										<a href="index.php?act=raiders&op=raiders_class&class_id=29"><img src="/home/tpl/pc/images/raiders_home/gd-btn.png" /></a>
+									</div>
+
+								</div>
+							</div>
+                            <div class="bodyer-top-name" style=" margin-top:-24px;">
+                                <p>手游心得</p>
+                            </div>
+							<ul>
+								
+																								<li>
+									<a href="http://sy.3dmgame.com/gl/107.html" class="medium-size">《饥荒手机版》新手攻略 手机版玩家初期心得分享</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/105.html" class="medium-size">《贪婪洞窟》装备哪个好 全装备品质属性详解</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/100.html" class="medium-size">《王者荣耀》橘右京技能介绍 完全同步侍魂技能英雄</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/93.html" class="medium-size">《王者荣耀》马可波罗背景故事介绍&nbsp远游之枪下周报道</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/92.html" class="medium-size">《王者荣耀》马可波罗下周二上线 急速收益超高的射手</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/91.html" class="medium-size">《王者荣耀》七夕花束可以兑换什么&nbsp七夕花束兑换物品</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/85.html" class="medium-size">《王者荣耀》新版本孙尚香原画重做曝光</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/84.html" class="medium-size">《王者荣耀》花木兰原画修改曝光&nbsp剑舞者兔女郎更显惊艳</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/83.html" class="medium-size">《王者荣耀》马可波罗背景故事介绍</a>
+								</li>
+																<li>
+									<a href="http://sy.3dmgame.com/gl/82.html" class="medium-size">《王者荣耀》张飞乱世虎臣皮肤获得方法</a>
+								</li>
+																							</ul>
+						</div>
+						<div class="wld-right" id="six">
+							<div class="bodyer-top-name">
+                                <p>攻略排行</p>
+                            </div>
+							<div style="margin-top:15px; width:272px;">
+								<img src="/home/tpl/pc/images/raiders_home/px.png"  style=" display:block; float:left;">
+								<div class="ph">
+									<ul>
+																														<li>
+											<a href="http://sy.3dmgame.com/gl/1.html" class="medium-size">全面解读CF手游生化角色分裂者&nbsp附实战技巧</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/17.html" class="medium-size">部落冲突8本部落战阵&nbspX型风车阵与大本外</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/24.html" class="medium-size">《罗马时代》游戏兵种大全</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/25.html" class="medium-size">收集控悲剧！《三国群英传》手游副将搭配简介</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/29.html" class="medium-size">火线精英手机版AK47天王星解析</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/30.html" class="medium-size">火线精英手机版暗影迷宫地图攻略</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/31.html" class="medium-size">火线精英手机版XM8步枪评测</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/32.html" class="medium-size">部落冲突8本部落战阵型推荐!8本防龙阵型分</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/33.html" class="medium-size">火影手游迪达拉和鼬实力比拼谁更强</a>
+										</li>
+																				<li>
+											<a href="http://sy.3dmgame.com/gl/34.html" class="medium-size">再来一把龙啸&nbsp龙啸翻卡攻略</a>
+										</li>
+																													</ul>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="wld-right" id="six" style="margin-top:20px;">
+							<div class="bodyer-top-name">
+                                <p>视频排行</p>
+                            </div>
+							<div style="margin-top: 15px;">
+								<img src="/home/tpl/pc/images/raiders_home/px.png" style=" display:block; float:left;"/>
+								<div class="ph">
+									<ul>
+																														<li>
+											<a href="http://v.3dmgame.com/shouyoushipin/201607/131.html" class="medium-size">《戴斯班克：雪山地牢》流程视频攻略第46集</a>
+										</li>
+										
+																				<li>
+											<a href="http://v.3dmgame.com/shouyoushipin/201607/130.html" class="medium-size">传侠仙龙</a>
+										</li>
+										
+																				<li>
+											<a href="http://v.3dmgame.com/shouyoushipin/201607/129.html" class="medium-size">龙仙侠传</a>
+										</li>
+										
+																				<li>
+											<a href="http://v.3dmgame.com/shouyoushipin/201607/128.html" class="medium-size">龙传仙侠</a>
+										</li>
+										
+																				<li>
+											<a href="http://v.3dmgame.com/shouyoushipin/201607/127.html" class="medium-size">仙侠龙传</a>
+										</li>
+										
+																													</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div style="height: 25px; background-color: #F0F0F0;"></div>
+				<div id="footer">
+					<p>
+						<a href="#">关于3DMGAME</a>丨
+						<a href="#">招聘信息</a>丨
+						<a href="#">网站地图</a>丨
+						<a href="#">联系我们</a>丨
+						<a href="#">家长监护工程</a>丨
+						<a href="#">友情链接</a>
+					</p>
+					<p >
+						CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+						<a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+					</p>
+					<p class="footers-p">
+						<a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/raiders_home/button_old_71.gif" /></a>
+						<a href="#">广告合作<img src="/home/tpl/pc/images/raiders_home/button_old_71.gif" /></a>
+						<a href="#">全区<img src="/home/tpl/pc/images/raiders_home/button_old_71.gif" /></a>
+					</p>
+					<img src="/home/tpl/pc/images/raiders_home/xyqy.jpg" class="footer-img" />
+					<hr />
+				</div>
+				<div class="side_bar hide">
+				<div class="bggcl">
+
+					<ul>
+						<!--<div class="li">
+							<li>
+								<a href=" #one">热点</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#tow">新闻</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#tow">评测</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#three">热评</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#four">美图</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#five">视频</a>
+							</li>
+						</div>
+						<div class="li">
+							<li>
+								<a href="#six">排行</a>
+							</li>
+						</div>-->
+						<div class="li">
+								<a href="#header"><li>&and;</li></a>
+						</div>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	</div>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/raiders_home/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/raiders_home/jquery.slideBox.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/raiders_home/jquery.pagination.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/raiders_home/jquery.kwicks.min.js"></script>
+    <script src="http://sy.3dmgame.com/home/tpl/pc/js/raiders_home/jquery.slideBox.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+    
+	<script>
+		jQuery(function($) {
+			$('#demo2').slideBox({
+				direction: 'top', //left,top#方向
+				duration: 0.3, //滚动持续时间，单位：秒
+				easing: 'linear', //swing,linear//滚动特效
+				delay: 5, //滚动延迟时间，单位：秒
+				startIndex: 1 //初始焦点顺序
+			});
+		});
+	</script>
+    
+	 <script type="text/javascript">
+		// When document has loaded, initialize pagination and form 
+		//$(document).ready(function() {
+			//$("#Pagination").pagination("10",{link_to:'index.php?act=game_lib&op=index'});
+		//});
+		$(document).ready(function () { 
+    //TotalNum 总数　这里写死了 
+    var TotalNum = 200; 
+    //首次加载 
+   // pageselectCallback(0); 
+    //分页事件 
+	
+    $("#Pagination").pagination("21", { 
+        prev_text: "上一页", 
+        next_text: "下一页", 
+		current_page:0,
+        num_edge_entries: 2, 
+        num_display_entries: 2, 
+        //回调 
+        callback: pageselectCallback 
+    }); 
+ 
+    function pageselectCallback(page) { 
+		//window.loaction.href = window.loaction.href;
+		var num = page+1;
+		window.location.href = 'index.php?act=raiders&op=raiders_home&page='+num;
+		//window.open("indexpage="+page,"_blank");
+    } 
+}); 
+		 
+	</script>
+    
+	<script>
+		$(window).scroll(function() {
+			var scroll_len = $(window).scrollTop();
+			if(scroll_len > 10) {
+				$('.side_bar').fadeIn();
+			} else {
+				$('.side_bar').fadeOut();
+			};
+		});
+	</script>
+    
+   	<script>
+	$('.comm-icon').mouseenter(function(){
+		$(this).find('img').attr('src','/home/tpl/pc/images/raiders_home/comm-icon2.png')
+		})
+	$('.comm-icon').mouseleave(function(){
+		$(this).find('img').attr('src','/home/tpl/pc/images/raiders_home/comm-icon.png')
+		})
+	</script>
+</html>

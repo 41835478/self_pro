@@ -1,0 +1,36 @@
+html,body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{
+	margin:0;padding:0;border:0;
+}
+
+	input::-ms-input-placeholder{text-align: center;}
+	input::-webkit-input-placeholder{text-align: center;}
+	
+input{
+	height:0.9rem;
+	width:97%;
+	border: none;
+	outline: none;
+	font-size: 0.3rem;
+	font-family:"黑体";
+	color:#323232;
+	padding-left:3%;
+}
+.bangding{
+	height: 0.7rem;
+	width:7.1rem;
+	margin: 0 auto;
+	font-size: 0.3rem;
+	font-family:"黑体";
+	color:#ffffff;
+	background: #d6d6d6;
+	text-align: center;
+	line-height: 0.7rem;
+	margin-top: 0.4rem;
+}
+.case{
+	font-family: "微软雅黑";
+	font-size:0.24rem;
+	color:#323232;
+	text-align: center;
+	margin-top: 0.4rem;
+}

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<title>新闻首页</title>
+		<link rel="shortcut icon" href="/home/tpl/pc/images/newses/logo.png" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/newses/3DMgame6.0.css" />
+		<link href="http://sy.3dmgame.com/home/tpl/pc/css/newses/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+		<script src="http://sy.3dmgame.com/home/tpl/pc/js/newses/jquery.slideBox.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/newses/pagination.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/newses/carousel-figure.css" />
+	</head>
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/header/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/header/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="g/" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="g/"><li>找游戏</li></a>
+                <a href="news/"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="gl/"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+							<li>
+								<a href="index.php" style=" color:#26AFDC;">首页</a>
+							</li>
+							<li>
+								<a href="#">资讯</a>
+							</li>
+							<li>
+								<a href="#">盘点</a>
+							</li>
+							<li>
+								<a href="#">产业</a>
+							</li>
+							<li>
+								<a href="#">人物</a>
+							</li>
+							<li>
+								<a href="#">动态</a>
+							</li>
+							<li>
+								<a href="#">评测</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<ul>
+					<li>
+						<a href="#">当前位置</a>:&nbsp;
+                    </li>
+					<li>
+						<a href="index.php">首页</a>&gt;
+                    </li>
+					<li>
+						<a href="#">游戏新闻中心</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="bodyer">
+				<div class="bodyer-b">
+
+					<div class="bodyer-left" id="one">
+						<div id="demo2" class="slideBox">
+							<ul class="items">
+																								<li>
+									<a href="1" title="“污”一点的妹子更招人爱 动漫中那些没节操少女"><img src="/uploads/adv/adv_20160812155544_7886.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="2" title=" 俄罗斯玩家欲娶百变怪为妻"><img src="/uploads/adv/adv_20160812155809_9965.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="3" title="日本超奇葩iPhone充电器！这是充电还是充翔？"><img src="/uploads/adv/adv_20160812160055_5550.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="4" title="那些敢于票房保底的国产电影"><img src="/uploads/adv/adv_20160812160055_2255.jpg" width="844" height="378"></a>
+								</li>
+																<li>
+									<a href="5" title="女司机面前公然劈腿？在外就看柔韧性的动态图"><img src="/uploads/adv/adv_20160812160055_3159.jpg" width="844" height="378"></a>
+								</li>
+																							</ul>
+						</div>
+						<div class="bd-left-c" id="tow">
+                            <div class="bodyer-top-name" style="margin-top:30px;">
+                                <p>最新新闻</p>
+                            </div>
+																					
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=95"><img src="/uploads/newses/news_20160817112801_1559.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=95">二次元卡牌游戏《妖怪百姬》 国服今年秋季正式上线</a>
+									</p>
+									<span class="Notes-world">近日，日本角川游戏旗下二次元卡牌游戏《妖怪百姬》将进入中国市场，授权布鲁潘达代理运营，预计将于今年秋季正式上线。这是一款继《舰队Collection》后的美少女系列新作。这款游戏将日本全国47个都道府县的在地妖怪，幻化成萌萌的美少女，打造妖怪后宫!喜欢萌娘的千万不能错过了。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-17										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=94"><img src="/uploads/newses/news_20160816142020_4515.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=94">7月27日体验服停机更新公告</a>
+									</p>
+									<span class="Notes-world">体验服上英雄的技能、数值、系统设定等内容，均为测试版本与测试数据，不代表最终的效果。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=93"><img src="/uploads/newses/news_20160816141405_4532.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=93">暑期奥运积分冲冲冲强力来袭</a>
+									</p>
+									<span class="Notes-world">夏日的热浪是不是为您的暑期增加了不少激情。暑期盛典期间，王者荣耀也会大家准备了不少丰富的活动！									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=92"><img src="/uploads/newses/news_20160816141020_4099.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=92">新英雄-蔡文姬&nbsp最萌奶妈登场</a>
+									</p>
+									<span class="Notes-world">欢迎您来到王者荣耀！黑暗的魔神王会降临大陆，唯有美少女的琴音挥洒希望与胜利！									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=91"><img src="/uploads/newses/news_20160816140918_3336.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=91">王者荣耀-QQ钱包暑期专享福利</a>
+									</p>
+									<span class="Notes-world">曾几何时，本宝宝曾有一个梦想，要是让钱包里的人民币们相亲相爱，能生下很多人民币宝宝，那该多好。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+														
+							<div class="Grandson-left">
+								<a href="index.php?act=raiders&op=raiders_info&id=90"><img src="/uploads/newses/news_20160816140819_3744.jpg" width="261" height="147"/></a>
+								<div class="Grandson-left-son">
+									<p>
+										<a href="index.php?act=raiders&op=raiders_info&id=90">未实名注册，将不能进入游戏</a>
+									</p>
+									<span class="Notes-world">根据文化部实施《网络游戏管理暂行办法》的要求，预计从2016年10月1日后，未进行“实名注册”的召唤师，将不能进入游戏。									</span>
+									<div class="comm-icon">
+										<img src="/home/tpl/pc/images/raiders_home/comm-icon.png" width="15" height="15"/>
+										<div class="comm-left-world">
+											<span>0</span> 条评论
+										</div>
+										<div class="comm-icon-date">
+											2016-08-16										</div>
+									</div>
+								</div>
+								<hr />
+							</div>
+							
+																					
+						</div>
+						                         	<div class="pages" style="float:left">
+                                <div id="Pagination" class="Pagination"></div>
+                                <div class="searchPage">
+                                    <span class="page-sum">共<strong class="allPage">13</strong>页</span>
+                                    <span class="page-go">到第<input type="text">页</span>
+                                    <a href="javascript:;" class="page-btn">GO</a>
+                                </div>
+                            </div>
+												</div>
+					<div class="bodyer-right">
+						<div class="hot-comment" id="three">
+                            <div class="bodyer-top-name" style=" margin-top:4px;">
+                                <p>今日热评</p>
+                            </div>
+							<ul>
+								<!--gl4 是4条， gl8是8条-->
+								<!--1条红色的。2条白色的 -->
+								<!--规律是三条key值是0,0,1   1,2,3   2,4,5   3,6,7-->
+								
+								  
+																<li class="world-bg">
+									<a href="index.php?act=news&op=news_info&id=85">解谜冒险游戏《Rusty&nbspLake》系列新作首度曝光</a>
+								</li>
+								 <!--因为0乘以2还是零-->
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=95">二次元卡牌游戏《妖怪百姬》 国服今年秋季正式上线</a>
+								</li>
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=94">7月27日体验服停机更新公告</a>
+								</li>
+																								<li class="world-bg">
+									<a href="index.php?act=news&op=news_info&id=76">皮卡堂后续作品年底上线 《皮卡堂3D》官方截图曝光</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=93">暑期奥运积分冲冲冲强力来袭</a>
+								</li>
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=92">新英雄-蔡文姬&nbsp最萌奶妈登场</a>
+								</li>
+																								<li class="world-bg">
+									<a href="index.php?act=news&op=news_info&id=17">部落冲突8本部落战阵&nbspX型风车阵与大本外置阵</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=91">王者荣耀-QQ钱包暑期专享福利</a>
+								</li>
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=90">未实名注册，将不能进入游戏</a>
+								</li>
+																								<li class="world-bg">
+									<a href="index.php?act=news&op=news_info&id=10">《梦幻西游》无双版2016奥运活动正式开启</a>
+								</li>
+								   
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=89">张飞皮肤【乱世虎臣】霸气来袭</a>
+								</li>
+								<li class="world-sm">
+									<a href="index.php?act=news&op=news_info&id=88">《王者荣耀》20160811&nbsp消极比赛惩罚公告</a>
+								</li>
+																															</ul>
+						</div>
+						<div class="game-evaluating">
+							<div id="pstion">
+								<div class="gd-btn0" style=" top:16px;">
+									<div class="gd-btn1">
+										<a href="index.php?act=news&op=news_class&class_id=38"><img src="/home/tpl/pc/images/newses/gd-btn.png" /></a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="bodyer-top-name" style=" margin-top:-24px;">
+                                <p>新闻公告</p>
+                            </div>
+							<ul>
+																								<li>
+									<a href="index.php?act=news&op=news_info&id=22" class="medium-size">PSVR国行正式开启预售 不到一分钟已被抢光</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=29" class="medium-size">火线精英手机版AK47天王星解析</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=39" class="medium-size">《王者荣耀》无限火力在哪里设置</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=53" class="medium-size">《天天酷跑》克隆战盛大开幕 九色鹿和貂蝉前来助阵</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=56" class="medium-size">《保卫萝卜3》版本更新公告 新增全新道具时间旅行</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=59" class="medium-size">《王者荣耀》校园争霸赛计划公布！全国高校，团起来</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=64" class="medium-size">休闲竞技手游《爆爆堂》&nbsp8月16日爆笑开测</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=65" class="medium-size">掌上舞蹈新体验 时尚音舞手游《舞动青春》即将来袭</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=73" class="medium-size">夏侯惇和橘右京哪个强 战士英雄的能力比拼</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=79" class="medium-size">《天天酷跑》克隆战限定名单图片版本</a>
+								</li>
+																							</ul>
+							<div id="pstion">
+								<div class="gd-btn0" style=" top:40px;">
+									<div class="gd-btn1">
+										<a href="index.php?act=news&op=news_class&class_id=42"><img src="/home/tpl/pc/images/newses/gd-btn.png" /></a>
+									</div>
+								</div>
+							</div>
+                            <div class="bodyer-top-name">
+                                <p>手游评测</p>
+                            </div>
+							<ul>
+																								<li>
+									<a href="index.php?act=news&op=news_info&id=10" class="medium-size">《梦幻西游》无双版2016奥运活动正式开启</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=16" class="medium-size">我的游戏</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=17" class="medium-size">部落冲突8本部落战阵&nbspX型风车阵与大本外置阵</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=18" class="medium-size">史上最灵敏小红帽《红色故事—小红帽》将上架</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=19" class="medium-size">女玩家深夜不要独自玩《Pokemon&nbspGo》以免被性侵</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=20" class="medium-size">《校花的贴身高手》AppStore&nbsp8月9日上架</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=21" class="medium-size">巨人网络44亿美元收购凯撒休闲社交游戏业务</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=22" class="medium-size">PSVR国行正式开启预售 不到一分钟已被抢光</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=23" class="medium-size">国服将至？传《Pokemon&nbspGo》已架好中国服务器</a>
+								</li>
+																<li>
+									<a href="index.php?act=news&op=news_info&id=24" class="medium-size">《罗马时代》游戏兵种大全</a>
+								</li>
+																							</ul>
+						</div>
+						<div class="game-evaluating">
+							<div id="pstion">
+								<div class="gd-btn0" style="top:380px;">
+									<div class="gd-btn1">
+										<a href="index.php?act=news&op=news_class&class_id=37"><img src="/home/tpl/pc/images/newses/gd-btn.png" /></a>
+									</div>
+								</div>
+							</div>
+                            <div class="bodyer-top-name" style=" margin-top:340px;">
+                                <p>手游活动</p>
+                            </div>
+							<ul>
+																								
+								<li>
+									<a href="" class="medium-size">《梦幻西游》无双版2016奥运活动正式开启</a>
+								</li>
+								
+																
+								<li>
+									<a href="" class="medium-size">《天堂2：血盟》8.18即将安卓二测&nbsp二测激活预约中</a>
+								</li>
+								
+																
+								<li>
+									<a href="" class="medium-size">王者荣耀GO！李白韩信撕逼大战！</a>
+								</li>
+								
+																
+								<li>
+									<a href="" class="medium-size">TGA移动游戏大奖赛战火重燃&nbsp王者巅峰</a>
+								</li>
+								
+																
+								<li>
+									<a href="" class="medium-size">8月9日全服不停机更新公告</a>
+								</li>
+								
+																
+								<li>
+									<a href="" class="medium-size">张飞皮肤【乱世虎臣】霸气来袭</a>
+								</li>
+								
+																							</ul>
+						</div>
+					</div>
+					<div class="shw1180">
+						<div class="cfix md_sl">
+							<div class="col_w900 left">
+                            	
+								<div style="width:1140px; height:366px; overflow:hidden ;" id="liangfajdt">
+                                
+                                	<div class="bodyer-top-name" style="margin-bottom:16px;" id="four">
+                                        <p>看看美图</p>
+                                    </div>
+									<ul style="width:1140px; height:311px; overflow:hidden" class="kwicks kwicks-horizontal kwicks-processed">
+										<li class="kwicks-selected kwicks-collapsed kwicks-expanded" style="left:0px;width:39px;">
+											<span style="float: left; font-size: 24px; color: #fff; margin-top: 274px; margin-left: 20px;"></span>
+											<div style="position:relative">
+												<div class="jdt_img">
+													<a href="http://sy.3dmgame.com/news/85.html"><img src="/uploads/adv/adv_20160815134558_9045.jpg" width="700" height="311"></a>
+												</div>
+												<div class="white lf_jdttitle">
+													<span style="float: left; font-size: 24px; color: #fff; margin-left: 20px;"></span>
+													<a href="http://sy.3dmgame.com/news/85.html">天天酷跑克隆战限定名单</a>
+												</div>
+												<div class="lf_jdtbg"></div>
+											</div>
+										</li>
+										<li style="left:40px;width:600px;">
+											<span style="float: left; font-size: 24px; color: #fff; margin-top: 274px; margin-left: 20px;"></span>
+											<div style="position:relative">
+												<div class="jdt_img">
+													<a href="http://sy.3dmgame.com/news/86.html"><img src="/uploads/adv/adv_20160815134558_4229.jpg" width="700" height="311"></a>
+												</div>
+												<div class="white lf_jdttitle">
+													<span style="float: left; font-size: 24px; color: #fff; margin-left: 20px;"></span>
+													<a href="http://sy.3dmgame.com/news/86.html">官方截图曝光《皮卡堂3D》年底将上线</a>
+												</div>
+												<div class="lf_jdtbg"></div>
+											</div>
+										</li>
+										<li style="left:641px;width:39px;" class="kwicks-collapsed">
+											<span style="float: left; font-size: 24px; color: #fff; margin-top: 274px; margin-left: 20px;"></span>
+											<div style="position:relative">
+												<div class="jdt_img">
+													<a href="http://sy.3dmgame.com/news/84.html"><img src="/uploads/adv/adv_20160815134558_8440.jpg" width="700" height="311"></a>
+												</div>
+												<div class="white lf_jdttitle">
+													<span style="float: left; font-size: 24px; color: #fff; margin-left: 20px;"></span>
+													<a href="http://sy.3dmgame.com/news/84.html">反击第一步&nbspXOne美国销量7月超PS4</a>
+												</div>
+												<div class="lf_jdtbg"></div>
+											</div>
+										</li>
+										<li style="left:681px;width:39px;" class="kwicks-collapsed">
+											<span style="float: left; font-size: 24px; color: #fff;  margin-top: 274px; margin-left: 2px;"></span>
+											<div style="position:relative">
+												<div class="jdt_img">
+													<a href="http://sy.3dmgame.com/news/76.html"><img src="/uploads/adv/adv_20160815134558_9725.jpg" width="700" height="311"></a>
+												</div>
+												<div class="white lf_jdttitle">
+													<span style="float: left; font-size: 24px; color: #fff; margin-left: 20px;"></span>
+													<a href="http://sy.3dmgame.com/news/76.html">《魔王本色》上架：连自杀都清新脱俗</a>
+												</div>
+												<div class="lf_jdtbg"></div>
+											</div>
+										</li>
+										<li style="left:721px;width:39px;" class="kwicks-collapsed">
+											<span style="float: left; font-size: 24px; color: #fff;margin-top: 274px; margin-left: 20px;"></span>
+											<div style="position:relative">
+												<div class="jdt_img">
+													<a href="http://sy.3dmgame.com/news/74.html"><img src="/uploads/adv/adv_20160815134558_8331.jpg" width="700" height="311"></a>
+												</div>
+												<div class="white lf_jdttitle">
+													<span style="float: left; font-size: 24px; color: #fff; margin-left: 20px;"></span>
+													<a href="http://sy.3dmgame.com/news/74.html">一周神回复：想养老的时候月卡就来了</a>
+												</div>
+												<div class="lf_jdtbg"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="bodyer_3" id="five">
+							<div class="bd3-left">
+								<div id="pstion">
+									<div class="gd-btn" style="top:40px;">
+										<div class="gd-btn1">
+											<img src="/home/tpl/pc/images/newses/gd-btn.png" />
+										</div>
+									</div>
+								</div>
+                                <div class="bodyer-top-name">
+                                    <p>游戏视频</p>
+                                </div>
+							</div>
+							<div class="img-left">
+								<div class="video">
+									<div class="video-img">
+										<a href="#"><img src="/home/tpl/pc/images/newses/12315641561hl.png" /></a>
+									</div>
+									<div class="img-shadow">
+										<a href="#"></a>
+									</div>
+									<a href="#" class="img-lj">
+										<p style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">仙侠龙传</p>
+										<p class="img-zt">脱离大厂依旧有货 新游《大召唤师》将于今春上架</p>
+									</a>
+								</div>
+							</div>
+							<div class="img-left">
+								<div class="video">
+									<div class="video-img">
+										<a href="#"><img src="/home/tpl/pc/images/newses/231231526310.png" /></a>
+									</div>
+									<div class="img-shadow">
+										<a href="#"></a>
+									</div>
+									<a href="#" class="img-lj">
+										<p style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">仙侠龙传</p>
+										<p class="img-zt">脱离大厂依旧有货 新游《大召唤师》将于今春上架</p>
+									</a>
+								</div>
+							</div>
+							<div class="img-left">
+								<div class="video">
+									<div class="video-img">
+										<a href="#"><img src="/home/tpl/pc/images/newses/356418561564156.png" /></a>
+									</div>
+									<div class="img-shadow">
+										<a href="#"></a>
+									</div>
+									<a href="#" class="img-lj">
+										<p style="font-size:16px; font-weight:bold;  margin-left:10px; margin-top:-8px;">仙侠龙传</p>
+										<p class="img-zt">脱离大厂依旧有货 新游《大召唤师》将于今春上架</p>
+									</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="wld-right" id="six">
+                            <div class="bodyer-top-name" style=" margin-top:26px;">
+                                <p>视频排行</p>
+                            </div>
+							<div style="margin-top: 15px; ">
+								<img src="/home/tpl/pc/images/newses/phxh.png" style="display:block; float:left"/>
+								<div class="ph">
+									<ul>
+										<li>
+											<a href="#" class="medium-size"> 3月14日手游限免玩个够：环日手游限免玩个够：环日手游限免玩个够：环游世界与火箭赛车</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 关于数上架双平</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> SEEC育成类游戏《周刊魔法少女》Android上</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 3月14日手游限免玩个够：环游世界与火箭赛车</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 关于数字“十”的解谜像游戏《鬼丸》上架双平</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> SEEC育成类游戏《周刊魔法少女》Android上</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 关于数字“十”的解谜像游戏《鬼丸》上架双平</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 文艺毛线新作《渔夫的天空》开发进度已到</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> 关于数字“十”的解谜像游戏《鬼丸》上架双</a>
+										</li>
+										<li>
+											<a href="#" class="medium-size"> SEEC育成类游戏《周刊魔法少女》Android上</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div style="height: 25px; background-color: #F0F0F0;"></div>
+			<div id="footer">
+				<p>
+					<a href="#">关于3DMGAME</a>丨
+					<a href="#">招聘信息</a>丨
+					<a href="#">网站地图</a>丨
+					<a href="#">联系我们</a>丨
+					<a href="#">家长监护工程</a>丨
+					<a href="#">友情链接</a>
+				</p>
+				<p>
+					CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+					<a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+				</p>
+				<p class="footers-p">
+					<a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/newses/button_old_71.gif" /></a>
+					<a href="#">广告合作<img src="/home/tpl/pc/images/newses/button_old_71.gif" /></a>
+					<a href="#">全区<img src="/home/tpl/pc/images/newses/button_old_71.gif" /></a>
+				</p>
+				<img src="/home/tpl/pc/images/newses/xyqy.jpg" class="footer-img" />
+				<hr />
+			</div>
+
+			<div class="side_bar hide">
+				<div class="bggcl">
+
+					<ul>
+						<!--<div class="li">
+							<li>
+								<a href=" #one">热点</a>
+							</li>
+						</div>-->
+						<div class="li">
+							
+								<a href="#tow"><li>新闻</li></a>
+							
+						</div>
+						<!--<div class="li">
+							<li>
+								<a href="#tow">评测</a>
+							</li>
+						</div>-->
+						<!--<div class="li">
+							<li>
+								<a href="#three">热评</a>
+							</li>
+						</div>-->
+						<div class="li">
+							
+								<a href="#four"><li>美图</li></a>
+							
+						</div>
+						<div class="li">
+							
+								<a href="#five"><li>视频</li></a>
+							
+						</div>
+						<!--<div class="li">
+							<li>
+								<a href="#six">排行</a>
+							</li>
+						</div>-->
+						<div class="li">
+							
+								<a href="#header"><li>&and;</li></a>
+							
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/newses/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/newses/jquery.slideBox.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/newses/jquery.pagination.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/newses/jquery.kwicks.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+
+	<script>
+		jQuery(function($) {
+			$('#demo2').slideBox({
+				direction: 'top', //left,top#方向
+				duration: 0.3, //滚动持续时间，单位：秒
+				easing: 'linear', //swing,linear//滚动特效
+				delay: 5, //滚动延迟时间，单位：秒
+				startIndex: 1 //初始焦点顺序
+			});
+		});
+	</script>
+	<!--分页-->
+<script type="text/javascript">
+	// When document has loaded, initialize pagination and form 
+	//$(document).ready(function() {
+		//$("#Pagination").pagination("10",{link_to:'index.php?act=game_lib&op=index'});
+	//});
+	$(document).ready(function () { 
+		//TotalNum 总数　这里写死了 
+		var TotalNum = 200; 
+		//首次加载 
+	   // pageselectCallback(0); 
+		//分页事件 
+		
+		$("#Pagination").pagination("13", { 
+			prev_text: "上一页", 
+			next_text: "下一页", 
+			current_page:0,
+			num_edge_entries: 2, 
+			num_display_entries:2, 
+			//回调 
+			callback: pageselectCallback 
+		}); 
+	 
+		function pageselectCallback(page) { 
+			//window.loaction.href = window.loaction.href;
+			var num = page+1;
+			window.location.href = 'index.php?act=news&page='+num;
+			//window.open("indexpage="+page,"_blank");
+		} 
+	}); 
+</script>
+
+	<script type="text/javascript">
+		$(function() {
+			jdt_lie_w = ($("#liangfajdt ul").width() - 700) / ($("#liangfajdt ul li").length - 1);
+			jdt_lie_w = Math.ceil(jdt_lie_w);
+			jdt_lie_sed = $("#liangfajdt ul").width() - jdt_lie_w * ($("#liangfajdt ul li").length - 1);
+			$("#liangfajdt ul li").css("width", Number(jdt_lie_w) - 1);
+			//$("#liangfajdt ul li.selected").css("width",jdt_lie_sed);
+			$('.kwicks').kwicks({
+				minSize: Number(jdt_lie_w) - 1,
+				spacing: 1,
+				behavior: 'slideshow'
+			});
+		});
+	</script>
+    
+	<script>
+		$(window).scroll(function() {
+			var scroll_len = $(window).scrollTop();
+			if(scroll_len > 10) {
+				$('.side_bar').fadeIn();
+			} else {
+				$('.side_bar').fadeOut();
+			};
+		});
+	</script>
+    <script>
+	$('.comm-icon').mouseenter(function(){
+		$(this).find('img').attr('src','/home/tpl/pc/images/raiders_home/comm-icon2.png')
+		})
+	$('.comm-icon').mouseleave(function(){
+		$(this).find('img').attr('src','/home/tpl/pc/images/raiders_home/comm-icon.png')
+		})
+	</script>
+
+</html>

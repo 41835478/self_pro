@@ -1,0 +1,2663 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<title>下载排行榜</title>
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/ranking_down/3DMgame8.1.css" />
+		<link type="text/css" href="http://sy.3dmgame.com/home/tpl/pc/css/ranking_down/ku_list.css" rel="stylesheet" />
+		<meta http-equiv=“X-UA-Compatible” content=“IE=8″>
+		<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+	</head>
+
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/header/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/header/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="g/" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="g/"><li>找游戏</li></a>
+                <a href="news/"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="gl/"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+							<li>
+								<a href="#" style="color:#26afdc;">排行榜</a>
+							</li>
+							<!--
+							<li>
+								<a href="#">玩家推荐榜</a>
+							</li>
+							<li>
+								<a href="#">问答</a>
+							</li>-->
+							<!--<li>
+								<a href="#">公告</a>
+							</li>
+							<li>
+								<a href="#">攻略</a>
+							</li>
+							<li>
+								<a href="#">视频</a>
+							</li>-->
+							<!--<li>
+								<a href="#">心得</a>
+							</li>-->
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<a href="#">当前位置</a>:
+				<a href="#"> 首页 </a>&gt;
+				<a href="#"> 排行榜 </a>&gt;
+				<a href="#" id="ph_name"> 下载排行榜</a>
+			</div>
+			<div class="bodyer">
+				<div class="bodyer-b">
+					<div class="bodyer-left">
+						<div class="ph">
+							<div class="ph_l">
+								<p class="ph_l_z"><img src="/home/tpl/pc/images/ranking_down/zph_03.png"><span>总排行榜</span></p>
+                                <p class="ph_l_z_lis ac ph_tab_b"><span>下载排行榜</span></p>
+								<!--
+								<p class="ph_l_az_lis_c ph_tab_b"><span>玩家推荐榜</span></p>   
+								-->								
+							    <p class="ph_l_az_lis_c ph_tab_b"><span>热门榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>期待榜</span></p>
+							    <p class="ph_l_z"><img src="/home/tpl/pc/images/ranking_down/androidb.png"><span>安卓排行榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>安卓游戏榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>安卓单机榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>安卓网游榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>安卓推荐榜</span></p>
+                                <p class="ph_l_z"><img src="/home/tpl/pc/images/ranking_down/iosb.png"><span>IOS排行榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>IOS游戏榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>IOS单机榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>IOS网游榜</span></p>
+                                <p class="ph_l_az_lis_c ph_tab_b"><span>IOS推荐榜</span></p>
+								
+								
+							</div>
+							<div class="ph_tab">
+								<ul  style="display: block"  class="ph_tab_con">
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>南京麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">有20张硬花，只能碰牌，杠牌，不能吃牌.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/njmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul class="ph_tab_con">
+									<!--remen-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>南京麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">有20张硬花，只能碰牌，杠牌，不能吃牌.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/njmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/tlj/"><img src="/uploads/games/game_logo/27/logo_20160809180841_3537.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>拖拉机</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">国内非常盛行的一种4人扑克牌游戏，可选择一副牌、两副牌或者三副牌进行...</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/tlj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zwdzjs2/"><img src="/uploads/games/game_logo/38/logo_20160810094004_9410.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>植物大战僵尸2</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《植物大战僵尸2》强势登陆中国，植物们与僵尸们史诗般的斗争，将在不同的时空维度中进行续写。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zwdzjs2/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/kdygfk/"><img src="/uploads/games/game_logo/42/logo_20160810100844_3957.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>口袋妖怪复刻</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">重温经典，激情不减！PVP联合竞技玩法大升级，携手小伙伴一起角逐精灵大师赛！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/kdygfk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/uploads/games/game_logo/44/logo_20160810105137_8604.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>行尸走肉：无人地带</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">选择最佳的生存策略和最合适的战术技巧是整部游戏的核心所在。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/xszrwrdd/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qsmy/"><img src="/uploads/games/game_logo/46/logo_20160810110606_4389.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>秦时明月</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">官方手游，正版授权、原声演绎、原创团队加盟监制！提前同步《秦时明月五君临天下》动漫剧情，登录游戏抢鲜观看动漫精彩看点！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qsmy/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/fhws/"><img src="/uploads/games/game_logo/47/logo_20160810111725_1898.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>烽火王师</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《烽火王师》都可以带你穿越回那个群雄并起的年代，主宰属于你自己的人生！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/fhws/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/jjws/"><img src="/uploads/games/game_logo/48/logo_20160810114541_9575.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>机甲无双</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">燃即正义！究极战斗手游，全球百万用户预约！燃爆热血战斗手游！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/jjws/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																											
+								</ul>
+								<ul class="ph_tab_con">
+									<!--qidai-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/jb/"><img src="/uploads/games/game_logo/4/logo_20160726143748_3266.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>聚爆</span>
+												<p style="margin: 4px 0;">角色 | 07-26</p>
+												<p style="height: 46px;">科幻背景下的生效给游戏有很好的代入感，道具可以切换的装甲需要玩家在通关时拿下成就勋章来解锁，实为良心作品！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/jb/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ndnd/"><img src="/uploads/games/game_logo/6/logo_20160809172632_6104.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>纳豆纳豆</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ndnd/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/bwlb3/"><img src="/uploads/games/game_logo/8/logo_20160810184207_9044.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>保卫萝卜3</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;">让体验过的人在重温经典的同时，也能感受不一样的游戏乐趣。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/bwlb3/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ttkp/"><img src="/uploads/games/game_logo/16/logo_20160810171056_4438.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>天天酷跑</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">闪靓的坐骑、萌动的宠物、超多元素，你还在 等待什么？</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ttkp/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/gzhz/"><img src="/uploads/games/game_logo/17/logo_20160810171146_9122.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>公主化妆</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">模拟装扮游戏，化上精致的妆容，让你的粉丝羡慕去...</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/gzhz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/mtt/"><img src="/uploads/games/game_logo/18/logo_20160810171309_5780.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>我的会说话的汤姆</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">可与人互动的虚拟宠物，能用滑稽声音复述您说的话...</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/mtt/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/mmihoyo/"><img src="/uploads/games/game_logo/30/logo_20160809182115_5519.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>崩坏学园2</span>
+												<p style="margin: 4px 0;">角色 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/mmihoyo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ttxq/"><img src="/uploads/games/game_logo/32/logo_20160809183227_1171.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>天天象棋</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">一款中国流传十分广泛的游戏，腾讯出品的天天象棋致力于打造一款风格清新休闲</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ttxq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hlpsz/"><img src="/uploads/games/game_logo/33/logo_20160809183858_6740.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐拼三张</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">这是一款玩法简单有趣的游戏，喜欢的玩家可以和自己的QQ好友一起来玩哦。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hlpsz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qbpkq/"><img src="/uploads/games/game_logo/40/logo_20160810095012_9268.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>去吧皮卡丘</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">精灵卡牌对战手游，千万玩家力荐《去吧皮卡丘》独特的模拟精灵养成玩法，百种美萌精灵助你战场取胜！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qbpkq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																											
+								</ul>
+								<ul class="ph_tab_con">
+									<!--2-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>南京麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">有20张硬花，只能碰牌，杠牌，不能吃牌.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/njmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																											
+								</ul>
+								<ul class="ph_tab_con">
+									<!--2-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>南京麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">有20张硬花，只能碰牌，杠牌，不能吃牌.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/njmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																											
+								</ul>
+								<ul class="ph_tab_con">
+									<!--3-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/uploads/games/game_logo/28/logo_20160809180922_2950.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>穿越火线：枪战王者</span>
+												<p style="margin: 4px 0;">射击 | 08-09</p>
+												<p style="height: 46px;">《穿越火线》手游是枪战题材手游大作，总类繁多的枪械，模式多样的地图，让爱好射击的玩家爱不释手!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul class="ph_tab_con">
+									<!--4-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/fxqdz/"><img src="/uploads/games/game_logo/35/logo_20160810091701_7011.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>飞行棋大战</span>
+												<p style="margin: 4px 0;">棋牌 | 08-10</p>
+												<p style="height: 46px;">飞行棋大战一触即发！飞行棋是大家必玩的童年经典游戏，给许多人留下了不少的童年回忆。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/fxqdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zwdzjs2/"><img src="/uploads/games/game_logo/38/logo_20160810094004_9410.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>植物大战僵尸2</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《植物大战僵尸2》强势登陆中国，植物们与僵尸们史诗般的斗争，将在不同的时空维度中进行续写。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zwdzjs2/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/bwlb2jdmx/"><img src="/uploads/games/game_logo/41/logo_20160810095843_5709.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>保卫萝卜2：极地冒险</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">此游戏是继《保卫萝卜》后的又一画风超萌老少皆爱的热门塔防游戏，继承了前作美轮美奂的游戏画面，痛快淋漓的战斗画面.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/bwlb2jdmx/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul class="ph_tab_con">
+									<!--5-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>南京麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">有20张硬花，只能碰牌，杠牌，不能吃牌.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/njmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/tlj/"><img src="/uploads/games/game_logo/27/logo_20160809180841_3537.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>拖拉机</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">国内非常盛行的一种4人扑克牌游戏，可选择一副牌、两副牌或者三副牌进行...</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/tlj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/uploads/games/game_logo/28/logo_20160809180922_2950.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>穿越火线：枪战王者</span>
+												<p style="margin: 4px 0;">射击 | 08-09</p>
+												<p style="height: 46px;">《穿越火线》手游是枪战题材手游大作，总类繁多的枪械，模式多样的地图，让爱好射击的玩家爱不释手!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hldn/"><img src="/uploads/games/game_logo/29/logo_20160809181700_7941.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐斗牛</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">由腾讯出品的一款地方性、游戏速度极快、刺激的棋牌游戏.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hldn/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hlmj/"><img src="/uploads/games/game_logo/31/logo_20160809182540_8336.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">腾讯倾力打造的一款经典国粹棋牌游戏</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hlmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zhzm/"><img src="/uploads/games/game_logo/34/logo_20160810091100_8036.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>造化之门</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">游戏根据小说，增加了修仙系统，玩家可以通过灵根、修真、技能DIY等方式来培养主角，这种设定大大增强了游戏的策略性与趣味性。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zhzm/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hhow/"><img src="/uploads/games/game_logo/36/logo_20160810091708_5495.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>炉石传说</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">暴雪出品卡牌游戏，与全世界玩家一起在魔法世界决斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hhow/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/dtcq/"><img src="/uploads/games/game_logo/37/logo_20160810093028_7341.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>刀塔传奇</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">2014年国民动作卡牌手游！《刀塔传奇》震撼开启，十大活动送上百万豪礼，让你成为全世界最幸福的玩家！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/dtcq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul class="ph_tab_con">
+									<!--6-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hlmj/"><img src="/uploads/games/game_logo/31/logo_20160809182540_8336.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">腾讯倾力打造的一款经典国粹棋牌游戏</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hlmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/fxqdz/"><img src="/uploads/games/game_logo/35/logo_20160810091701_7011.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>飞行棋大战</span>
+												<p style="margin: 4px 0;">棋牌 | 08-10</p>
+												<p style="height: 46px;">飞行棋大战一触即发！飞行棋是大家必玩的童年经典游戏，给许多人留下了不少的童年回忆。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/fxqdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hhow/"><img src="/uploads/games/game_logo/36/logo_20160810091708_5495.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>炉石传说</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">暴雪出品卡牌游戏，与全世界玩家一起在魔法世界决斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hhow/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/dtcq/"><img src="/uploads/games/game_logo/37/logo_20160810093028_7341.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>刀塔传奇</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">2014年国民动作卡牌手游！《刀塔传奇》震撼开启，十大活动送上百万豪礼，让你成为全世界最幸福的玩家！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/dtcq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zwdzjs2/"><img src="/uploads/games/game_logo/38/logo_20160810094004_9410.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>植物大战僵尸2</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《植物大战僵尸2》强势登陆中国，植物们与僵尸们史诗般的斗争，将在不同的时空维度中进行续写。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zwdzjs2/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hqg/"><img src="/uploads/games/game_logo/50/logo_20160810190657_9429.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>花千骨</span>
+												<p style="margin: 4px 0;">角色 | 08-10</p>
+												<p style="height: 46px;">Q版萌系中国风人物造型，唯美古风套装，尽显修仙风韵。独创二段式破防立体打击感，一键释放华丽大招，打击感爆棚，令你欲罢不能。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hqg/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ayc4/"><img src="/uploads/games/game_logo/59/logo_20160815101857_1466.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>爱养成4</span>
+												<p style="margin: 4px 0;">模拟 | 08-15</p>
+												<p style="height: 46px;">“爱养成”系列全新篇章，在架空古典风格背景下，玩家将扮演妖皇真灵转世成为人族，并且与宫廷生活结下渊源。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ayc4/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul class="ph_tab_con">
+									<!--7-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地狱边境</span>
+												<p style="margin: 4px 0;">休闲 | 07-28</p>
+												<p style="height: 46px;">在游戏中，玩家必须想尽办法生存下来，探索未知的世界，建立自己的房子，与野兽搏斗并烹饪食谱，维持自己的健康状态，让自己不断存活下去。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/limbo/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>蛇蛇大作战</span>
+												<p style="margin: 4px 0;">休闲 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ssdzz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>全民飞机大战</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qmfjdz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>会说话的安吉拉</span>
+												<p style="margin: 4px 0;">休闲 | 08-09</p>
+												<p style="height: 46px;">欢迎来到“我的安吉拉”绚丽的世界!领养专属于你的虚拟宠物安吉拉，为她带来奇妙精彩的一生!你要悉心呵护她，帮她从猫咪宝宝成长为猫咪美女哦!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hshdanjl/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/djddz/"><img src="/uploads/games/game_logo/25/logo_20160809172331_5435.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>单机斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">单机斗地主都会带给您不一样的极致体验!让您的休闲生活High起来！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/djddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zwdzjs2/"><img src="/uploads/games/game_logo/38/logo_20160810094004_9410.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>植物大战僵尸2</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《植物大战僵尸2》强势登陆中国，植物们与僵尸们史诗般的斗争，将在不同的时空维度中进行续写。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zwdzjs2/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/bwlb2jdmx/"><img src="/uploads/games/game_logo/41/logo_20160810095843_5709.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>保卫萝卜2：极地冒险</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">此游戏是继《保卫萝卜》后的又一画风超萌老少皆爱的热门塔防游戏，继承了前作美轮美奂的游戏画面，痛快淋漓的战斗画面.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/bwlb2jdmx/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ss/"><img src="/uploads/games/game_logo/57/logo_20160815093327_3868.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>地铁跑酷</span>
+												<p style="margin: 4px 0;">动作 | 08-15</p>
+												<p style="height: 46px;">全球超人气跑酷手游《地铁跑酷》给你精彩、好玩的游戏体验。画面精致、操作流畅、玩法刺激、滑板炫酷、角色丰富、特效绚丽……全民皆玩，全球3亿用户的共同选择，一路狂奔，环游世界，你会爱上它！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ss/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																										</ul>
+								<ul  class="ph_tab_con">
+									<!--8-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>QQ欢乐斗地主</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/qqhlddz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/uploads/games/game_logo/28/logo_20160809180922_2950.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>穿越火线：枪战王者</span>
+												<p style="margin: 4px 0;">射击 | 08-09</p>
+												<p style="height: 46px;">《穿越火线》手游是枪战题材手游大作，总类繁多的枪械，模式多样的地图，让爱好射击的玩家爱不释手!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hldn/"><img src="/uploads/games/game_logo/29/logo_20160809181700_7941.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐斗牛</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">由腾讯出品的一款地方性、游戏速度极快、刺激的棋牌游戏.</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hldn/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hlmj/"><img src="/uploads/games/game_logo/31/logo_20160809182540_8336.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">腾讯倾力打造的一款经典国粹棋牌游戏</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hlmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zhzm/"><img src="/uploads/games/game_logo/34/logo_20160810091100_8036.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>造化之门</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">游戏根据小说，增加了修仙系统，玩家可以通过灵根、修真、技能DIY等方式来培养主角，这种设定大大增强了游戏的策略性与趣味性。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zhzm/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hhow/"><img src="/uploads/games/game_logo/36/logo_20160810091708_5495.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>炉石传说</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">暴雪出品卡牌游戏，与全世界玩家一起在魔法世界决斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hhow/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/dtcq/"><img src="/uploads/games/game_logo/37/logo_20160810093028_7341.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>刀塔传奇</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">2014年国民动作卡牌手游！《刀塔传奇》震撼开启，十大活动送上百万豪礼，让你成为全世界最幸福的玩家！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/dtcq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/glxbwysw/"><img src="/uploads/games/game_logo/39/logo_20160810170022_9493.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>乖离性百万亚瑟王</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">继扩散性百万亚瑟王之后的正统续作。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/glxbwysw/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/uploads/games/game_logo/44/logo_20160810105137_8604.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>行尸走肉：无人地带</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">选择最佳的生存策略和最合适的战术技巧是整部游戏的核心所在。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/xszrwrdd/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								<ul  class="ph_tab_con">
+									<!--9-->
+																												<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>1</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>部落冲突</span>
+												<p style="margin: 4px 0;">休闲 | 07-25</p>
+												<p style="height: 46px;">游戏以策略战争为主题，通过经营自己的村庄，玩家可逐渐强大兵力，进而与成千上万的玩家进行战斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:3.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing1.png">
+											<a href="http://sy.3dmgame.com/g/coc/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>2</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>王者荣耀</span>
+												<p style="margin: 4px 0;">射击 | 08-01</p>
+												<p style="height: 46px;"></p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/wzry/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>3</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/yydzpk/"><img src="/uploads/games/game_logo/24/logo_20160812085940_6867.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>遇悦德州扑克</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">遇悦德州扑克让你领略“手机棋牌”的无限乐趣!精致的游戏画面，极致的操作体验，更多土豪美女邀你来战，不管你是德州高手还是新手上路，都可以在遇悦德州扑克中体验到前所未有的刺激!</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/yydzpk/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>4</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hlmj/"><img src="/uploads/games/game_logo/31/logo_20160809182540_8336.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>欢乐麻将</span>
+												<p style="margin: 4px 0;">棋牌 | 08-09</p>
+												<p style="height: 46px;">腾讯倾力打造的一款经典国粹棋牌游戏</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hlmj/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>5</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hhow/"><img src="/uploads/games/game_logo/36/logo_20160810091708_5495.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>炉石传说</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">暴雪出品卡牌游戏，与全世界玩家一起在魔法世界决斗。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hhow/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>6</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/dtcq/"><img src="/uploads/games/game_logo/37/logo_20160810093028_7341.png"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>刀塔传奇</span>
+												<p style="margin: 4px 0;">卡牌 | 08-10</p>
+												<p style="height: 46px;">2014年国民动作卡牌手游！《刀塔传奇》震撼开启，十大活动送上百万豪礼，让你成为全世界最幸福的玩家！</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/dtcq/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>7</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/zwdzjs2/"><img src="/uploads/games/game_logo/38/logo_20160810094004_9410.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>植物大战僵尸2</span>
+												<p style="margin: 4px 0;">策略 | 08-10</p>
+												<p style="height: 46px;">《植物大战僵尸2》强势登陆中国，植物们与僵尸们史诗般的斗争，将在不同的时空维度中进行续写。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/zwdzjs2/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>8</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/hqg/"><img src="/uploads/games/game_logo/50/logo_20160810190657_9429.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>花千骨</span>
+												<p style="margin: 4px 0;">角色 | 08-10</p>
+												<p style="height: 46px;">Q版萌系中国风人物造型，唯美古风套装，尽显修仙风韵。独创二段式破防立体打击感，一键释放华丽大招，打击感爆棚，令你欲罢不能。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/hqg/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>9</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/blr/"><img src="/uploads/games/game_logo/51/logo_20160810192345_3140.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>不良人</span>
+												<p style="margin: 4px 0;">角色 | 08-10</p>
+												<p style="height: 46px;">8亿点播，千万粉丝，3D成人武侠RPG手游《不良人》震撼来袭！传承最热国漫经典剧情、延续原著角色恩怨情仇。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/blr/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																			<li>
+                                    	<i class="triangle-topleft">
+                                        	<span>10</span>
+                                        </i>
+										<div class="ph_tab_c_t">
+                                        	<a href="http://sy.3dmgame.com/g/ayc4/"><img src="/uploads/games/game_logo/59/logo_20160815101857_1466.jpg"></a>
+                                            <div class="ph_tab_c_t_r">
+												<span>爱养成4</span>
+												<p style="margin: 4px 0;">模拟 | 08-15</p>
+												<p style="height: 46px;">“爱养成”系列全新篇章，在架空古典风格背景下，玩家将扮演妖皇真灵转世成为人族，并且与宫廷生活结下渊源。</p>
+											</div>
+                                        </div>
+										<div class="ph_tab_c_b">
+											<span>评分:0.0分</span>
+                                            <img src="/home/tpl/pc/images/index/xingxing0.png">
+											<a href="http://sy.3dmgame.com/g/ayc4/"><p>下载游戏</p></a>
+										</div>
+                                    </li>
+																		
+								</ul>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="bodyer-right">
+						<div class="bodyer-top-name"  style="margin-top: 10px;">
+							<p>分类排行</p>
+						</div>
+						<div class="flph">
+																					<a href="http://sy.3dmgame.com/g/0_0_0_0_7_0_0_0_1_t.html"><p>休闲</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_16_0_0_0_1_t.html"><p>棋牌</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_21_0_0_0_1_t.html"><p>策略</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_32_0_0_0_1_t.html"><p>卡牌</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_33_0_0_0_1_t.html"><p>角色</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_34_0_0_0_1_t.html"><p>射击</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_35_0_0_0_1_t.html"><p>电竞</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_43_0_0_0_1_t.html"><p>动作</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_44_0_0_0_1_t.html"><p>模拟</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_48_0_0_0_1_t.html"><p>竞速</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_0_0_49_0_0_0_1_t.html"><p>体育</p></a>
+																				</div>
+                        <div class="bodyer-top-name" style="margin-top:20px;">
+							<p>标签排行</p>
+						</div>
+						<div class="flph">
+																					<a href="http://sy.3dmgame.com/g/0_0_1_0_0_0_0_0_1_t.html"><p>女生</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_2_0_0_0_0_0_1_t.html"><p>二次元</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_3_0_0_0_0_0_1_t.html"><p>动漫</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_4_0_0_0_0_0_1_t.html"><p>小说改编</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_5_0_0_0_0_0_1_t.html"><p>古典</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_6_0_0_0_0_0_1_t.html"><p>二战</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_7_0_0_0_0_0_1_t.html"><p>可爱</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_9_0_0_0_0_0_1_t.html"><p>跑酷</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_10_0_0_0_0_0_1_t.html"><p>换装</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_12_0_0_0_0_0_1_t.html"><p>养成</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_13_0_0_0_0_0_1_t.html"><p>魔幻</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_14_0_0_0_0_0_1_t.html"><p>塔防</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_15_0_0_0_0_0_1_t.html"><p>僵尸</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_16_0_0_0_0_0_1_t.html"><p>闯关</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_17_0_0_0_0_0_1_t.html"><p>仙侠</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_18_0_0_0_0_0_1_t.html"><p>战争</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_19_0_0_0_0_0_1_t.html"><p>三国</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_20_0_0_0_0_0_1_t.html"><p>武侠</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_21_0_0_0_0_0_1_t.html"><p>生存</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_22_0_0_0_0_0_1_t.html"><p>像素</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_23_0_0_0_0_0_1_t.html"><p>密室</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_24_0_0_0_0_0_1_t.html"><p>逃脱</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_25_0_0_0_0_0_1_t.html"><p>男生</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_26_0_0_0_0_0_1_t.html"><p>恋爱</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_27_0_0_0_0_0_1_t.html"><p>3D</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_28_0_0_0_0_0_1_t.html"><p>即时战斗</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_29_0_0_0_0_0_1_t.html"><p>竞技</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_30_0_0_0_0_0_1_t.html"><p>多人对战</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_31_0_0_0_0_0_1_t.html"><p>对战</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_32_0_0_0_0_0_1_t.html"><p>娱乐</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_33_0_0_0_0_0_1_t.html"><p>益智</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_34_0_0_0_0_0_1_t.html"><p>竞速</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_35_0_0_0_0_0_1_t.html"><p>西游</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_36_0_0_0_0_0_1_t.html"><p>回合制</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_37_0_0_0_0_0_1_t.html"><p>Q版</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_38_0_0_0_0_0_1_t.html"><p>篮球</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_39_0_0_0_0_0_1_t.html"><p>经典</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_40_0_0_0_0_0_1_t.html"><p>格斗</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_43_0_0_0_0_0_1_t.html"><p>经营</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_44_0_0_0_0_0_1_t.html"><p>赛车</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_45_0_0_0_0_0_1_t.html"><p>电视改编</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_46_0_0_0_0_0_1_t.html"><p>日系</p></a>
+														<a href="http://sy.3dmgame.com/g/0_0_47_0_0_0_0_0_1_t.html"><p>冒险</p></a>
+																				</div>
+					</div>
+				</div>
+				<div id="footer">
+					<p>
+						<a href="#">关于3DMGAME</a>丨
+						<a href="#">招聘信息</a>丨
+						<a href="#">网站地图</a>丨
+						<a href="#">联系我们</a>丨
+						<a href="#">家长监护工程</a>丨
+						<a href="#">友情链接</a>
+					</p>
+					<p>
+						CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+						<a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+					</p>
+					<p class="footers-p">
+						<a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/ranking_down/button_old_71.gif" /></a>
+						<a href="#">广告合作<img src="/home/tpl/pc/images/ranking_down/button_old_71.gif" /></a>
+						<a href="#">全区<img src="/home/tpl/pc/images/ranking_down/button_old_71.gif" /></a>
+					</p>
+					<img src="/home/tpl/pc/images/ranking_down/xyqy.jpg" class="footer-img" />
+					<hr / style="width:80%; margin:0 auto; margin-top:-6px;">
+				</div>
+			</div>
+            <div class="side_bar hide">
+                    <div class="bggcl">
+                    <ul>
+                        <!--<div class="li">
+                            <li>
+                                <a href="#one">下载</a>
+                            </li>
+                        </div>-->
+                        <!--<div class="li">
+                             <a href="#tow"><li>介绍</li></a>
+                        </div>
+                        <div class="li">
+                             <a href="#three"><li>截图</li></a>
+                        </div>
+                        <div class="li">
+                             <a href="#four"><li>下载</li></a>
+                        </div>-->
+                        <!--<div class="li">
+                            <li>
+                                <a href="#five">功略</a>
+                            </li>
+                        </div>
+                        <div class="li">
+                            <li>
+                                <a href="#six">喜欢</a>
+                            </li>
+                        </div>-->
+                        <!--<div class="li">
+                              <a href="#seven"> <li>点评</li></a>
+                        </div>-->
+                        <div class="li" >
+                             <a href="#header"><li>&and;</li></a>
+                        </div>
+        
+                    </ul>
+                    </div>
+                </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/ranking_down/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/ranking_down/ku.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+    <script>
+	$('.side_bar').fadeOut();
+		$(window).scroll(function() {
+			var scroll_len = $(window).scrollTop();
+			if(scroll_len > 100) {
+				$('.side_bar').fadeIn();
+			} else {
+				$('.side_bar').fadeOut();
+			};
+		});
+	</script>
+    <script>
+    	$('.ph_tab_con').find('li:even').addClass('ad');
+    </script>
+
+	<script>
+		//$('.ph_tab_b').click(function(){
+//			var k = $(this).index();
+//			alert($(this).index())
+//			$('.ph_tab_con').hide();
+//			$('.ph_tab_con').eq(1).show();
+//		})
+	var alis = document.getElementsByClassName('ph_tab_b')
+	var alic = document.getElementsByClassName('ph_tab_con')
+//alert(alic.length)
+			var j = 2;
+		
+	
+	
+	alic[0].style.display = "none";
+	alic[1].style.display = "none";
+	alic[2].style.display = "none";
+	alic[3].style.display = "none";
+	alic[4].style.display = "none";
+	alic[5].style.display = "none";
+	alic[6].style.display = "none";
+	alic[7].style.display = "none";
+	alic[8].style.display = "none";
+	alic[9].style.display = "none";
+	alic[10].style.display = "none";
+	alic[j].style.display = "block";
+	$('.ph_tab_b').removeClass('ac');
+	$('.ph_tab_b').eq(j).addClass('ac');
+	
+	
+	
+	for(i=0;i<alis.length;i++){
+			alis[i].index = i;
+			alis[i].onclick=function(){
+				 j=this.index;
+	//alert(j)
+			alic[0].style.display = "none";
+			alic[1].style.display = "none";
+			alic[2].style.display = "none";
+			alic[3].style.display = "none";
+			alic[4].style.display = "none";
+			alic[5].style.display = "none";
+			alic[6].style.display = "none";
+			alic[7].style.display = "none";
+			alic[8].style.display = "none";
+			alic[9].style.display = "none";
+			alic[10].style.display = "none";
+			alic[j].style.display = "block";
+		}
+	}	
+		$('.ph_tab_b').click(function(){
+			$('.ph_tab_b').removeClass('ac');
+			$(this).addClass('ac');
+			var str = $('.ac').html();
+			//alert(str);
+			$('#ph_name').html(str);
+			str = str.replace(/<.*?>/ig,"");
+			$('title').html(str);
+		})
+
+	</script>
+
+</html>

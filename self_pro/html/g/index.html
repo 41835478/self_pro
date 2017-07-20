@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>手游_好玩的手游排行榜-3DM手机游戏</title>
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/game_lib/3DMgame2.0.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/game_lib/pagination.css" />
+		<link type="text/css" href="http://sy.3dmgame.com/home/tpl/pc/css/game_lib/ku_list.css" rel="stylesheet" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+	</head>
+
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/header/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/header/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="g/" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="g/"><li>找游戏</li></a>
+                <a href="news/"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="gl/"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+						<!--
+																			<li>
+								<a href="g">游戏库</a>
+							</li>
+													<li>
+								<a href="g">新闻</a>
+							</li>
+													<li>
+								<a href="gl">攻略</a>
+							</li>
+													<li>
+								<a href="index.php?act=special&op=special_home">专题</a>
+							</li>
+						 
+						 
+						-->
+						<li>
+							<a href="http://sy.3dmgame.com/g/" style="color:#26afdc;">游戏库</a>
+						</li>
+						<li>
+							<a href="http://sy.3dmgame.com/top/qd">期待榜</a>
+						</li>
+						<li>
+							<a href="http://sy.3dmgame.com/top/rm">热门榜</a>
+						</li>
+						<li>
+							<a href="index.php?act=game_lib">论坛</a>
+						</li>
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<a href="#">当前位置</a>:
+				<a href="#">游戏主题</a>&gt;
+				<a href="http://sy.3dmgame.com">首页</a>
+			</div>
+			<div class="bodyer">
+				<div class="bodyer-b">
+					<div class="bodyer-left">
+						<img src="/home/tpl/pc/images/game_lib/Game-classification.png" />
+						<div class="Menu">
+							<div class="Menu_2">
+							<div class="Menu2_1">
+									<div class="Menu21_1">系统：</div>
+									<div class="Menu21_2 Mh0" id="xitong">
+										<!--
+										<div class="YN list1" data-state="CLOSE">展开<b>&Lambda;</b></div>
+										-->
+										<div class="Menu212">
+											<a class="n"  onclick="search_keywords(0,'sy')" class="m" value="0">全部</a>
+											<a class="m"  onclick="search_keywords(1,'sy')" class="m" value="1">安卓</a>
+											<a class="m"  onclick="search_keywords(2,'sy')" class="n" value="2">IOS</a>
+										</div>
+									</div>
+								</div>
+								<div class="Menu2_1">
+									<div class="Menu21_1">类别：</div>
+									<div class="Menu21_2 Mh0" id="leibie">
+										<!--
+										<div class="YN list1" data-state="CLOSE">展开<b>&Lambda;</b></div>
+										-->
+										<div class="Menu212">
+											<a class="n" onclick="search_keywords(0,'lb')" class="n" value="0">全部</a>
+											<a class="m" onclick="search_keywords(1,'lb')" class="m" value="1">单机</a>
+											<a class="m" onclick="search_keywords(2,'lb')" class="m" value="2">网游</a>
+										</div>
+									</div>
+								</div>
+								
+								<script>
+									var arr;
+									var len
+									function search_nav(num,type){
+										search_keywords(num,type);
+										return 0;
+										var id = num;
+										var type = type;
+										$.post('index.php?act=search&op=nav',{id:id,type:type},function(data){
+											if(data.code == 1){
+												arr = data.data;
+												len = arr.length;
+												var html = '';
+												html += '<a class="n" id="lables_0" onclick="lables(0,\'tc\')" value="0">全部</a>';
+												for(var i=0;i<len;i++){
+													html += '<a class="m" id="lables_'+arr[i].id+'"  onclick="lables('+arr[i].id+',\'tc\')" value="'+arr[i].id+'">'+arr[i].name+'</a>';
+												}
+												if(html != ''){
+													$('#lables').html(html);
+												}
+											}
+											
+										},'json');
+									}
+									
+									function lables(num,type){
+										var html = '';
+										if(num == 0){
+											html += '<a class="n" id="lables_0" onclick="lables(0,\'tc\')" value="0" >全部</a>';
+											for(var i=0;i<len;i++){
+												html += '<a class="m" id="lables_'+arr[i].id+'"  onclick="lables('+arr[i].id+',\'tc\')">'+arr[i].name+'</a>';
+											}
+										}
+										if(num != 0){
+											html += '<a class="m" id="lables_0" onclick="lables(0,\'tc\')" value="0" >全部</a>';
+											for(var i=0;i<len;i++){
+												if(num == arr[i].id){
+													html += '<a class="n" id="lables_'+arr[i].id+'"  onclick="lables('+arr[i].id+',\'tc\')" value="'+arr[i].id+'" >'+arr[i].name+'</a>';
+												}else{
+													html += '<a class="m" id="lables_'+arr[i].id+'"  onclick="lables('+arr[i].id+',\'tc\')" value="'+arr[i].id+'" >'+arr[i].name+'</a>';
+												}
+												
+											}
+										}
+										if(html != ''){
+											$('#lables').html(html);
+										}
+										search_keywords(num,type);
+									}
+									
+								</script>
+								<div class="Menu2_1">
+									<div class="Menu21_1">类型：</div>
+									<div class="Menu21_2 Mh0">
+																					<div class="YN list1" data-state="CLOSE">展开<b>↓</b></div>
+																				
+										<div class="Menu212" id="leixing" >
+											<a class="n"  onclick="search_nav(0,'nav')" value="0" >全部</a>
+																																	<a  class="m"   onclick="search_nav(7,'nav')" value="7" >休闲</a>
+																						<a  class="m"   onclick="search_nav(16,'nav')" value="16" >棋牌</a>
+																						<a  class="m"   onclick="search_nav(21,'nav')" value="21" >策略</a>
+																						<a  class="m"   onclick="search_nav(32,'nav')" value="32" >卡牌</a>
+																						<a  class="m"   onclick="search_nav(33,'nav')" value="33" >角色</a>
+																						<a  class="m"   onclick="search_nav(34,'nav')" value="34" >射击</a>
+																						<a  class="m"   onclick="search_nav(35,'nav')" value="35" >电竞</a>
+																						<a  class="m"   onclick="search_nav(43,'nav')" value="43" >动作</a>
+																						<a  class="m"   onclick="search_nav(44,'nav')" value="44" >模拟</a>
+																						<a  class="m"   onclick="search_nav(48,'nav')" value="48" >竞速</a>
+																						<a  class="m"   onclick="search_nav(49,'nav')" value="49" >体育</a>
+																																</div>
+									</div>
+								</div>
+								
+								<div class="Menu2_1">
+									<div class="Menu21_1">题材：</div>
+									<div class="Menu21_2 Mh0" id="ticai">
+																					<div class="YN list1" data-state="CLOSE">展开<b>↓</b></div>
+																				<div class="Menu212" id='lables'>
+											<a onclick='lables(0,"tc")' class="n" value="0">全部</a>
+																																	<a class="m" onclick='lables(1,"tc")'  value="1">女生</a>
+																						<a class="m" onclick='lables(2,"tc")'  value="2">二次元</a>
+																						<a class="m" onclick='lables(3,"tc")'  value="3">动漫</a>
+																						<a class="m" onclick='lables(4,"tc")'  value="4">小说改编</a>
+																						<a class="m" onclick='lables(5,"tc")'  value="5">古典</a>
+																						<a class="m" onclick='lables(6,"tc")'  value="6">二战</a>
+																						<a class="m" onclick='lables(7,"tc")'  value="7">可爱</a>
+																						<a class="m" onclick='lables(9,"tc")'  value="9">跑酷</a>
+																						<a class="m" onclick='lables(10,"tc")'  value="10">换装</a>
+																						<a class="m" onclick='lables(12,"tc")'  value="12">养成</a>
+																						<a class="m" onclick='lables(13,"tc")'  value="13">魔幻</a>
+																						<a class="m" onclick='lables(14,"tc")'  value="14">塔防</a>
+																						<a class="m" onclick='lables(15,"tc")'  value="15">僵尸</a>
+																						<a class="m" onclick='lables(16,"tc")'  value="16">闯关</a>
+																						<a class="m" onclick='lables(17,"tc")'  value="17">仙侠</a>
+																						<a class="m" onclick='lables(18,"tc")'  value="18">战争</a>
+																						<a class="m" onclick='lables(19,"tc")'  value="19">三国</a>
+																						<a class="m" onclick='lables(20,"tc")'  value="20">武侠</a>
+																						<a class="m" onclick='lables(21,"tc")'  value="21">生存</a>
+																						<a class="m" onclick='lables(22,"tc")'  value="22">像素</a>
+																						<a class="m" onclick='lables(23,"tc")'  value="23">密室</a>
+																						<a class="m" onclick='lables(24,"tc")'  value="24">逃脱</a>
+																						<a class="m" onclick='lables(25,"tc")'  value="25">男生</a>
+																						<a class="m" onclick='lables(26,"tc")'  value="26">恋爱</a>
+																						<a class="m" onclick='lables(27,"tc")'  value="27">3D</a>
+																						<a class="m" onclick='lables(28,"tc")'  value="28">即时战斗</a>
+																						<a class="m" onclick='lables(29,"tc")'  value="29">竞技</a>
+																						<a class="m" onclick='lables(30,"tc")'  value="30">多人对战</a>
+																						<a class="m" onclick='lables(31,"tc")'  value="31">对战</a>
+																						<a class="m" onclick='lables(32,"tc")'  value="32">娱乐</a>
+																						<a class="m" onclick='lables(33,"tc")'  value="33">益智</a>
+																						<a class="m" onclick='lables(34,"tc")'  value="34">竞速</a>
+																						<a class="m" onclick='lables(35,"tc")'  value="35">西游</a>
+																						<a class="m" onclick='lables(36,"tc")'  value="36">回合制</a>
+																						<a class="m" onclick='lables(37,"tc")'  value="37">Q版</a>
+																						<a class="m" onclick='lables(38,"tc")'  value="38">篮球</a>
+																						<a class="m" onclick='lables(39,"tc")'  value="39">经典</a>
+																						<a class="m" onclick='lables(40,"tc")'  value="40">格斗</a>
+																						<a class="m" onclick='lables(43,"tc")'  value="43">经营</a>
+																						<a class="m" onclick='lables(44,"tc")'  value="44">赛车</a>
+																						<a class="m" onclick='lables(45,"tc")'  value="45">电视改编</a>
+																						<a class="m" onclick='lables(46,"tc")'  value="46">日系</a>
+																						<a class="m" onclick='lables(47,"tc")'  value="47">冒险</a>
+																																</div>
+									</div>
+								</div>
+								<div class="Menu2_1">
+									<div class="Menu21_1">语言：</div>
+									<div class="Menu21_2 Mh0" id="yuyan">
+										<div class="Menu212">
+											<a class="n" onclick="search_keywords(0,'la')"  value="0">全部</a>
+											<a class="m" onclick="search_keywords(1,'la')"  value="1">中文</a>
+											<a class="m" onclick="search_keywords(2,'la')"  value="2">汉化</a>
+											<a class="m" onclick="search_keywords(3,'la')"  value="3">英文</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="contents">
+							<div class="content-screen">
+								<p>筛选结果：全部 <span>68</span> 款单机游戏</p>
+							</div>
+							<div class="content-array">
+								<p>排序：<span><a onclick="search_keywords(0,'t_sort')" id="t_sort" value="0">时间排序↑</a></span><span><a id="p_sort" onclick="search_keywords(0,'p_sort')" value="0" >评分排序↓</a></span><span><a onclick="search_keywords(0,'h_sort')" id="h_sort" value="0">热度排序↓</a></span></p>
+							</div>
+						</div>
+						<div class="Download-Game-area">
+							<div class="Download-Game-area-top">
+																								<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg" /></a>
+										<p>全民飞机大战</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-09</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/njmj/"><img src="/uploads/games/game_logo/26/logo_20160809180249_1826.jpg" /></a>
+										<p>南京麻将</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-09</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/njmj/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/njmj/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/njmj/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/tlj/"><img src="/uploads/games/game_logo/27/logo_20160809180841_3537.jpg" /></a>
+										<p>拖拉机</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-09</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/tlj/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/tlj/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/tlj/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/uploads/games/game_logo/28/logo_20160809180922_2950.jpg" /></a>
+										<p>穿越火线：枪战王者</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-09</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/cyhxqzwz/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/hldn/"><img src="/uploads/games/game_logo/29/logo_20160809181700_7941.jpg" /></a>
+										<p>欢乐斗牛</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-09</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/hldn/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/hldn/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/hldn/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/zhzm/"><img src="/uploads/games/game_logo/34/logo_20160810091100_8036.png" /></a>
+										<p>造化之门</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/zhzm/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/zhzm/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/zhzm/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/kdygfk/"><img src="/uploads/games/game_logo/42/logo_20160810100844_3957.jpg" /></a>
+										<p>口袋妖怪复刻</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/kdygfk/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/kdygfk/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/kdygfk/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/uploads/games/game_logo/44/logo_20160810105137_8604.jpg" /></a>
+										<p>行尸走肉：无人地带</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/xszrwrdd/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/sjzfz3/"><img src="/uploads/games/game_logo/45/logo_20160810105853_1968.jpg" /></a>
+										<p>世界征服者3</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/sjzfz3/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/sjzfz3/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/sjzfz3/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/qsmy/"><img src="/uploads/games/game_logo/46/logo_20160810110606_4389.jpg" /></a>
+										<p>秦时明月</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/qsmy/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/qsmy/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/qsmy/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/fhws/"><img src="/uploads/games/game_logo/47/logo_20160810111725_1898.jpg" /></a>
+										<p>烽火王师</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/fhws/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/fhws/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/fhws/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/jjws/"><img src="/uploads/games/game_logo/48/logo_20160810114541_9575.jpg" /></a>
+										<p>机甲无双</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/jjws/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/jjws/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/jjws/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg" /></a>
+										<p>蛇蛇大作战</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/glxbwysw/"><img src="/uploads/games/game_logo/39/logo_20160810170022_9493.png" /></a>
+										<p>乖离性百万亚瑟王</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/glxbwysw/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/glxbwysw/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/glxbwysw/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/xxjqxc/"><img src="/uploads/games/game_logo/49/logo_20160810180943_5363.jpg" /></a>
+										<p>新仙剑奇侠传</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-10</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/xxjqxc/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/xxjqxc/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/xxjqxc/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/hdqb/"><img src="/uploads/games/game_logo/43/logo_20160810104104_8204.jpg" /></a>
+										<p>海岛奇兵</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-11</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/hdqb/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/hdqb/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/hdqb/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/lawrm/"><img src="/uploads/games/game_logo/56/logo_20160811190207_9580.jpg" /></a>
+										<p>战争领主</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-11</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/lawrm/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/lawrm/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/lawrm/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/uploads/games/game_logo/19/logo_20160812085715_9584.jpg" /></a>
+										<p>会说话的安吉拉</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-12</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/hshdanjl/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/uploads/games/game_logo/21/logo_20160812085850_5427.jpg" /></a>
+										<p>QQ欢乐斗地主</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-12</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/qqhlddz/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																<div class="dld-game" style="margin-right: 17px;">
+									<div class="dld-top">
+										<a href="http://sy.3dmgame.com/g/jstw/"><img src="/uploads/games/game_logo/61/logo_20160816102422_3531.png" /></a>
+										<p>极速逃亡</p>
+									</div>
+									<div class="dld-middle">
+										<p>日期: <span>16-08-16</span></p>
+										<p>系统： <span><a href="http://sy.3dmgame.com/g/jstw/"><img src="/home/tpl/pc/images/game_lib/az1421321.png"></a></span><span><a href="http://sy.3dmgame.com/g/jstw/"><img src="/home/tpl/pc/images/game_lib/pg323123.png"></a></span></p>
+									</div>
+									<div class="dld-bottom">
+										<div id="pstion">
+											<div class="dld-img">
+												<div class="dld-img1">
+													<a href="http://sy.3dmgame.com/g/jstw/"><img src="/home/tpl/pc/images/game_lib/dlod-img.png" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+																								
+								
+							</div>
+						</div>
+												<div class="pages" style="float:left">
+							<div id="Pagination"></div>
+							<div class="searchPage">
+								<span class="page-sum">共<strong class="allPage">4</strong>页</span>
+								<span class="page-go">跳转<input type="text">页</span>
+								<a href="javascript:;" class="page-btn">GO</a>
+							</div>
+						</div>
+											</div>
+					<div class="bodyer-right">
+						<div id="pstion">
+							<div class="gd-btn0">
+								<div class="gd-btn1">
+									<a href="http://sy.3dmgame.com/top/qd"><img src="/home/tpl/pc/images/game_lib/gd-btn.png" /></a>
+								</div>
+							</div>
+						</div>
+						<img src="/home/tpl/pc/images/game_lib/hope-ph.png" />
+						<div class="paihang" style="height: 440px; margin-bottom:5px ;">
+							<ul class="bodyer-right-phb clearfloat">
+																																<li>
+									<u style="background:#ff3b3c; margin-top:30px;" id='phblist'>1</u>
+									<div id="phbfist" class="game-pic" style="display:block;"><a href="http://sy.3dmgame.com/g/mtt/"><img src="/uploads/games/game_logo/18/logo_20160810171309_5780.jpg" width="54" height="54"></a></div>
+									<p style="font-weight:bold; color:#000;" id="gamename">我的会说话的汤姆<span id="phbnum" class="phbmove">&nbsp;休闲</span> </p>
+									<div class="dowl-game" id="phbdowl" style="margin-top:36px; background:#26AFDC"><a href="http://sy.3dmgame.com/g/mtt/" style="color:#ffffff;">下载</a></div>
+								</li>
+								
+																																<li>
+									<u style="background:#ff9600;">2</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ttxq/"><img src="/uploads/games/game_logo/32/logo_20160809183227_1171.jpg" width="54" height="54"></a></div>
+									<p>天天象棋<span>&nbsp;棋牌</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ttxq/">下载</a></div>
+								</li>
+																																<li>
+									<u style="background:#ff9600;">3</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/gzhz/"><img src="/uploads/games/game_logo/17/logo_20160810171146_9122.jpg" width="54" height="54"></a></div>
+									<p>公主化妆<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/gzhz/">下载</a></div>
+								</li>
+																																<li>
+									<u>4</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ttkp/"><img src="/uploads/games/game_logo/16/logo_20160810171056_4438.jpg" width="54" height="54"></a></div>
+									<p>天天酷跑<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ttkp/">下载</a></div>
+								</li>
+																																<li>
+									<u>5</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/qbpkq/"><img src="/uploads/games/game_logo/40/logo_20160810095012_9268.jpg" width="54" height="54"></a></div>
+									<p>去吧皮卡丘<span>&nbsp;策略</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/qbpkq/">下载</a></div>
+								</li>
+																																<li>
+									<u>6</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/mmihoyo/"><img src="/uploads/games/game_logo/30/logo_20160809182115_5519.jpg" width="54" height="54"></a></div>
+									<p>崩坏学园2<span>&nbsp;角色</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/mmihoyo/">下载</a></div>
+								</li>
+																																<li>
+									<u>7</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/hlpsz/"><img src="/uploads/games/game_logo/33/logo_20160809183858_6740.jpg" width="54" height="54"></a></div>
+									<p>欢乐拼三张<span>&nbsp;棋牌</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/hlpsz/">下载</a></div>
+								</li>
+																																<li>
+									<u>8</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/bwlb3/"><img src="/uploads/games/game_logo/8/logo_20160810184207_9044.jpg" width="54" height="54"></a></div>
+									<p>保卫萝卜3<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/bwlb3/">下载</a></div>
+								</li>
+																																<li>
+									<u>9</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ndnd/"><img src="/uploads/games/game_logo/6/logo_20160809172632_6104.jpg" width="54" height="54"></a></div>
+									<p>纳豆纳豆<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ndnd/">下载</a></div>
+								</li>
+																																<li>
+									<u>10</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/jb/"><img src="/uploads/games/game_logo/4/logo_20160726143748_3266.jpg" width="54" height="54"></a></div>
+									<p>聚爆<span>&nbsp;角色</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/jb/">下载</a></div>
+								</li>
+																															</ul>
+							
+						</div>
+						<div id="pstion">
+							<div class="gd-btn0">
+								<div class="gd-btn1">
+									<a href="http://sy.3dmgame.com/g/zzxz/"><img src="/home/tpl/pc/images/game_lib/gd-btn.png" /></a>
+								</div>
+							</div>
+						</div>
+						<img src="/home/tpl/pc/images/game_lib/game-dling.png" />
+																		
+						<div class="game-downloading">
+							<div class="game-dl-left">
+								<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" /></a>
+							</div>
+							<div class="game-dl-right">
+								<h3>休闲</h3>
+								<p>部落冲突</p>
+								<p><span>22</span>分钟前</p>
+							</div>
+						</div>
+												
+						<div class="game-downloading">
+							<div class="game-dl-left">
+								<a href="http://sy.3dmgame.com/g/jb/"><img src="/uploads/games/game_logo/4/logo_20160726143748_3266.jpg" /></a>
+							</div>
+							<div class="game-dl-right">
+								<h3>角色</h3>
+								<p>聚爆</p>
+								<p><span>22</span>分钟前</p>
+							</div>
+						</div>
+												
+						<div class="game-downloading">
+							<div class="game-dl-left">
+								<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" /></a>
+							</div>
+							<div class="game-dl-right">
+								<h3>休闲</h3>
+								<p>地狱边境</p>
+								<p><span>22</span>分钟前</p>
+							</div>
+						</div>
+												
+						<div class="game-downloading">
+							<div class="game-dl-left">
+								<a href="http://sy.3dmgame.com/g/ndnd/"><img src="/uploads/games/game_logo/6/logo_20160809172632_6104.jpg" /></a>
+							</div>
+							<div class="game-dl-right">
+								<h3>休闲</h3>
+								<p>纳豆纳豆</p>
+								<p><span>22</span>分钟前</p>
+							</div>
+						</div>
+												
+						<div class="game-downloading">
+							<div class="game-dl-left">
+								<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" /></a>
+							</div>
+							<div class="game-dl-right">
+								<h3>射击</h3>
+								<p>王者荣耀</p>
+								<p><span>22</span>分钟前</p>
+							</div>
+						</div>
+																	</div>
+				</div>
+				<div style="height: 25px; width:100%; background-color: #F0F0F0;" class=" fl">
+				</div>
+				<div id="footer" class=" fl">
+					<p>
+						<a href="#">关于3DMGAME</a>丨
+						<a href="#">招聘信息</a>丨
+						<a href="#">网站地图</a>丨
+						<a href="#">联系我们</a>丨
+						<a href="#">家长监护工程</a>丨
+						<a href="#">友情链接</a>
+					</p>
+					<p>
+						CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+						<a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+					</p>
+					<p class="footers-p">
+						<a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/game_lib/button_old_71.gif" /></a>
+						<a href="#">广告合作<img src="/home/tpl/pc/images/game_lib/button_old_71.gif" /></a>
+						<a href="#">全区<img src="/home/tpl/pc/images/game_lib/button_old_71.gif" /></a>
+					</p>
+					<img src="/home/tpl/pc/images/game_lib/xyqy.jpg" class="footer-img" />
+					<hr />
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/game_lib/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/game_lib/jquery.pagination.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/game_lib/ku.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+	<script type="text/javascript">
+		// When document has loaded, initialize pagination and form 
+		//$(document).ready(function() {
+			//$("#Pagination").pagination("10",{link_to:'index.php?act=game_lib&op=index'});
+		//});
+		$(document).ready(function () { 
+    //TotalNum 总数　这里写死了 
+    var TotalNum = 200; 
+    //首次加载 
+   // pageselectCallback(1); 
+    //分页事件 
+	
+    $("#Pagination").pagination("4", { 
+        prev_text: "上一页", 
+        next_text: "下一页", 
+		current_page:0,
+        num_edge_entries: 2, 
+        num_display_entries: 4, 
+        //回调 
+        callback: pageselectCallback 
+    }); 
+ 
+    function pageselectCallback(page) { 
+		//window.loaction.href = window.loaction.href;
+		var num = page+1;
+	//	window.location.href = 'index.php?act=game_lib&page='+num;
+	//	window.location.href = '' + '' + '',
+		window.location.href = "http://sy.3dmgame.com/g/0_0_0_0_0_0_0_0_" + num + "_t.html";
+		//window.open("indexpage="+page,"_blank");
+    } 
+}); 
+		 
+	</script>
+	<script>
+		$('.bodyer-right-phb li').mousemove(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$(this).find('u').css('margin-top','30px')
+			$(this).find('.dowl-game').css('margin-top','36px')
+			$(this).find('p').css({'margin':'-6px 0 0 0','color':'#000','font-weight':'bold','padding-top':'6px'})
+			$(this).find('.game-pic').show()
+			$(this).find('span').addClass("phbmove");
+			$(this).find('.dowl-game').css('background','#26AFDC')
+			$(this).find('.dowl-game a').css('color','#ffffff')
+
+			})
+		$('.bodyer-right-phb li').mouseenter(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$('span').removeClass("phbmove");
+			$('p').css({'margin':'','color':'','font-weight':'','padding-top':''})
+			$('.dowl-game').css('background','')
+			$('.dowl-game a').css('color','')
+			})
+	</script>
+<script>
+
+var leibie = '';
+var leixing = '';
+var ticai = '';
+var lang = '';
+var system = '';
+var t_sort = '';
+var p_sort = '';
+var h_sort = '';
+
+function search_keywords(num,type){ //查询链接
+	var str = '';
+	switch(type){
+		case 'lb':
+			str += num+'_';
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+			leixing = $('#leixing a[class=n]').attr('value');
+			t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = str + system + '_' + ticai+ '_' + lang + '_' + leixing + '_' + t_sort + '_' + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		case 'sy':
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+				t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + str + ticai+ '_' + lang + '_' + leixing + '_' + t_sort + '_' + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		
+		case 'tc':
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			//ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+				t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + str + lang + '_' + leixing + '_' + t_sort + '_' + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		
+		case 'la':
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			//lang = $('#yuyan a[class=n]').attr('value');
+			t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + ticai+ '_' + str + leixing + '_' + t_sort + '_' + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		case 'nav':
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+			t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + ticai+ '_' + lang + '_' + str + t_sort + '_' + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		case 't_sort':
+			if(num == 0){
+				num = 1;
+			}else{
+				num = 0;
+			}
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+			//t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + ticai+ '_' + lang + '_' + leixing + '_' + str + p_sort + '_' + h_sort + '_' + '1' + '_' + 't';
+			break;
+		case 'p_sort':
+			if(num == 0){
+				num = 1;
+			}else{
+				num = 0;
+			}
+			str += num+'_';
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+			t_sort = $('#t_sort').attr('value');
+			//p_sort = $('#p_sort').attr('value');
+			h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + ticai+ '_' + lang + '_' + leixing + '_' + t_sort + '_' + str  + h_sort + '_' + '1' + '_' + 'p';
+			break;
+		case 'h_sort':
+			if(num == 0){
+				num = 1;
+			}else{
+				num = 0;
+			}
+			str += num;
+			leixing = $('#leixing a[class=n]').attr('value');
+			leibie = $('#leibie a[class=n]').attr('value');
+			system = $('#xitong a[class=n]').attr('value');
+			ticai = $('#lables a[class=n]').attr('value');
+			lang = $('#yuyan a[class=n]').attr('value');
+			t_sort = $('#t_sort').attr('value');
+			p_sort = $('#p_sort').attr('value');
+			//h_sort = $('#h_sort').attr('value');
+			str = leibie + '_' + system + '_' + ticai+ '_' + lang + '_' + leixing + '_' + t_sort + '_' + p_sort + '_' + str  + '_' + '1' + '_' + 'h';
+			break;
+		default:
+			break;
+	}
+	window.location.href = str + '.html';
+}
+</script>
+</html>

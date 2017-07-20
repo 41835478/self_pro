@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>花千骨下载</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/game_down/head-model.css" />
+    <link href="http://sy.3dmgame.com/home/tpl/pc/css/game_down/starability-all.min.css" rel="stylesheet" type="text/css">
+    <link href="http://sy.3dmgame.com/home/tpl/pc/css/game_down/pagination.css" rel="stylesheet" type="text/css">
+</head>
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/top/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/top/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="index.php?act=game_lib" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="#"><li>找游戏</li></a>
+                <a href="#"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="#"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+							<li>
+								<a href="http://sy.3dmgame.com/g/" style="color:#26afdc;" target="_block">游戏库</a>
+							</li>
+							<li>
+								<a href="index.php?act=ranking&op=ranking_down&v=qidai">期待榜</a>
+							</li>
+							<li>
+								<a href="index.php?act=ranking&op=ranking_down&v=remen">热门榜</a>
+							</li>
+							<!--<li>
+								<a href="#">公告</a>
+							</li>
+							<li>
+								<a href="#">攻略</a>
+							</li>
+							<li>
+								<a href="#">视频</a>
+							</li>-->
+							<li>
+								<a href="#">论坛</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<a href="#">当前位置</a>:
+				<a href="#">首页</a>&gt;
+				<a href="#">游戏库</a>&gt;
+				<a href="#">花千骨</a>
+                &gt;
+				<a href="#">下载</a>
+			</div>
+			<div class="bodyer">
+				<div class="bodyer-b">
+					<div class="bodyer-top">
+						<div class="bodyer-top-name" id="one">
+							<p>游戏信息</p>
+						</div>
+						<div class="bodyer-top-con">
+							<div class="bodyer-top-con-left">
+								<div class="ry-zl">
+									<div class="ry-zl-pic">
+										<img src="/uploads/games/game_logo/50/logo_20160810190657_9429.jpg" alt="" width="130" height="130">
+										<span><img src="/home/tpl/pc/images/game_desc/frame160.png"></span>
+									</div>
+									<div class="ry-zl-txt">
+										<div class="ry-zl-txt-c">
+											<p>花千骨</p>
+											<ul>
+												<li style="background:none;color:black">标签：</li>
+																							</ul>
+										</div>
+										<p><b>游戏类型：</b><span>网游/角色</span><b>游戏语音：</b><span>中文&nbsp</span></p>
+										<p><b>支持平台：</b><span >安卓、IOS</span><b>发行厂商:</b><span>成都天象互动</span></p>
+										<div class="but">我要评分</div>
+										<div class="star">
+                                        	<div class="pingfen">
+											<div id="star">
+												<span></span>
+												<ul>
+													<li>
+														<a href="javascript:;">1</a>
+													</li>
+
+													<li>
+														<a href="javascript:;">2</a>
+													</li>
+
+													<li>
+														<a href="javascript:;">3</a>
+													</li>
+
+													<li>
+														<a href="javascript:;">4</a>
+													</li>
+
+													<li>
+														<a href="javascript:;">5</a>
+													</li>
+
+												</ul>
+												<span></span>
+												<p></p>
+											</div>
+											</div>
+                                        </div>
+						</div>
+								</div>
+								<div class="ry-zl-pf">
+									<img src="/home/tpl/pc/images/game_down//pf.jpg" alt="">
+									<p>0.0</p>
+								</div>
+								<div class="ry-zl-dp">
+									<b>编辑点评：</b>
+									<p>Q版萌系中国风人物造型，唯美古风套装，尽显修仙风韵。独创二段式破防立体打击感，一键释放华丽大招，打击感爆棚，令你欲罢不能。</p>
+								</div>
+							</div>
+							<div class="bodyer-top-con-right">
+								<div class="bodyer-top-r-top">
+									<img src="/home/tpl/pc/images/game_down/android.png" width="21">
+									<p>Android下载<a href="#" style="color:#72b127 !important; ">更多+</a></p>
+								</div>
+								<div class="bodyer-top-r-mid">
+									<ul>
+																														<li>王者荣耀3.0.1<span>游戏大小:102mb</span>评分:9.8											<div class="dowl"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+
+													</div>
+												</div>
+											</div>
+										</li>
+																				<li>王者荣耀3.0.1<span>游戏大小:102mb</span>评分:9.8											<div class="dowl"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+
+													</div>
+												</div>
+											</div>
+										</li>
+																				<li>王者荣耀3.0.1<span>游戏大小:102mb</span>评分:9.8											<div class="dowl"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+
+													</div>
+												</div>
+											</div>
+										</li>
+																													</ul>
+									<div class="bodyer-top-r-top">
+										<img src="/home/tpl/pc/images/game_down/iphone.png" width="21">
+										<p style="color:#26afdc;">IOS下载<a href="#">更多+</a></p>
+									</div>
+									<ul>
+																														<li style="border-bottom: none">王者荣耀3.0.1<span style="margin-left:20px; ">游戏大小:102mb</span>评分:9.8											<div class="dowl dowl-2"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+													</div>
+												</div>
+											</div>
+										</li>
+																				<li style="border-bottom: none">王者荣耀3.0.1<span style="margin-left:20px; ">游戏大小:102mb</span>评分:9.8											<div class="dowl dowl-2"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+													</div>
+												</div>
+											</div>
+										</li>
+																				<li style="border-bottom: none">王者荣耀3.0.1<span style="margin-left:20px; ">游戏大小:102mb</span>评分:9.8											<div class="dowl dowl-2"><a href="www.baidu.com">下载</a>
+<div class="dowl-wx">
+						<div class="dowl-wx-big speech-bubble speech-bubble-left">
+														<img src="/home/tpl/pc/images/game_desc/wxbig.png" width="94%" style="margin-top: 6%">
+														<p>扫一扫下载到手机</p>
+													</div>
+												</div>
+											</div>
+										</li>
+																													</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bodyer-left">
+						<div class="bodyer-left-tab">
+							<div class="investment_f">
+								<div class="investment_title" id="tow">
+									<div><a href="http://sy.3dmgame.com/g/hqg/" >介绍</a></div>
+									<div class="on"><a href="http://sy.3dmgame.com/g/hqg/d">下载</a></div>
+									<div><a href="http://sy.3dmgame.com/g/hqg/n">新闻</a></div>
+									<div><a href="http://sy.3dmgame.com/g/hqg/g">攻略</a></div>
+									<div><a href="http://sy.3dmgame.com/g/hqg/v">视频</a></div>
+								</div>
+								<div class="investment_con">
+									<div class="investment_con_list">
+									</div>
+									<div class="investment_con_list">
+										<div class="xz_l"><img src="/home/tpl/pc/images/game_down/androidbig.png"></div>
+										<div class="xz_c">
+											<ul>
+																																				
+												<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but">
+															<div class="xz_c_name_but_l">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+                                                                <div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+																								
+												<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but">
+															<div class="xz_c_name_but_l">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+                                                                <div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+																								
+												<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but">
+															<div class="xz_c_name_but_l">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+                                                                <div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+																																			</ul>
+										</div>
+										<div class="xz_l"><img src="/home/tpl/pc/images/game_down/ios.png"></div>
+										<div class="xz_c xz_c2" style="height:320px;">
+											<ul>
+												
+																																				<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but xz_c_name_but2">
+															<div class="xz_c_name_but_l xz_c_name_but_l2 ">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+																<div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+																								<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but xz_c_name_but2">
+															<div class="xz_c_name_but_l xz_c_name_but_l2 ">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+																<div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+																								<li>
+													<div class="xz_c_name">
+														<p>王者荣耀3.0.1</p>
+														<p>游戏大小:102mb</p>
+														<p>评分:9.8</p>
+														<div class="xz_c_name_but xz_c_name_but2">
+															<div class="xz_c_name_but_l xz_c_name_but_l2 ">
+																<i style=" margin-left: 8px;"><img src="/home/tpl/pc/images/special_game_down/dowl_03.png"></i>
+																<p><a href="www.baidu.com">下载</a></p>
+															</div>
+															<div class="xz_c_name_but_r">
+																<p><a href="www.baidu.com">二维码</a></p>
+																<div class="dowl-wx">
+                                                                    <div class="dowl-wx-big speech-bubble speech-bubble-left" >
+                                                                        <img src="/home/tpl/pc/images/special_game_down/wxbig.png" width="100" style="margin-top: 6%; margin-left:10px;">
+                                                                        <p>扫一扫下载到手机</p>
+                                                                    </div>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+												</li>
+																																			</ul>
+										</div>
+									</div>
+									<div class="investment_con_list">
+
+									</div>
+									<div class="investment_con_list">
+
+									</div>
+									<div class="investment_con_list">
+
+									</div>
+									<div class="investment_con_list">
+
+									</div>
+								</div>
+							</div>
+						</div>
+												<div class="dp">
+							<div class="bodyer-right-top" id="seven">
+								<b>点评一下</b>
+								<p></p>
+							</div>
+							<div class="dp-con">
+								﻿
+<script type="text/javascript">
+    var client_id = "cy2x2lUJoEMz";
+    var category_id = "753.1470016836";
+    var topic_source_id = "";
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.3dmgame.com/templets/common/pinglun/css/styles2.css">
+<script type="text/javascript" src="http://www.3dmgame.com/templets/common/pinglun/js/jquery.pagination.js"></script>
+<div class="QZmainL_comment" style="width:100%" >
+	<div id="new_comment">
+		<div class="hd-comment">
+			<div class="hd-comment-l">
+				评论<span class="Number_po">0</span>人参与，<span class="Number_so">0</span>条评论）
+			</div>
+			<div class="hd-comment-r" style="display: none;">
+			</div>
+		</div>
+		<div class="comment_publish">
+			<div class="content_inp_div">
+				<textarea placeholder="说几句?" autocomplete="off" class="content_inp"></textarea>
+			</div>
+			<div class="Send_comment">
+				<div class="face_out"></div>
+				<div class="submitComment">发表评论</div>
+			</div>
+			<div class="np-wrapper-face"></div>
+		</div>
+		<div class="comment_Login">
+			<div class="login_username_icon"></div>
+			<input type="text" id="pl_username" name="pl_username" value="" placeholder="3DM论坛账号登录" autocomplete="off" />
+			<div class="login_userpwd_icon"></div>
+			<input type="password" id="pl_password" name="pl_password" value="" />
+			<div class="Login_but"></div>
+			<div class="QQ_Login"></div>
+			<div class="comment_Register">
+				<a href="http://bbs.3dmgame.com/member.php?mod=register" target="_blank">注册</a>
+			</div>
+		</div>
+	</div>
+	<div class="hot_comment" style="display: none;">
+		<div class="comment_tips"><span>热门评论</span></div>
+		<div class="hot_comment_list"></div>
+	</div>
+	<div class="last_comment" id="last_comment_content">
+		<div class="comment_tips"><span>最新评论</span></div>
+		<div class="No_Comment">暂无评论</div>
+		<div class="last_comment_list" style="display: none;"></div>
+	</div>
+	<div class="hot_comment_topic" style="display: none;">
+		<p class="hot_topic_tips">热门话题</p>
+		<div class="hot_comment_topic_list"></div>
+	</div>
+	<div style="clear: both;"></div>
+	<div class="pinglun_pages">
+		<div class="pinglun_pagination" id="Pagination"></div>
+		<div class="searchPage">
+			<span class="page-sum">�?span class="allPage">1</span>�?/span>
+			<span class="page-go">跳转<input type="text" class="page-change-num" />�?/span>
+			<a href="javascript:;" class="page-btn">GO</a>
+		</div>
+	</div>
+</div>
+<div class="Mask" id="Mask"></div>
+<div class="np_popframe">
+	<div class="np_popframe_close"><a href="javascript:void(0);" class="pop_close"></a></div>
+	<div class="pop_comment_list"></div>
+</div>
+<div style="clear: both;"></div>
+<script type="text/javascript" src="http://www.3dmgame.com/templets/common/pinglun/js/pinglun2.js"></script>
+
+<style>
+.body_5 .QZmainL_comment{width:100%}
+.comment_Login .QQ_Login {
+    float: left;
+    width: 100px;
+    height: 30px;
+    border-radius:0;
+    background: url(http://www.3dmgame.com/templets/common/pinglun/images/icons.png) -121px -18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.comment_Login .comment_Register a {
+      float: left;
+    width: 100px;
+    height: 30px;
+    background: url(http://www.3dmgame.com/templets/common/pinglun/images/icons.png) -121px -18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.comment_Register{
+	color:#ffffff !important;}
+.comment_Register a{
+	font-weight:bold;
+	width:100px !important;
+	text-align:center !important;
+	line-height:40px;
+	color:#ffffff  !important;
+	font-size:16px !important;
+	width: 100px !important;
+	background:#26afdc !important;
+}
+.comment_Register a:hover{
+	background:#239cc4 !important;}
+</style>							</div>
+							<div class="go" style="margin-left:250px;">
+								<div class="pages" style="float:left">
+                                    <div id="Pagination" class="Pagination"></div>
+                                    <div class="searchPage">
+                                        <span class="page-sum">共<strong class="allPage">11</strong>页</span>
+                                        <span class="page-go">到第<input type="text">页</span>
+                                        <a href="javascript:;" class="page-btn">确定</a>
+                                    </div>
+                                </div>
+							</div >
+						</div>
+					</div>
+					<div class="bodyer-right" style="position: relative;">
+						<div style="display: block; position: absolute;">
+							<div class="bodyer-right-top">
+								<b>本类排行</b>
+								<a href="index.php?act=game_lib&v=0_0_0_0_33_0_0_0"><p></p></a>
+							</div>
+							<ul class="bodyer-right-phb clearfloat">
+																																	<li>
+									<u style="background:#ff3b3c; margin-top:30px;" id='phblist'>1</u>
+									<div id="phbfist" class="game-pic" style="display:block;"><a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" width="54" height="54"></a></div>
+									<p style="font-weight:bold; color:#000;" id="gamename">部落冲突<span id="phbnum" class="phbmove">&nbsp;休闲</span> </p>
+									<div class="dowl-game" id="phbdowl" style="margin-top:36px; background:#26AFDC"><a href="http://sy.3dmgame.com/g/coc/" style="color:#ffffff;">下载</a></div>
+								</li>
+																																		<li>
+									<u style="background:#ff9600;">2</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/jb/"><img src="/uploads/games/game_logo/4/logo_20160726143748_3266.jpg" width="54" height="54"></a></div>
+									<p>聚爆<span>&nbsp;角色</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/jb/">下载</a></div>
+								</li>	
+																																		<li>
+									<u style="background:#ff9600;">3</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" width="54" height="54"></a></div>
+									<p>地狱边境<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/limbo/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>4</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ndnd/"><img src="/uploads/games/game_logo/6/logo_20160809172632_6104.jpg" width="54" height="54"></a></div>
+									<p>纳豆纳豆<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ndnd/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>5</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" width="54" height="54"></a></div>
+									<p>王者荣耀<span>&nbsp;射击</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/wzry/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>6</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/bwlb3/"><img src="/uploads/games/game_logo/8/logo_20160810184207_9044.jpg" width="54" height="54"></a></div>
+									<p>保卫萝卜3<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/bwlb3/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>7</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ssdzz/"><img src="/uploads/games/game_logo/9/logo_20160810170814_6803.jpg" width="54" height="54"></a></div>
+									<p>蛇蛇大作战<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ssdzz/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>8</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/qmfjdz/"><img src="/uploads/games/game_logo/10/logo_20160809172711_9971.jpg" width="54" height="54"></a></div>
+									<p>全民飞机大战<span>&nbsp;射击</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/qmfjdz/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>9</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/ttkp/"><img src="/uploads/games/game_logo/16/logo_20160810171056_4438.jpg" width="54" height="54"></a></div>
+									<p>天天酷跑<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/ttkp/">下载</a></div>
+								</li>	
+																																		<li>
+									<u>10</u>
+									<div class="game-pic"><a href="http://sy.3dmgame.com/g/gzhz/"><img src="/uploads/games/game_logo/17/logo_20160810171146_9122.jpg" width="54" height="54"></a></div>
+									<p>公主化妆<span>&nbsp;休闲</span> </p>
+									<div class="dowl-game"><a href="http://sy.3dmgame.com/g/gzhz/">下载</a></div>
+								</li>	
+																																</ul>
+						</div>
+						<div style="display:block;  position: absolute; margin-top: 500px;" class="bodyer-right-but_con">
+							<div class="bodyer-right-top">
+								<b>正在下载</b>
+								<a href="http://sy.3dmgame.com?act=raiders&op=game_down_list"><p></p></a>
+							</div>
+							
+																					<div class="game-downloading" style="margin-top: 8px;height: 80px;">
+								<div class="game-dl-left">
+									<a href="http://sy.3dmgame.com/g/coc/"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" width="72" height="72" /></a>
+								</div>
+								<div class="game-dl-right">
+									<u>休闲</u>
+									<p><a href="http://sy.3dmgame.com/g/coc/">部落冲突</a></p>
+									<p><span>0</span>分钟前</p>
+								</div>
+							</div>
+														<div class="game-downloading" style="margin-top: 8px;height: 80px;">
+								<div class="game-dl-left">
+									<a href="http://sy.3dmgame.com/g/jb/"><img src="/uploads/games/game_logo/4/logo_20160726143748_3266.jpg" width="72" height="72" /></a>
+								</div>
+								<div class="game-dl-right">
+									<u>角色</u>
+									<p><a href="http://sy.3dmgame.com/g/jb/">聚爆</a></p>
+									<p><span>0</span>分钟前</p>
+								</div>
+							</div>
+														<div class="game-downloading" style="margin-top: 8px;height: 80px;">
+								<div class="game-dl-left">
+									<a href="http://sy.3dmgame.com/g/limbo/"><img src="/uploads/games/game_logo/5/logo_20160728155025_7922.jpg" width="72" height="72" /></a>
+								</div>
+								<div class="game-dl-right">
+									<u>休闲</u>
+									<p><a href="http://sy.3dmgame.com/g/limbo/">地狱边境</a></p>
+									<p><span>0</span>分钟前</p>
+								</div>
+							</div>
+														<div class="game-downloading" style="margin-top: 8px;height: 80px;">
+								<div class="game-dl-left">
+									<a href="http://sy.3dmgame.com/g/ndnd/"><img src="/uploads/games/game_logo/6/logo_20160809172632_6104.jpg" width="72" height="72" /></a>
+								</div>
+								<div class="game-dl-right">
+									<u>休闲</u>
+									<p><a href="http://sy.3dmgame.com/g/ndnd/">纳豆纳豆</a></p>
+									<p><span>0</span>分钟前</p>
+								</div>
+							</div>
+														<div class="game-downloading" style="margin-top: 8px;height: 80px;">
+								<div class="game-dl-left">
+									<a href="http://sy.3dmgame.com/g/wzry/"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" width="72" height="72" /></a>
+								</div>
+								<div class="game-dl-right">
+									<u>射击</u>
+									<p><a href="http://sy.3dmgame.com/g/wzry/">王者荣耀</a></p>
+									<p><span>0</span>分钟前</p>
+								</div>
+							</div>
+														
+						</div>
+					</div>
+
+				</div>
+				<div class="footer">
+					<div class="footer-con-box">
+						<div class="footer-con">
+                        	<div class="lbt-footers">
+                                <p>
+                                    <a href="#">关于3DMGAME</a>丨
+                                    <a href="#">招聘信息</a>丨
+                                    <a href="#">网站地图</a>丨
+                                    <a href="#">联系我们</a>丨
+                                    <a href="#">家长监护工程</a>丨
+                                    <a href="#">友情链接</a>
+                                </p>
+                                <p>
+                                    CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+                                    <a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+                                </p>
+                                <p class="footers-p">
+                                    <a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/game_down/button_old_71.gif" /></a>
+                                    <a href="#">广告合作<img src="/home/tpl/pc/images/game_down/button_old_71.gif" /></a>
+                                    <a href="#">全区<img src="/home/tpl/pc/images/game_down/button_old_71.gif" /></a>
+                                </p>
+                                <img src="/home/tpl/pc/images/game_down/xyqy.jpg" class="footer-img" />
+                                <hr />
+                            </div>
+						</div>
+					</div>
+				</div>
+                <div class="side_bar hide">
+                    <div class="bggcl">
+                    <ul>
+                        <!--<div class="li">
+                                <a href="#one"><li>下载</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#tow"><li>介绍</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#three"><li>截图</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#four"><li>视频</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#five"><li>功略</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#six"><li>喜欢</li></a>
+                        </div>
+                        <div class="li">
+                                <a href="#seven"><li>点评</li></a>
+                        </div>-->
+                        <div class="li">
+                                <a href="#header"><li>&and;</li></a>
+                        </div>
+                    </ul>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/game_down/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/game_down/star.js"></script>
+	<script src="http://sy.3dmgame.com/home/tpl/pc/js/game_down/ZoomPic.js"></script>
+    <script src="http://sy.3dmgame.com/home/tpl/pc/js/game_down/jquery.pagination.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+    <!--微信鼠标经过-->
+	<script>
+			$(".dowl-wx").mouseover(function(){
+			$(this).find('.dowl-wx-big').show();
+			});
+			$(".dowl-wx").mouseout(function(){
+			$(".dowl-wx-big").hide();
+			});
+	</script>
+    <!--tab-->
+    <script>
+		$(function() {
+			/*tab标签切换*/
+			function tabs(tabTit, on, tabCon) {
+				$(tabCon).each(function() {
+					$(this).children().eq(1).show();
+	
+				});
+				$(tabTit).each(function() {
+					$(this).children().eq(1).addClass(on);
+				});
+				$(tabTit).children().click(function() {
+					$(this).addClass(on).siblings().removeClass(on);
+					var index = $(tabTit).children().index(this);
+					$(tabCon).children().eq(index).show().siblings().hide();
+				});
+			}
+			tabs(".investment_title", "on", ".investment_con");
+	
+		})
+	</script>
+    <!--排行榜-->
+    <script>
+		$('.bodyer-right-phb li').mousemove(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$(this).find('u').css('margin-top','30px')
+			$(this).find('.dowl-game').css('margin-top','36px')
+			$(this).find('p').css({'margin':'-6px 0 0 0','color':'#000','font-weight':'bold','padding-top':'6px'})
+			$(this).find('.game-pic').show()
+			$(this).find('span').addClass("phbmove");
+			$(this).find('.dowl-game').css('background','#26AFDC')
+			$(this).find('.dowl-game a').css('color','#ffffff')
+
+			})
+		$('.bodyer-right-phb li').mouseenter(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$('span').removeClass("phbmove");
+			$('p').css({'margin':'','color':'','font-weight':'','padding-top':''})
+			$('.dowl-game').css('background','')
+			$('.dowl-game a').css('color','')
+			})
+	</script>
+    <!------固定导航------>
+    	<script>
+		$('.side_bar').fadeOut();
+			$(window).scroll(function() {
+				var scroll_len = $(window).scrollTop();
+				if(scroll_len > 100) {
+					$('.side_bar').fadeIn();
+				} else {
+					$('.side_bar').fadeOut();
+				};
+			});
+		</script>
+        
+        <!------跳转------>
+        <script type="text/javascript">
+			// When document has loaded, initialize pagination and form 
+			$(document).ready(function() {
+				$("#Pagination").pagination("11");
+			});
+		</script>
+        
+        <script>
+			/*
+			$('.tab-game').eq(0).click(function(){
+				$('.tab-game').css('background','#ffa800')
+				$(this).css('background','#ffb72b')
+				})
+			$('.tab-game').eq(1).click(function(){
+				$('.tab-game').css('background','#ffa800')
+				$(this).css('background','#ffb72b')
+				})
+				*/
+			//猜你喜欢
+			$('.tab-game-con').eq(0).show();
+			
+			$(".tab-game").each(function(i){
+			   $(this).click(function(){
+				   $('.tab-game-con').hide();
+				   $('.tab-game-con').eq(i).show();
+			   });
+			 });
+		</script>
+    
+</html>

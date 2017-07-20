@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<title>6.2</title>
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/news_info/3DMgame6.2.css" />
+		<link rel="stylesheet" href="http://sy.3dmgame.com/home/tpl/pc/css/news_info/pagination.css" />
+		<link type="text/css" href="http://sy.3dmgame.com/home/tpl/pc/css/news_info/ku_list.css" rel="stylesheet" />
+		<meta http-equiv=“X-UA-Compatible” content=“IE=8″>
+	</head>
+
+	<body>
+		<div id="header">
+				<div id="header">
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/index/jquery-1.7.min.js"></script>
+		<div class="header_a">
+       		<div class="header_lis_a fl">
+            	<img src="/home/tpl/pc/images/top/meun.png">
+				<link rel="stylesheet" href="/home/tpl/pc/css/top/top.css" />
+                <p class="fl">全站导航</p>
+                <span></span>
+                <div class="lis_meun_a">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="ac_blue">新闻中心</a>
+                            <a href="#" class="ac_red">游戏新闻</a>
+                            <a href="#">游戏杂谈</a>
+                            <a href="#">游戏前瞻</a>
+                            <a href="#" class="ac_red">游戏评测</a>
+                            <a href="#">游戏盘点</a>
+                            <a href="#">原创精品</a>
+                        </li>
+                        <li>
+                        	<a href="index.php?act=game_lib" class="ac_blue">游戏库</a>
+                            <a href="#" class="ac_red">角色扮演</a>
+                            <a href="#">动作</a>
+                            <a href="#" class="ac_red">射击</a>
+                            <a href="#">体育</a>
+                            <a href="#">赛车</a>
+                            <a href="#">策略</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">图片集</a>
+                            <a href="#">游戏截图</a>
+                            <a href="#">游戏壁纸</a>
+                            <a href="#">COSplay</a>
+                            <a href="#" class="ac_red">美女</a>
+                            <a href="#">雷人囧图</a>
+                            <a href="#">showgirl</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">视频</a>
+                            <a href="#">视频攻略</a>
+                            <a href="#" class="ac_red">3dm速攻组</a>
+                            <a href="#">视频评测</a>
+                            <a href="#">游戏预告</a>
+                            <a href="#">游戏试玩</a>
+                            <a href="#">玩家原创</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="ac_blue">下载站</a>
+                            <a href="#" class="ac_red">单机游戏</a>
+                            <a href="#">独立游戏</a>
+                            <a href="#" class="ac_red">游戏补丁</a>
+                            <a href="#">模拟器</a>
+                            <a href="#">PSP游戏</a>
+                            <a href="#">NDS游戏</a>
+                        </li>
+                        <li style="border-right:none;">
+                        	<a href="#" class="ac_blue">攻略中心</a>
+                            <a href="#" class="ac_red">游戏攻略</a>
+                            <a href="#">游戏秘籍</a>
+                            <a href="#">游戏宝典</a>
+                            <a href="#">心得体会</a>
+                            <a href="#">常见问题</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="fl">
+            	<a href="http://sy.3dmgame.com"><li style=" color:#d64747;">首页</li></a>
+                <a href="#"><li>找游戏</li></a>
+                <a href="#"><li>看新闻</li></a>
+                <a href="#"><li>下资源</li></a>
+                <a href="#"><li>搜攻</li></a>
+                <a href="#"><li>瞧视频</li></a>
+                <a href="#"><li>淘图</li></a>
+                <a href="#"><li>买正</li></a>
+                <a href="#"><li>游戏硬件</li></a>
+                <a href="#"><li>论坛</li></a>
+            </ul>
+            <div class="fr login_a"><a href="#">登录</a><a href="#">注册</a>
+			</div>
+        </div>
+	</div>
+	<!--游戏id-->
+	<input type="hidden" id="game_id" value="60">
+	
+	 <script>
+		//头部下拉菜单
+		$('.header_lis_a').mouseenter(function(){
+			$('.lis_meun_a').show()
+			}).mouseleave(function(){
+				$('.lis_meun_a').hide()
+		})
+	</script>			<div id="Navigation">
+				<div class="nav">
+					<div class="nav-left">
+						<ul>
+							<li>
+								<a href="#" style="color:#26afdc;">首页</a>
+							</li>
+							<li>
+								<a href="#">资讯</a>
+							</li>
+							<li>
+								<a href="#">盘点</a>
+							</li>
+							<li>
+								<a href="#">产业</a>
+							</li>
+							<li>
+								<a href="#">人物</a>
+							</li>
+							<li>
+								<a href="#">动态</a>
+							</li>
+							<li>
+								<a href="#">评测</a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-right">
+						<!--搜索-->
+						
+<form  action="http://so.3dmgame.com/" method="get" target="_blank">
+					<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+						<div class="radius" style="top:-2px;"></div>
+						<div class="radius" style="top:31px;"></div>
+						<div class="searchMenu">
+							<div class="searchSelected" id="searchSelected">游戏</div>
+							<div style="display:none;" class="searchTab" id="searchTab">
+								<div class="radius" style="top:259px;"></div>
+								<div class="radius" style="top:259px;left:59px;"></div>
+								<ul>
+									<li>游戏</li>
+									<li>资讯</li>
+									<li>攻略</li>
+								</ul>
+							</div>
+						</div>
+						<input  id="kw" maxlength="100" size="40" name="keyword" type="text" placeholder="请输入关键字" autocomplete="off" required="required" />
+						<input type="hidden" value="9" name="type" id="type" />
+						<div style="background-image:url(../../images/index/bg.png);" class="searchBtn"><button id="searchBtn" type="submit">sousou</button></div>
+					</div>
+				</form>
+<!--
+<form action="http://so.3dmgame.com/" method="get" target="_blank">
+							<div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';">
+								<div class="radius" style="top:-2px;"></div>
+								<div class="radius" style="top:31px;"></div>
+								<div class="searchMenu">
+									<div class="searchSelected" id="searchSelected">安卓</div>
+									<div style="display:none;" class="searchTab" id="searchTab">
+										<div class="radius" style="top:259px;"></div>
+										<div class="radius" style="top:259px;left:59px;"></div>
+										<ul>
+											<li class="">安卓</li>
+											<li>苹果</li>
+											<li>网游</li>
+											<li>资讯</li>
+										</ul>
+									</div>
+								</div>
+								<input name="keyword" type="text"  placeholder="请输入关键字" autocomplete="off" />
+								<div class="searchBtn">
+												<button id="searchBtn" type="submit">sousou</button>
+					</div>
+							</div>
+</form>
+-->
+<script type="text/javascript" src="http://sy.3dmgame.com/res/js/search/search.js"></script>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bodyer">
+			<div class="bodyer-a">
+				<a href="#">当前位置</a>:
+				<a href="#">游戏主题</a>&gt;
+				<a href="index.php">首页</a>&gt;
+				<a href="#"> 手游攻略中心 </a>&gt;
+				<a href="#">《诛仙手游》：拿捏得当的动作元素，使其更像传统端游</a>
+			</div>
+			<style>
+				.content p{
+					line-height:32px;
+					font-size:14px;
+				}
+				.content img{
+					margin:10px 0;
+				}
+				.zy_con{
+					font-size:14px;
+				}
+			</style>
+			<div class="bodyer">
+				<div class="bodyer-b">
+					<div class="bodyer-left">
+						<div style="float:left">
+						<div class="bt_top">
+							<p class="bt_top_bt">《诛仙手游》：拿捏得当的动作元素，使其更像传统端游</p>
+							<p class="bt_top_time">3dmgame.com 发布时间：2016-08-15 14:35 （<span>网友评论0条</span>） 来源：互联网 编辑：阿猫</span></p>
+						</div>
+						
+						<div class="zy_con">
+													<p>8月10日，完美世界自研MMORPG游戏《诛仙手游》正式开启公测，这是完美世界又一款以《诛仙》小说IP为主题制作的游戏作品。该作品亮相ChinaJoy时引发了过去《诛仙》端游粉丝的关注，作为沿袭诛仙之名的正统手游新作，该作又是否会给玩家带来当年的感动。							</p>
+													</div>
+						</div>
+						
+						<div class="content" style="float:left">
+						<p style="text-align: left;">8月10日，完美世界自研MMORPG游戏《诛仙手游》正式开启公测，这是完美世界又一款以《诛仙》小说IP为主题制作的游戏作品。该作品亮相ChinaJoy时引发了过去《诛仙》端游粉丝的关注，作为沿袭诛仙之名的正统手游新作，该作又是否会给玩家带来当年的感动。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242730831028.jpg" title="1471242730831028.jpg" alt="1.jpg" style="max-width:650px"/></p><p style="text-align: left;"><strong>画面建模优秀 动画效果欠佳</strong></p><p style="text-align: left;">在进入《诛仙手游》时，该作给人最直观印象就是优秀的画面。出色的建模、艳丽的地图场景都令人印象深刻。游戏以张小凡叛出青云山，女主之一碧瑶身死作为游戏的开场，剑拔弩张的气氛凸显了游戏出色的画面效果与场面的宏大，玩家御剑而来参与战斗更是将游戏的画面效果展现到极致，而御剑时经过水面并溅起浪花是点睛之笔。在游戏的体验过程中，遇到较大的主线剧情时，玩家的视角都会被切换到第一视角，这一方面给玩家增加了代入感，也充分给玩家接触更多观看主要角色建模的机会，一举两得。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242736249227.jpg" title="1471242736249227.jpg" alt="2.jpg" style="max-width:650px"/></p><p style="text-align: left;">不过相比优秀的画面效果，游戏动画部分在表现上则相对不够到位。动画建模的设计问题我们先避开不谈，可能是为了照顾到包体问题，游戏的动画被一定程度的压缩。画面稍显模糊，动态元素较多时，画面模糊程度较高，特别是陆雪琪与张小凡在七脉会武时的对决，动态元素较多，战斗部分的画面效果大打折扣。这同时也给其他游戏开发商敲响了警钟：CG动画是否需要在手游中有所体现，包体大小与CG动画究竟如何取舍。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242745527743.jpg" title="1471242745527743.jpg" alt="3.jpg" style="max-width:650px"/></p><p style="text-align: left;"><strong>相比同类作品 玩起来更像端游</strong></p><p style="text-align: left;">与其他传统MMORPG手游相同，本作也是左摇杆右技能盘辅助的操作方式，上手操作没有门槛。不过，在实际接触后我们会发现，这款游戏的操作与世面上的MMO手游有一定的不同。我们知道，现今国内的MMORPG手游在操作上大多都强调了动作元素，网易也将这种模式称为AMMO。而《诛仙手游》则与之相反，没有手感可言，也没有闪避功能，移动与攻击无法兼得，技能释放在释放上甚至有公CD的元素存在;再加上目前MMO游戏强调的“战法牧”设定(输出、坦克、治疗)，这款游戏在实际体验时更像是一款端游类的MMORPG游戏。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242756756498.jpg" title="1471242756756498.jpg" alt="4.jpg" style="max-width:650px"/></p><p style="text-align: left;">在玩法上，婚姻、帮派、副本、挂机、跑环、制造等内容应有尽有，较其他同类型游戏更为全面，玩家可体验的内容也相对较多。值得一提的是，该作带有的直播功能，可以直播决斗与炼器，以往游戏直播武器+14的娱乐内容可以通过这种方式得到呈现。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242765399522.jpg" title="1471242765399522.jpg" alt="5.jpg" style="max-width:650px"/></p><p style="text-align: left;">《诛仙手游》玩法虽然全面，但这不表示所有玩家都会有好的体验。当玩家随着等级提升后，游戏门槛也会逐渐显现，并开始需要玩家不断的提升数值，否则玩家连日常都无法正常执行。这种战力上的需求逐渐增加后，中低消费玩家面对的问题就剩下是走是流，惹完美需要做的就是如何好好把握玩家的活跃性。另一方面，完美过去出品的端游《诛仙》实际对玩家的消费也有一定的门槛要求，所以在用户引导上完美有比较多成功的经验。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242774541521.jpg" title="1471242774541521.jpg" alt="6.jpg" style="max-width:650px"/></p><p style="text-align: left;"><strong>商城数值消费 VIP有不透明度</strong></p><p style="text-align: left;">在消费方面，《诛仙手游》更注重商城内容上的消费，玩家在游戏的商城中可以购买到与玩法功能挂钩的商品，涵盖炼器、灌注、VIP、宝石等。譬如玩家可以通过购买各等级的铁玉让自己的装备强化到+10，如果玩家自行+10不仅消耗炼器符，失败后还会被迫下降5个强化等级，除非玩家另外购买各数值的完璧符，否则过程不可逆，而失败惩罚从第1个强化等级便开始存在。另外，+10并不是游戏强化的终极目标，玩家在之后的强化过程中依然需要使用到保值的完璧符道具。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242781947826.jpg" title="1471242781947826.jpg" alt="7.jpg" style="max-width:650px"/></p><p style="text-align: left;">我们先前提过，这款游戏对数值的依赖性较高，随着后期发展数值鸿沟会越来越明显，所以玩家还是要有一定的必要性消费。</p><p style="text-align: left;">《诛仙手游》也包含了目前F2P手游常见的VIP设定，不过玩家在充值到VIP4之前，不会见到后续的等级，也就是说一般中低消费的玩家只能见到4个VIP等级。这种方式可以有效的隔离低阶玩家看到后续的特权功能的不适感，而VIP究竟有什么功能也只有VIP自己知道。目前越来越多F2P游戏开始屏蔽玩家可见的特权功能，部分游戏甚至只能看到玩家当前的VIP特权功能;这种屏蔽可见特权的方式在未来可能会成为主流。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242797161740.jpg" title="1471242797161740.jpg" alt="8.jpg" style="max-width:650px"/></p><p style="text-align: left;"><strong>一款整体偏端游的MMO手游</strong></p><p style="text-align: left;">《诛仙手游》在消费上相对强调数值消费，玩家需要提高数值来应对后续的数值鸿沟，但这种消费形式并非没有市场，完美有足够多的经验，引导得当即可创造现象级的产品。在游戏操作上，《诛仙手游》整体相比同类游戏作品更像是是一部MMORPG端游，没有所谓的手感等“AMMO”元素，而且更强调战法牧之间的协调与输出。游戏的可体验玩法也相对完善，玩家可以在手机上体验到端游过去带给玩家的各种魅力。</p><p style="text-align: center;"><img src="/uploads/textarea/image/20160815/1471242804303363.jpg" title="1471242804303363.jpg" alt="9.jpg" style="max-width:650px"/></p>						</div>
+                        <div class="game_dowl">
+							<div class="gd-btn0" style="top:40px; margin-left: 560px;">
+								<!--
+								<div class="gd-btn1">
+									<img src="/home/tpl/pc/images/raiders_info/gd-btn.png" />
+								</div>
+								-->
+							</div>
+							<div class="bodyer-top-name">
+								<p>游戏下载</p>
+							</div>
+							<div class="game_dowl_con">
+								<div class="game_dowl_conl">
+									<div class="game_dowl_pic">
+                                    <img src="/uploads/games/game_logo/60/logo_20160815103714_1024.jpg">
+									</div>
+									<div class="game_dowl_name">
+										<p>诛仙手游</p>
+										<u>类型：角色    时间：2016-08-15</u>
+										<u>评分：<span>0.0分</span></u>
+										<u style="width: 50px;">介绍：</u>
+										<u style="width: 293px; margin-left:-12px; height:40px; overflow: hidden;">以仙侠小说开山之作《诛仙》为背景，完全忠于原著剧情，再现小说经典“情”字回忆；完美还原端游经典元素，追溯热血情怀；电影级CG画质，真3D仙侠大世界，360度全景自由飞行，多元深度自由交互让玩家拥有独一无二的极致仙侠体验。</u>
+									</div>
+								</div>
+								<div class="game_dowl_conr">
+									<a href="#">
+										<div class="game_dowl_conr_box game_dowl_conr_box1">
+											<img src="/home/tpl/pc/images/raiders_info/iosb.png">
+											<p>IOS下载</p>
+											<div class="game_dowl_m"><i></i></div>
+											<span>下载点这里</span>
+										</div>
+									</a>
+									<a href="#">
+										<div class="game_dowl_conr_box game_dowl_conr_box2" >
+											<img src="/home/tpl/pc/images/raiders_info/androidb.png">
+											<p>安卓下载</p>
+											<div class="game_dowl_m"><i></i></div>
+											<span>下载点这里</span>
+										</div>
+									</a>
+									<a href="#">
+										<div class="game_dowl_conr_box">
+											<span style="height: 100px; margin-top: 0; font-size: 14px; line-height: 100px;">进入专区</span>
+										</div>
+									</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="xggl">
+							<div class="gd-btn0" style="top:10px; margin-left: 560px;">
+							
+								<div class="gd-btn1">
+									<img src="/home/tpl/pc/images/raiders_info/gd-btn.png" />
+								</div>
+								
+							</div>
+							<div class="bodyer-top-name" style="margin-top: -30px;">
+								<p>相关攻略</p>
+							</div>
+							<div class="xggl_con">
+								<div class="xggl_con_l">
+																																						<a href="index.php?act=raiders&op=raiders_info&id=104"><p>《诛仙手游》鬼王宝石推荐&nbsp鬼王首饰宝石用什么好</p><span>2016-08-16</span></a>
+																										</div>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="bodyer-right">
+						<div class="bodyer-top-name"  style="margin-top: 26px;">
+							<p>每日推荐</p>
+						</div>
+						<div class="bodyer-right_top_c">
+							<div class="mrtj">
+								<i><a href="index.php?act=game_lib&op=game_desc&game_id=8"><img src="/uploads/games/game_logo/8/logo_20160810184207_9044.jpg" width="72" height="72"></a></i>
+								<div class="mrtj_c">
+									<div class="mrtj_c_t">
+										<p>保卫萝卜3</p>
+										<span><a href="index.php?act=game_lib&op=game_desc&game_id=8">下载游戏</a></span>
+									</div>
+									<div class="mrtj_c_b">
+										<p>游戏类型： <span>休闲</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="mrtj-txt">
+								<p>
+									<span>推荐理由：</span>保卫萝卜3是一款非常有爱的塔防游戏，游戏中各种怪物想要偷你的萝卜吃，玩家要竭尽全力保护自己的萝卜，要想完美通关，那就一个也不许少！游戏融入了社交互动系统，玩家可以通关糖果比拼且互送体力，而新地图还加入了全新场景元素，更有多款全新炮塔加入战局，让体验过的人在重温经典的同时，也能感受不一样的游戏乐趣。
+								</p>
+							</div>
+						</div>
+                        <div class="gd-btn0" style="top:22px;">
+                            <!--
+							<div class="gd-btn1">
+                                <img src="/home/tpl/pc/images/raiders_info/gd-btn.png" />
+                            </div>
+							-->
+                        </div>
+                        <div class="bodyer-top-name" style="margin-top:-20px;">
+							<p>热门攻略</p>
+						</div>
+                        <div class="rmgl">
+																					<p><a href="index.php?act=raiders&raiders_info=17">部落冲突8本部落战阵&nbspX型风车阵与大本外置阵</a></p>
+																				</div>
+                        <div class="gd-btn0" style="top:0;">
+                            <div class="gd-btn1">
+                                <a href="index.php?act=ranking&op=ranking_down&v=qidai"><img src="/home/tpl/pc/images/raiders_info/gd-btn.png" /></a>
+                            </div>
+                        </div>
+                    	<div class="bodyer-top-name" style="margin-top:-42px;">
+							<p>推荐排行</p>
+						</div>
+						<div class="paihang" style="height: 440px; margin-bottom:-40px ;">
+							<ul class="bodyer-right-phb clearfloat">
+																									 
+									
+									<li>
+										<u style="background:#ff3b3c; margin-top:30px;" id='phblist'>1</u>
+										<div id="phbfist" class="game-pic" style="display:block;"><a href="index.php?act=game_lib&op=game_desc&game_id=3"><img src="/uploads/games/game_logo/3/logo_20160810165838_7224.jpg" width="54" height="54"></a></div>
+										<p style="font-weight:bold; color:#000;" id="gamename">部落冲突<span id="phbnum" class="phbmove">&nbsp;休闲</span> </p>
+										<div class="dowl-game" id="phbdowl" style="margin-top:36px; background:#26AFDC">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=3" style="color:#ffffff;">下载</a>
+										</div>
+									</li>
+									
+																																			<li>
+										<u style="background:#ff9600;">2</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=7"><img src="/uploads/games/game_logo/7/logo_20160810162018_7030.jpg" width="54" height="54"></a></div>
+										<p>王者荣耀<span>&nbsp;射击</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=7">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u style="background:#ff9600;">3</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=8"><img src="/uploads/games/game_logo/8/logo_20160810184207_9044.jpg" width="54" height="54"></a></div>
+										<p>保卫萝卜3<span>&nbsp;休闲</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=8">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>4</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=24"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>遇悦德州扑克<span>&nbsp;棋牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=24">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>5</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=30"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>崩坏学园2<span>&nbsp;角色</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=30">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>6</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=31"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>欢乐麻将<span>&nbsp;棋牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=31">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>7</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=33"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>欢乐拼三张<span>&nbsp;棋牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=33">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>8</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=35"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>飞行棋大战<span>&nbsp;棋牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=35">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>9</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=36"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>炉石传说<span>&nbsp;卡牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=36">下载</a>
+										</div>
+									</li>
+																																			<li>
+										<u>10</u>
+										<div class="game-pic"><a href="index.php?act=game_lib&op=game_desc&game_id=37"><img src="/home/tpl/pc/images/raiders_info/cqpic.png" width="54" height="54"></a></div>
+										<p>刀塔传奇<span>&nbsp;卡牌</span> </p>
+										<div class="dowl-game">
+											<a href="index.php?act=game_lib&op=game_desc&game_id=37">下载</a>
+										</div>
+									</li>
+																																</ul>
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+					<p>
+						<a href="#">关于3DMGAME</a>丨
+						<a href="#">招聘信息</a>丨
+						<a href="#">网站地图</a>丨
+						<a href="#">联系我们</a>丨
+						<a href="#">家长监护工程</a>丨
+						<a href="#">友情链接</a>
+					</p>
+					<p>
+						CopyRight &copy;3DMGAME-单机游戏 2004-2013,ALL Rights Reserved 北京三鼎梦软件服务有限公司
+						<a href="#">京ICP证14006952号</a> 服务电话：(010-53382269)
+					</p>
+					<p class="footers-p">
+						<a href="#">商务合作/友情链接<img src="/home/tpl/pc/images/raiders_info/button_old_71.gif" /></a>
+						<a href="#">广告合作<img src="/home/tpl/pc/images/raiders_info/button_old_71.gif" /></a>
+						<a href="#">全区<img src="/home/tpl/pc/images/raiders_info/button_old_71.gif" /></a>
+					</p>
+					<img src="/home/tpl/pc/images/raiders_info/xyqy.jpg" class="footer-img" />
+					<hr / style="width:80%; margin:0 auto; margin-top:-6px;">
+				</div>
+			</div>
+            <div class="side_bar hide">
+                    <div class="bggcl">
+                    <ul>
+                        <!--<div class="li">
+                            <li>
+                                <a href="#one">下载</a>
+                            </li>
+                        </div>-->
+                        <!--<div class="li">
+                             <a href="#tow"><li>介绍</li></a>
+                        </div>
+                        <div class="li">
+                             <a href="#three"><li>截图</li></a>
+                        </div>
+                        <div class="li">
+                             <a href="#four"><li>下载</li></a>
+                        </div>-->
+                        <!--<div class="li">
+                            <li>
+                                <a href="#five">功略</a>
+                            </li>
+                        </div>
+                        <div class="li">
+                            <li>
+                                <a href="#six">喜欢</a>
+                            </li>
+                        </div>-->
+                        <!--<div class="li">
+                              <a href="#seven"> <li>点评</li></a>
+                        </div>-->
+                        <div class="li">
+                             <a href="#header"><li>&and;</li></a>
+                        </div>
+        
+                    </ul>
+                    </div>
+                </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/news_info/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="http://sy.3dmgame.com/home/tpl/pc/js/news_info/ku.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$("#searchSelected").click(function() {
+				$("#searchTab").show();
+				$(this).addClass("searchOpen");
+			});
+
+			$("#searchTab li").hover(function() {
+				$(this).addClass("selected");
+			}, function() {
+				$(this).removeClass("selected");
+			});
+
+			$("#searchTab li").click(function() {
+				$("#searchSelected").html($(this).html());
+				$("#searchTab").hide();
+				$("#searchSelected").removeClass("searchOpen");
+			});
+
+		});
+	</script>
+	<script>
+		$('.bodyer-right-phb li').mousemove(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$(this).find('u').css('margin-top','30px')
+			$(this).find('.dowl-game').css('margin-top','36px')
+			$(this).find('p').css({'margin':'-6px 0 0 0 ','color':'#000','font-weight':'bold','padding-top':'6px'})
+			$(this).find('.game-pic').show()
+			$(this).find('span').addClass("phbmove");
+			$(this).find('.dowl-game').css('background','#26AFDC')
+			$(this).find('.dowl-game a').css('color','#ffffff')
+
+			})
+		$('.bodyer-right-phb li').mouseenter(function(){
+			$('u').css('margin-top','')
+			$('.dowl-game').css('margin-top','')
+			$('.game-pic').hide();
+			$('span').removeClass("phbmove");
+			$('p').css({'margin':'','color':'','font-weight':'','padding-top':''})
+			$('.dowl-game').css('background','')
+			$('.dowl-game a').css('color','')
+			})
+	</script>
+    <script>
+	$('.side_bar').fadeOut();
+		$(window).scroll(function() {
+			var scroll_len = $(window).scrollTop();
+			if(scroll_len > 100) {
+				$('.side_bar').fadeIn();
+			} else {
+				$('.side_bar').fadeOut();
+			};
+		});
+	</script>
+
+</html>

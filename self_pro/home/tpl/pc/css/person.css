@@ -1,0 +1,97 @@
+html,body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{
+margin:0;padding:0;border:0;
+}
+body{
+    background:#fbfbfb;color:#333;font-size:12px;font-family:"SimSun","黑体","Arial Narrow";
+}
+ul,ol{
+    list-style-type:none;
+}
+select,input,img,select{
+    vertical-align:middle;
+}
+a{text-decoration:none;}
+a:link{color:black;}
+a:visited{color:black;}
+a:hover,a:active,a:focus{color:black;} 
+
+.table{width:100%;display:table;table-layout:fixed;}
+.table-cell{display:table-cell;}
+.fs12{font-size:12px;}
+.bt{border-top:1px #dfdfdf solid;}
+.bgf{background-color:#fff;}
+.tc{text-align:center;}
+.vm{vertical-align:middle;}
+.footer {width: 100%; position: fixed; left: 0; bottom: 0; right: 0; z-index: 98;}
+.footer_wrap{height: 50px;line-height: 1.3em;}
+.footer .footer_wrap a{line-height:1.3em;}
+[class^="ft-icon-"]{display:block;margin-left:auto;margin-right:auto;background-image:url("../images/footer_icon.png");background-repeat: no-repeat;background-size:auto 50px;width:25px;height: 25px;}
+.ft-icon-plan{background-position: 0 -25px;}
+.ft-icon-notice{background-position: -25px -25px;}
+.ft-icon-friends{background-position: -50px -25px;}
+/* .footer .on{color:#dd2030;} */
+.footer .on{color:#ffc603;}
+.footer .on i{background-position-y:0px;}
+
+.person_head{
+	height: 3.2rem;
+	width: 100%;
+	position: relative;
+}
+.person_spe{
+	height: 1.8rem;
+	width: 92%;
+	position:absolute;
+	top:0.7rem;
+	padding-left: 8%;
+}
+.person_head_img{
+	float: left;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 3px;
+}
+.person_head_ifo{
+	float: left;
+	padding-top: 0.08rem;
+	padding-left: 0.34rem;
+}
+.person_head_ifo_1{
+	font-size: 0.4rem;
+	color:#ffffff;
+	font-family:'黑体';
+}
+.person_head_ifo_2{
+	font-size: 0.3rem;
+	color:#ffffff;
+	font-family:'黑体';
+}
+.person_head_ifo_3{
+	font-size: 0.3rem;
+	color:#ffffff;
+	font-family:'黑体';
+}
+.weui_cell_primary p{
+	color: #323232;
+	font-size: 0.3rem;
+}
+.weui_cell_ft{
+	color: #646464;
+	font-size: 0.3rem;
+}
+.weui_cell_bd{
+	position: relative;
+}
+.weui_cell_bd span{
+	position: absolute;
+	right:0;
+	width: 0.3rem;
+	height: 0.3rem;
+	border-radius: 50%;
+	color:#ffffff;
+	line-height: 0.3rem;
+	text-align: center;
+	background: #f83600;
+	top:-0.1rem;
+	font-size: 0.18rem;
+}

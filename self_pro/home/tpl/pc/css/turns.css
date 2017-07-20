@@ -1,0 +1,44 @@
+/* 轮播图样式 */
+.adv_icons_selected{
+	border:1px solid red;
+}
+.adv_show{
+	position: relative;
+	float:left;
+	width:auto;
+	height:auto;
+}
+.adv{
+	overflow: hidden;
+	position: relative;
+	float:left;
+	width:auto;
+	height:auto;
+}
+.adv_left{
+	cursor: pointer;
+	position: absolute;
+	top:50%;
+	left:0px;
+} 
+.adv_right{
+	cursor: pointer;
+	position: absolute;
+	top:50%;
+	right:0px;
+}
+.adv_icon{
+	cursor:pointer;
+	position: absolute;
+	bottom:0px;
+}
+.adv_icons{
+	width:30px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	text-align:center;
+}
+.adv_images a{
+	float: left;
+}

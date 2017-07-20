@@ -1,0 +1,12 @@
+request body = <VoiceVerify>
+                    <appId>d</appId>
+                    <verifyCode>验证码内容</verifyCode>
+                    <playTimes>循环播放次数</playTimes>
+                    <to>接收号码</to>
+                    <respUrl>营销外呼状态通知回调地址</respUrl>
+                    <displayNum>显示的主叫号码</displayNum>
+                    <lang>语言类型</lang>
+                    <userData>第三方私有数据</userData>
+                  </VoiceVerify>
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/d/Calls/VoiceVerify?sig=868FAD9A3CC6C8EBDF32A06FDA917AB3
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Response><statusCode>111141</statusCode><statusMsg>【账号】主账户不存在</statusMsg></Response>

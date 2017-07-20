@@ -1,0 +1,60 @@
+﻿接口说明
+
+ /**
+	 * 初始化
+	 * @param serverIP     	必选参数	服务器地址
+	 * @param serverPort	必选参数	服务器端口
+	 * @param softVersion	必选参数	REST版本号
+	 */
+	 REST($serverIP,$serverPort,$softVersion)
+  
+  
+   /**
+    * 设置主帐号
+    * 
+    * @param AccountSid 主帐号
+    * @param AccountToken 主帐号Token
+    */    
+    function setAccount($AccountSid,$AccountToken)
+		
+	 /**
+    * 设置应用ID
+    * 
+    * @param AppId 应用ID
+    */
+    function setAppId($AppId)
+	
+	
+   /**
+    * 打印日志
+    * 
+    * @param log 日志内容
+    */
+    function showlog($log)
+    
+    
+    /**
+     * 发起HTTPS请求
+     * @param url 请求地址
+     * @param data 请求包体
+     * @param header 请求包头
+     * @param post 请求方式 默认为1 1：post，0：get
+     */
+     function curl_post($url,$data,$header,$post=1)
+  
+  
+
+   
+    /**
+    * 语音验证码
+    * @param verifyCode 验证码内容，为数字和英文字母，不区分大小写，长度4-8位
+    * @param playTimes 播放次数，1－3次
+    * @param to 接收号码
+    * @param displayNum 显示的主叫号码
+    * @param respUrl 语音验证码状态通知回调地址，云通讯平台将向该Url地址发送呼叫结果通知
+    * @param lang 语言类型。取值en（英文）、zh（中文），默认值zh。
+    * @param userData 第三方私有数据
+    */
+    function voiceVerify($verifyCode,$playTimes,$to,$displayNum,$respUrl,$lang,$userData)
+  
+   

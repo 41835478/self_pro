@@ -1,0 +1,12 @@
+body{
+	width:80%;
+	
+	padding:0px;
+	margin:0px auto;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}

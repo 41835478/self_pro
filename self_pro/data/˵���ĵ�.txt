@@ -1,0 +1,4 @@
+region  地区
+upload上传文件目录
+download下载文件目录
+拿来做数据存储，有需要的话
