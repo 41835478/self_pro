@@ -74,7 +74,8 @@
               var start = {
                 min: laydate.now()
                 ,max: '2099-06-16 23:59:59'
-                ,istoday: false
+            //  ,istoday: false
+			//	,istime:true
                 ,choose: function(datas){
                   end.min = datas; //开始日选好后，重置结束日的最小日期
                   end.start = datas //将结束日的初始值设定为开始日
@@ -89,7 +90,28 @@
                   start.max = datas; //结束日选好后，重置开始日的最大日期
                 }
               };
-              
+              <?php if(isset($output['time_abcdefghijkl']) && !empty($output['time_abcdefghijkl'])){ ?>
+			  <?php foreach($output['time_abcdefghijkl'] as $key => $val){ ?>
+				  var <?php echo $val;?> = {
+				//	min: '1991-01-01'//laydate.now()
+				//	,max: '2099-06-16 23:59:59'
+					istoday: true
+					,issure:true
+					,format:"YYYY-MM-DD hh:mm:ss"
+				//	,isclear:true
+					,istime:true
+					,choose: function(datas){
+				//	  <?php echo $val;?>.min = datas;
+				//	  <?php echo $val;?>.max = datas; //结束日选好后，重置开始日的最大日期
+					}
+				  };
+				  
+				  document.getElementById('<?php echo $val;?>').onclick = function(){
+					<?php echo $val;?>.elem = this;
+					laydate(<?php echo $val;?>);
+				  }
+			  <?php } ?>
+			  <?php } ?>
               document.getElementById('LAY_demorange_s').onclick = function(){
                 start.elem = this;
                 laydate(start);

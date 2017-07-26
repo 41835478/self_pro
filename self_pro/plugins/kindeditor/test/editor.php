@@ -6,12 +6,13 @@
 	jQuery(function() {
 		KindEditor.ready(function(K) {
 			var editors = document.getElementsByTagName('textarea');
+			/*
 			if(editors != null){
 				for( x in editors){
-					console.log(editors[x]);
-					
+				//	console.log(editors[x]);
 				}
 			}
+			*/
 			var editor1 = K.create('.select_editor_label', {
 				allowFileManager : true,
 				filePostName : 'imgFile',

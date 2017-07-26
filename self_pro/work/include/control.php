@@ -15,6 +15,7 @@ class control{
 	private static $form = array();
 	private static $editor = array();
 	private static $select_data = array();
+	private static $time_data = array();
 	
 	public function __construct(){
 		self::is_login();
@@ -64,6 +65,153 @@ class control{
 		}
 		return self::$obj;
 	}
+	
+	static public function form_top($data = array()){
+		$form_top = array(
+			'selected' 	=> false,
+			'start_time' => false,
+			'end_time' 	=> false,
+			'keyword' 	=> false,
+			'all_del' 	=> false,
+			'add' 		=> false,
+			'search' 	=> false,
+			'export' 	=> false,
+			'self' 		=> false,
+		);
+		if(!empty($data)){
+			foreach($data as $key => $val){
+				$t = is_integer($key) ? $val : $key ;
+				switch($t){
+					case 'selected':
+					$selected = '';
+					if(!empty($val) && is_array($val)){
+						foreach($val as $k => $v){
+							$e = explode('/',$k); 
+							$selected .= '<div class="layui-input-inline"><select style="min-width:190px;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$e[0].'" class="__web-inspector-hide-shortcut__">';
+								foreach($v as $kk => $vv){
+									if(isset($e[1]) && !empty($e[1]) && $e[1] == $kk){
+										$selected .= '<option selected="selected" value="'.$kk.'">'.$vv.'</option>';
+									}else{
+										$selected .= '<option value="'.$kk.'">'.$vv.'</option>';
+									}
+								}
+							$selected .= '</select></div>';
+						}
+					}
+					
+					$form_top['selected'] = $selected;
+					break;
+					case 'start_time':
+					$val = $val != 'start_time' && $val != false ? date('Y-m-d H:i:s',$val) : KEY;
+					$form_top['start_time'] = $val;
+					break;
+					case 'end_time':
+					$val = $val != 'end_time' && $val != false ? date('Y-m-d H:i:s',$val) : KEY;
+					
+					$form_top['end_time'] = $val;
+					break;
+					case 'keyword':
+					$val = $val != 'keyword' ? $val : KEY;
+					if($val == ''){
+						$val = KEY;
+					}
+					$form_top['keyword'] = $val;
+					break;
+					case 'all_del':
+					$form_top['all_del'] = $val;
+					break;
+					case 'add':
+					$form_top['add'] = $val;
+					break;
+					case 'export':
+					$form_top['export'] = $val;
+					break;
+					case 'search':
+					$form_top['search'] = true;
+					break;
+					case 'self':
+					//这个是数组第一个是名称，第二个是数组，用来做属性，第三个是包含，需要弄页面可以重新弄一个页面做js处理
+					$attr ='';
+					if(isset($val[1]) && !empty($val[1])){
+						$attr = self::createattr($val[1]);
+					}
+					if(isset($val[2]) && !empty($val[2])){
+						require_once($val[2]);
+					}
+					$form_top['self'] = '<a '.$attr.' class="layui-btn" >'.$val[0].'</a>';
+					break;
+				}
+				
+			}
+			self::output('form_top_hujdfisahjhj',$form_top);
+		}
+	}
+	
+	/*
+		数据
+	*/
+	static public function form_list($field,$data,$id = 'id',$page = 'public_form_list'){
+		$form_list = '';
+		if(!empty($field) && is_array($field)){
+			$th = '<tr>';
+			foreach($field as $key => $val){
+				switch($val[0]){
+					case 'checkbox':
+						self::setotherpage('checked');
+						$th .= '<th><input  class="all_checked_abc" id="all_checked_abc" type="checkbox" >'.$val[2].'</th>';
+					break;
+					default:
+						$th .= '<th>'.$val[2].'</th>';
+					break;
+				}
+			}
+			$th .= '</tr>';
+			$form_list .= $th;
+		}
+		if(!empty($data) && is_array($data)){
+			$td = '';
+			foreach($data as $key => $val){
+				$td .= '<tr>';
+				foreach($field as $k => $v){
+					switch($v[0]){
+						case 'checkbox':
+							$td .= '<th><input value="'.$val[$id].'" class="checked" type="checkbox" >'.$val[$v[1]].'</th>';
+						break;
+						case 'label':
+							$td .= '<td>'.$val[$v[1]].'</td>';
+						break;
+						case 'time':
+							$val[$v[1]] = isset($val[$v[1]]) ? date('Y-m-d H:i:s',$val[$v[1]]) : '';
+							$td .= '<td>'.$val[$v[1]].'</td>';
+						break;
+						case 'image':
+							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
+						break;
+						case 'menu':
+							$menu = $v[1];
+							$td .= '<td>';
+							foreach($menu as $kk => $vv){
+								$attr = '';
+								if(isset($vv[2]) && !empty($vv[2])){
+									$attr = self::createattr($vv[2]);
+								}
+							//	$vv[1] = str_replace('__ID__',$val[$zhujian],$vv[1]);
+								$td .= '<a '.$attr.' class="layui-btn" href="'.$vv[1].'" >'.$vv[0].'</a>';
+							}
+							$td .= '</td>';
+						break;
+					}
+				}
+				$td .= '</tr>';
+			}
+			//此句是把这个字符串改成id号
+			$td = str_replace('__ID__',$val[$id],$td);
+			$form_list .= $td;
+		}
+		self::output('form_list',$form_list);
+		self::display($page); 
+	}
+	
 	/*
 	第一个是url地址，第二个是表单属性，第三个是查询的数据,第四个是提交方式,第五个是类型list或者edit
 	第一个参数是字段，第二个参数是自定义名称，第三个是属性，第四个是附加属性，第五个是包含外部文件
@@ -82,6 +230,9 @@ class control{
 				switch($val[0]){
 					case 'text':
 						$form .= self::createtext($val);
+					break;
+					case 'hidden':
+						$form .= self::createhidden($val);
 					break;
 					case 'password':
 						$form .= self::createpassword($val);
@@ -110,6 +261,9 @@ class control{
 					case 'editor':
 						$form .= self::createeditor($val);
 					break;
+					case 'time':
+						$form .= self::createtime($val);
+					break;
 				}
 				/*
 				if(isset($val[5]) && file_exists($val[5])){
@@ -130,6 +284,10 @@ class control{
 		}
 		if(!empty(self::$file)){
 			self::output('file_abcdefghijkl',self::$file);
+		}
+		
+		if(!empty(self::$time_data)){
+			self::output('time_abcdefghijkl',self::$time_data);
 		}
 		
 		self::output('method',$met);
@@ -154,6 +312,25 @@ class control{
 			$str = '<tr><td>'.$data[2].':</td><td><div style="margin-bottom:10px;"><img '.$attr.' style="max-height:150px;max-width:150px;"  id="img_'.$data[1].'" src="'.$content.'"></div><div class="file_abcdefghijkl" id="'.$data[1].'">选择文件</div><input id="i'.$data[1].'" name="'.$data[1].'" type="hidden" value="'.$content.'"></td></tr>';
 		}
 		self:$file[] = $data[1];
+		return $str;
+	}
+	
+	//创建input文本
+	static public function createtime($data){
+		$str = '';
+		if(!empty($data) && $data[0] == 'time'){
+			$attr = '';
+			if(isset($data[4]) && !empty($data[4])){
+				$attr = self::createattr($data[4]);
+			}
+			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
+			if(!empty($content)){
+				$content = date('Y-m-d H:i:s',$content);
+			}
+			$str = '<tr><td>'.$data[2].':</td><td><div class="layui-input-inline"><input '.$attr.' placeholder="'.$content.'" id= "'.$data[1].'" class="layui-input" type="text" name="'.$data[1].'" value="'.$content.'"  ></div></td></tr>';
+		}
+		self::$time_data[] = $data[1];
+		
 		return $str;
 	}
 	
@@ -187,6 +364,21 @@ class control{
 		self:$file[] = $data[1];
 		return $str;
 	}
+	
+	//创建hidden文本
+	static public function createhidden($data){
+		$str = '';
+		if(!empty($data) && $data[0] == 'hidden'){
+			$attr = '';
+			if(isset($data[4]) && !empty($data[4])){
+				$attr = self::createattr($data[4]);
+			}
+			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
+			$str = '<input '.$attr.' type="hidden" name="'.$data[1].'" value="'.$content.'"  >';
+		}
+		return $str;
+	}
+	
 	//创建input文本
 	static public function createtext($data){
 		$str = '';
@@ -320,7 +512,7 @@ class control{
 			if(is_array($data[3])){
 				$selected .= '<select '.$attr.' style="min-width:190px;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$data[1].'" >';
 				foreach($data[3] as $key => $val){
-					if($key == self::$select_data[$data[1]]){
+					if(isset(self::$select_data[$data[1]]) && $key == self::$select_data[$data[1]]){
 						$selected .= '<option selected="selected" value="'.$key.'">'.$val.'</option>';
 					}else{
 						$selected .= '<option value="'.$key.'">'.$val.'</option>';
@@ -418,6 +610,7 @@ class control{
 		
 		if(!empty(self::$footer)){
 			if(file_exists(self::$footer)){
+				
 				include_once self::$footer;
 			}else{
 				$error = self::$footer.' null';
@@ -463,6 +656,7 @@ class control{
 		if(!empty($path_name)){
 			$path_name = str_replace('.php','',basename($path_name));
 			$path = str_replace('//','/',BasePath.DS.PROJECT.DS.'tpl'.DS.WEB.DS.$type.DS.$path_name.'.php');
+			
 			return $path;
 		}
 	} 

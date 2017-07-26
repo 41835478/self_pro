@@ -548,7 +548,18 @@ function checkDateIsValid($date, $formats = array("Y-m-d", "Y/m/d")) {
 function is_date($date, $formats = array("Y-m-d", "Y/m/d")){
 	return checkDateIsValid($date,$formats);
 }
-
+//下拉框选择查询
+function selected($where = array()){
+	if(!empty($where)){
+		$data = array();
+		foreach($where as $key => $val){
+			$data[$val] = isset($_POST[$val]) && !empty($_POST[$val]) ? $val.'/'.$_POST[$val] : $val.'/';
+		}
+		return $data;
+	}
+	return false;
+}
+//查询
 function search($where=array(),$other=''){
 	$keywords = isset($_GET['keywords'])?$_GET['keywords']:'';
 	$str = '';

@@ -73,7 +73,45 @@ class run{
 			return json_encode(array('code'=>$code,'msg'=>$msg,'data'=>$data));
 		}
 	}
-	
+	//爬虫
+	 private function _pachong(){
+	//	 die;
+		 $url = $_POST['url'];
+		 if(!empty($url)){
+			$html = file_get_contents($url);
+			$s = preg_match('/没有找到相关信息/',$html);
+			if($s == 0){
+				$res =  file_put_contents(BasePath.DS.'admin/tpl/pc/pachong/list/'.date('YmdHis').rand(100000,999999).'.php',$html);
+			}
+			exit(json_encode(array('code'=>$res)));
+		 }
+	 }
+	 
+	 private function _zhengli(){
+		 $data = $_POST['data'];
+		 $data2 = array();
+		 foreach($data as $key => $val){
+			 foreach($val as $k => $v){
+				 $data[$key][$k] = strip_tags(str_replace(array('&nbsp',' ',"\n"),
+												array('','',''),$v));
+			 }
+		 }
+		 $d = $data['title'];
+		 foreach($d as $key => $val){
+			 $desc = explode('#',$data['desc'][$key]);
+			 $a = array(
+				'title' => $val,
+				'desc1' => $desc[0],
+				'address' => $desc[1],
+				'price' => $data['price'][$key],
+				'unit' => $data['unit'][$key],
+				'href' => $data['href'][$key],
+			 );
+			 $data2[] = $a;
+		 }
+		 $res = M('pachong')->insert_all($data2);
+		 exit($res);
+	 }
 	/*
 	*	广告
 	*	type 	是广告类型

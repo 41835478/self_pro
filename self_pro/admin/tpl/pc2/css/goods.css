@@ -1,0 +1,21 @@
+.goods_nav{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.upload_imgs{
+	width:100%;
+	height:388px;
+}
+.upload_imgs .fileupload{
+	float:left;
+}
+.fileupload-preview{
+	border:1px #9e5733 solid;
+}
+/*百度富文本样式*/
+.baidu_text{
+	color:black;
+}
+.weiselected{
+	background:rgba(255, 255, 255,0.6);
+}

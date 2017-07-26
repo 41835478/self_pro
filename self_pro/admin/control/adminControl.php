@@ -9,11 +9,15 @@ class adminControl extends sysControl{
 		$admin['content1'] = '你好富文本';
 		$admin['content2'] = '唐果';
 		$admin['content3'] = '你好富文本唐果';
+		$admin['start_time'] = '1491461251';
+		$admin['end_time'] = '1491461251';
 		self::form("",array(
 			array('text','id','用户名'),
 			array('password','password','密码'),
 			array('label','password','标签'),
 			array('textarea','username','用户名'),
+			array('time','start_time','开始时间'),
+			array('time','end_time','开始时间'),
 			array('radio','id','单选',array('a','b','c')),
 			array('checkbox','id','多选',array('aa','bb','cc')),
 			array('selected','id','下拉',array('aa','bb','cc')),
@@ -24,6 +28,7 @@ class adminControl extends sysControl{
 			array('editor','content1','描述'),
 			array('editor','content2','描述'),
 			array('editor','content3','描述'),
+			
 		),$admin,'post','public_form');
 	}
 }

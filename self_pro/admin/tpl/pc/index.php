@@ -317,6 +317,45 @@
                                 </dd>
                             </dl>
                         </li>
+						 <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>测试页面</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test1">
+                                        <cite>测试1</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test2">
+                                        <cite>测试2</cite>
+                                    </a>
+                                </dd>
+								<!--
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test3">
+                                        <cite>测试3</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test4">
+                                        <cite>测试4</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test5">
+                                        <cite>测试5</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test6">
+                                        <cite>测试6</cite>
+                                    </a>
+                                </dd>
+								-->
+                            </dl>
+                        </li>
                         <li class="layui-nav-item" style="height: 30px; text-align: center">
                         </li>
                     </ul>
