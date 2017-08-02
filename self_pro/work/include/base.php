@@ -18,7 +18,7 @@ class base{
 			$error = $path.' null';
 			show_message($error);
 		}
-	
+		
 		//判断是否有初始base控制器
 		$basepath = BasePath.DS.PROJECT.DS.'control'.DS.'baseControl.php';
 		if(file_exists($basepath)){
@@ -32,10 +32,12 @@ class base{
 		}
 		$control = new $class();
 		$method = isset($_GET['op']) ? $_GET['op'] : 'index';
+		
 		if(!method_exists($class,$method)){
 			$error = 'class '.$class.' function_exists '.$method.' exists';
 			show_message($error);
 		}
+		
 	//	var_dump($control);die;
 		$control->$method();
 	}

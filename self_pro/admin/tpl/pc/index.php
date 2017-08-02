@@ -29,7 +29,7 @@
                         <dl class="layui-nav-child"> <!-- 二级菜单 -->
                           <dd><a href="">个人信息</a></dd>
                           <dd><a href="">切换帐号</a></dd>
-                          <dd><a href="./login.html">退出</a></dd>
+                          <dd><a href="?act=login&op=logout">退出</a></dd>
                         </dl>
                       </li>
                       <!-- <li class="layui-nav-item">
@@ -354,6 +354,11 @@
                                     </a>
                                 </dd>
 								-->
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=test&op=test7">
+                                        <cite>测试7</cite>
+                                    </a>
+                                </dd>
                             </dl>
                         </li>
                         <li class="layui-nav-item" style="height: 30px; text-align: center">

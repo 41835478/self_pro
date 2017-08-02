@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
         <meta charset="utf-8">
         <title>
@@ -13,220 +14,99 @@
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="<?php echo TPL;?>/css/x-admin.css" media="all">
     </head>
+    
     <body>
-        <div class="x-nav">
-            <span class="layui-breadcrumb">
-              <a><cite>首页</cite></a>
-              <a><cite>会员管理</cite></a>
-              <a><cite>问题/资讯列表</cite></a>
-            </span>
-            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
-        </div>
         <div class="x-body">
-            <form class="layui-form x-center" action="" style="width:800px">
-                <div class="layui-form-pane" style="margin-top: 15px;">
-                  <div class="layui-form-item">
-                    <label class="layui-form-label">日期范围</label>
-                    <div class="layui-input-inline">
-                      <input class="layui-input" placeholder="开始日" id="LAY_demorange_s">
+            <form class="layui-form layui-form-pane">
+                <div class="layui-form-item">
+                    <label for="L_title" class="layui-form-label">
+                        标题
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="text" id="L_title" name="title" required lay-verify="title" value="layDate如何设置最小时间为当前" 
+                        autocomplete="off" class="layui-input">
                     </div>
-                    <div class="layui-input-inline">
-                      <input class="layui-input" placeholder="截止日" id="LAY_demorange_e">
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <div class="layui-input-block">
+                        <textarea id="L_content" name="content" 
+                        placeholder="请输入内容" class="layui-textarea fly-editor" style="height: 260px;">请教layDate如何设置最小时间为当前,使用min: laydate.now()的时候只能设置日期，不能设置时间；</textarea>
                     </div>
-                    <div class="layui-input-inline">
-                      <input type="text" name="username"  placeholder="标题" autocomplete="off" class="layui-input">
+                    <label for="L_content" class="layui-form-label" style="top: -2px;">
+                        描述
+                    </label>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">
+                            所在类别
+                        </label>
+                        <div class="layui-input-block">
+                            <select lay-verify="required" name="cid">
+                                <option>
+                                </option>
+                                <optgroup label="Layui相关">
+                                    <option value="0">layui</option>
+                                    <option value="2">layer弹层</option>
+                                    <option value="3">LayIM即时通讯</option>
+                                </optgroup>
+                                <optgroup label="其它交流">
+                                    <option selected="" value="100">技术闲谈</option>
+                                    <option value="101">建议反馈</option>
+                                    <option value="168">官方公告</option>
+                                </optgroup>
+                            </select>
+                        </div>
                     </div>
-                    <div class="layui-input-inline" style="width:80px">
-                        <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-                    </div>
-                  </div>
-                </div> 
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-filter="add" lay-submit>
+                        保存
+                    </button>
+                </div>
             </form>
-            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="question_add('添加问题','question-add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
-            <table class="layui-table">
-                <thead>
-                    <tr>
-                        <th>
-                            <input type="checkbox" name="" value="">
-                        </th>
-                        <th>
-                            ID
-                        </th>
-                        <th>
-                            标题
-                        </th>
-                        <th>
-                            分类
-                        </th>
-                        <th>
-                            来源
-                        </th>
-                        <th>
-                            更新时间
-                        </th>
-                        <th>
-                            浏览次数
-                        </th>
-                        <th>
-                            操作
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="checkbox" value="1" name="">
-                        </td>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <u style="cursor:pointer" onclick="question_show()">
-                                问题标题1
-                            </u>
-                        </td>
-                        <td >
-                            新闻子类1
-                        </td>
-                        <td >
-                            xuebingsi
-                        </td>
-                        <td >
-                            2017-01-01 11:11:42
-                        </td>
-                        <td >
-                            34
-                        </td>
-                        <td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','?act=index&op=edit','4','','510')"
-                            class="ml-5" style="text-decoration:none">
-                                <i class="layui-icon">&#xe642;</i>
-                            </a>
-                            <a title="删除" href="javascript:;" onclick="question_del(this,'1')" 
-                            style="text-decoration:none">
-                                <i class="layui-icon">&#xe640;</i>
-                            </a>
-                        </td>
-                    </tr>
-					<tr>
-                        <td>
-                            <input type="checkbox" value="2" name="">
-                        </td>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <u style="cursor:pointer" onclick="question_show()">
-                                问题标题
-                            </u>
-                        </td>
-                        <td >
-                            新闻子类1
-                        </td>
-                        <td >
-                            xuebingsi
-                        </td>
-                        <td >
-                            2017-01-01 11:11:42
-                        </td>
-                        <td >
-                            34
-                        </td>
-                        <td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','question-edit.html','4','','510')"
-                            class="ml-5" style="text-decoration:none">
-                                <i class="layui-icon">&#xe642;</i>
-                            </a>
-                            <a title="删除" href="javascript:;" onclick="question_del(this,'1')" 
-                            style="text-decoration:none">
-                                <i class="layui-icon">&#xe640;</i>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-			
-            <div id="page"></div>
         </div>
-        <script src="<?php echo TPL;?>/lib/layui/layui.js" charset="utf-8"></script>
-        <script src="<?php echo TPL;?>/js/x-layui.js" charset="utf-8"></script>
+        <script src="<?php echo TPL;?>/lib/layui/layui.js" charset="utf-8">
+        </script>
+        <script src="<?php echo TPL;?>/js/x-layui.js" charset="utf-8">
+        </script>
         <script>
-            layui.use(['laydate','element','laypage','layer'], function(){
-                $ = layui.jquery;//jquery
-              laydate = layui.laydate;//日期插件
-              lement = layui.element();//面包导航
-              laypage = layui.laypage;//分页
-              layer = layui.layer;//弹出层
+            layui.use(['form','layer','layedit'], function(){
+                $ = layui.jquery;
+              var form = layui.form()
+              ,layer = layui.layer
+              ,layedit = layui.layedit;
 
-              //以上模块根据需要引入
-              laypage({
-                cont: 'page'
-                ,pages: 100
-                ,first: 1
-                ,last: 100
-                ,prev: '<em><</em>'
-                ,next: '<em>></em>'
-              }); 
+
+                layedit.set({
+                  uploadImage: {
+                    url: "./upimg.json" //接口url
+                    ,type: 'post' //默认post
+                  }
+                })
+  
+            //创建一个编辑器
+            editIndex = layedit.build('L_content');
+            
               
-              var start = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
-                ,istoday: false
-                ,choose: function(datas){
-                  end.min = datas; //开始日选好后，重置结束日的最小日期
-                  end.start = datas //将结束日的初始值设定为开始日
-                }
-              };
+
+              //监听提交
+              form.on('submit(add)', function(data){
+                console.log(data);
+                //发异步，把数据提交给php
+                layer.alert("保存成功", {icon: 6},function () {
+                    // 获得frame索引
+                    var index = parent.layer.getFrameIndex(window.name);
+                    //关闭当前frame
+                    parent.layer.close(index);
+                });
+                return false;
+              });
               
-              var end = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
-                ,istoday: false
-                ,choose: function(datas){
-                  start.max = datas; //结束日选好后，重置开始日的最大日期
-                }
-              };
               
-              document.getElementById('LAY_demorange_s').onclick = function(){
-                start.elem = this;
-                laydate(start);
-              }
-              document.getElementById('LAY_demorange_e').onclick = function(){
-                end.elem = this
-                laydate(end);
-              }
             });
-
-            //批量删除提交
-             function delAll () {
-                layer.confirm('确认要删除吗？',function(index){
-                    //捉到所有被选中的，发异步进行删除
-                    layer.msg('删除成功', {icon: 1});
-                });
-             }
-
-             function question_show (argument) {
-                layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
-             }
-             /*添加*/
-            function question_add(title,url,w,h){
-                x_admin_show(title,url,w,h);
-            }
-            //编辑 
-           function question_edit (title,url,id,w,h) {
-                x_admin_show(title,url,w,h); 
-            }
-
-            /*删除*/
-            function question_del(obj,id){
-                layer.confirm('确认要删除吗？',function(index){
-                    //发异步删除数据
-                    $(obj).parents("tr").remove();
-                    layer.msg('已删除!',{icon:1,time:1000});
-                });
-            }
-            </script>
-            <script>
+        </script>
+        <script>
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
@@ -236,4 +116,5 @@
         })();
         </script>
     </body>
+
 </html>

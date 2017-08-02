@@ -18,6 +18,22 @@ function space_replace(& $data,$type = ''){  //递归
 		$data = str_replace($str_replace1,$str_replace2,$data);
 	}
 }
+/*
+	字符串从哪里到哪里拿一组
+*/
+function preg($str,$start = '',$end = ''){
+	$s = array();
+	if(!empty($start)){
+		
+		$s = explode($start,$str);
+		$s = $s[1];
+	}
+	if(!empty($end)){
+		$s = explode($end,$s);
+		$s = $s[0];
+	}
+	return $s;	
+}
 //防止sql注入，把空格干掉
 space_replace($_GET,'get');
 space_replace($_POST,'post');
@@ -341,13 +357,38 @@ function shop_decrypt( $txt, $key = "" )
 		return trim( base64_decode( $tmp ) );
 }
 //I方法
-function I(){
-	if(isset($_POST) && !empty($_POST)){
-		r_space_replace($_POST,'post');
+function I($name = ''){
+	if(!empty($name)){
+		$d = explode('.',$name);
+		if(count($d) == 2){
+			if($d[0] == 'post'){
+				r_space_replace($_POST[$d[1]],'post');
+				return $_POST[$name];
+			}
+			if($d[0] == 'get'){
+				r_space_replace($_GET[$d[1]],'get');
+				return $_GET[$name];
+			}
+		}
+		if(isset($_POST[$name])){
+			r_space_replace($_POST[$name],'post');
+			return $_POST[$name];
+		}
+		if(isset($_GET[$name])){
+			r_space_replace($_GET[$name],'get');
+			return $_GET[$name];
+		}
+	}else{  //无参数
+		if(isset($_POST) && !empty($_POST)){
+			r_space_replace($_POST,'post');
+		}
+		if(isset($_GET) && !empty($_GET)){
+			r_space_replace($_GET,'get');
+		}
 	}
-	if(isset($_GET) && !empty($_GET)){
-		r_space_replace($_GET,'get');
-	}
+	
+	
+	return null;
 }
 
 //$type = true 就去model层
@@ -475,6 +516,9 @@ function show_message($msg = '',$type='',$header=''){
 			}
 			echo $html;die;
 			break;
+		case 'json':
+			$msg = json_encode($msg);
+			break;
 		default:
 			die($msg);
 			break;
@@ -561,7 +605,7 @@ function selected($where = array()){
 }
 //查询
 function search($where=array(),$other=''){
-	$keywords = isset($_GET['keywords'])?$_GET['keywords']:'';
+	$keywords = isset($_POST['keyword'])?$_POST['keyword']:'';
 	$str = '';
 	if(!empty($other)){
 		$other = ' '.$other.' ';

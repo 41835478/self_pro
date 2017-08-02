@@ -51,9 +51,14 @@
 					<?php } ?>
                   </div>
                 </div> 
+				<!--
 				<input id="form_page" type="hidden" name="page" value="" >
+				-->
             </form>
             <xblock>
+			
+			<?php if($output['form_top_hujdfisahjhj']['self']){ echo $output['form_top_hujdfisahjhj']['self'];};?>
+			
 			<?php if($output['form_top_hujdfisahjhj']['export']){ ?>
 			<button class="layui-btn layui-btn-danger layui-export" href="<?php echo $output['form_top_hujdfisahjhj']['export']?>">导出execl</button>	
 			<?php } ?>
@@ -63,7 +68,8 @@
 			<?php if($output['form_top_hujdfisahjhj']['add']){ ?>
 			<button class="layui-btn" onclick="question_add('添加','<?php echo $output['form_top_hujdfisahjhj']['add']?>','','')"><i class="layui-icon">&#xe608;</i>添加</button>
 			<?php } ?>
-			<span class="x-right" style="line-height:40px">共有数据：<?php echo isset($output['count']) ? intval($output['count']) : '0' ;?> 条</span></xblock>
+			<span class="x-right" style="line-height:40px">共有数据：<?php echo isset($output['count']) ? intval($output['count']) : '0' ;?> 条</span>
+			</xblock>
 			<table class="layui-table">
 				<?php echo $output['form_list'];?>
 			</table>
@@ -74,42 +80,12 @@
         <script src="<?php echo TPL;?>/js/x-layui.js" charset="utf-8"></script>
         <script>
 			
-            layui.use(['laydate','element','layer'], function(){
+            layui.use(['laydate','element','layer','form'], function(){
                 $ = layui.jquery;//jquery
               laydate = layui.laydate;//日期插件
               lement = layui.element();//面包导航
         //      laypage = layui.laypage;//分页
               layer = layui.layer;//弹出层
-			  /*
-              //以上模块根据需要引入
-              laypage({
-                cont: 'page'
-                ,pages: 100
-                ,first: 1
-                ,last: 100
-                ,prev: '<em><</em>'
-                ,next: '<em>></em>'
-              }); 
-              */
-              var start = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
-            //    ,istoday: false
-			//	,istime:true
-                ,choose: function(datas){
-            //      end.min = datas; //开始日选好后，重置结束日的最小日期
-            //      end.start = datas //将结束日的初始值设定为开始日
-                }
-              };
-              
-              var end = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
-                ,istoday: false
-                ,choose: function(datas){
-            //      start.max = datas; //结束日选好后，重置开始日的最大日期
-                }
-              };
               <?php if(isset($output['time_abcdefghijkl']) && !empty($output['time_abcdefghijkl'])){ ?>
 			  <?php foreach($output['time_abcdefghijkl'] as $key => $val){ ?>
 				  var <?php echo $val;?> = {
@@ -132,14 +108,7 @@
 				  }
 			  <?php } ?>
 			  <?php } ?>
-              document.getElementById('LAY_demorange_s').onclick = function(){
-                start.elem = this;
-                laydate(start);
-              }
-              document.getElementById('LAY_demorange_e').onclick = function(){
-                end.elem = this
-                laydate(end);
-              }
+              
             });
 
             //批量删除提交
@@ -163,11 +132,22 @@
             }
 
             /*删除*/
-            function question_del(obj,id){
+            function question_del(obj,url){
                 layer.confirm('确认要删除吗？',function(index){
                     //发异步删除数据
-                    $(obj).parents("tr").remove();
-                    layer.msg('已删除!',{icon:1,time:1000});
+					$.ajax({
+						url:url,
+						type:'get',
+						async:false, //同步
+						success:function(res){
+							if(res.code == '1'){
+								$(obj).parents("tr").remove();
+								
+							}
+							layer.msg(res.msg,{icon:1,time:1000});
+						},
+						dataType:'json'
+					});
                 });
             }
 			function search_keyword(page){

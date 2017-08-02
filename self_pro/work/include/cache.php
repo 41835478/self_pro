@@ -3,13 +3,13 @@ if(!defined('PROJECT_NAME')) die('project empty');
 class cache{
 	private $path = '';
 	/*
-	*$path Ð´ÈëÂ·¾¶
+	*$path å†™å…¥è·¯å¾„
 	*/
 	public function __construct($path){
 		$path = BasePath.DS.PROJECT.DS.'cache'.DS.$path;
 		$this->path = $path;
 	}
-	//Ð´»º´æ
+	//å†™ç¼“å­˜
 	public function w_cache($data=array()){
 		if(empty($data) || !is_array($data)){
 			return false;
@@ -28,7 +28,7 @@ class cache{
 			}
 		}
 	}
-	//¶Á»º´æ
+	//è¯»ç¼“å­˜
 	public function r_cache(){
 		if(!file_exists($this->path)){
 			return false;
@@ -41,11 +41,11 @@ class cache{
 		}
 		return $data;
 	}
-	//Çå»º´æ
+	//æ¸…ç¼“å­˜
 	public function c_cache($path = ''){
 		if(!file_exists($path)){
 			rm_dir(BasePath.DS.PROJECT.DS.'cache'.DS);
-			//´´½¨Ò»¸öÄ¿Â¼
+			//åˆ›å»ºä¸€ä¸ªç›®å½•
 			mkdir(BasePath.DS.PROJECT.DS.'cache');
 		}else{
 			rm_dir($path);

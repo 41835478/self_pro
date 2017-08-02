@@ -2,7 +2,7 @@
 if(!defined('PROJECT_NAME')) die('project empty');
 class testControl extends sysControl{
 	
-	public function test1(){
+	public function test1(){   //编辑
 		$admin = M('admin')->where(array('id' => 1))->find();
 		$admin['imagesab'] = '/uploads/default/20170715/1ab18430ae52a4c1ea8434fe451d4cb0.jpg,/uploads/default/20170715/b15c4b1a78f46eae4389ddb7ba60ca0b.jpg';
 		$admin['imagesabc'] = '/uploads/default/20170715/1ab18430ae52a4c1ea8434fe451d4cb0.jpg,/uploads/default/20170715/b15c4b1a78f46eae4389ddb7ba60ca0b.jpg,/uploads/default/20170715/05b3119a66f4c3308e91f31ff983dba2.jpg';
@@ -33,7 +33,7 @@ class testControl extends sysControl{
 		),$admin,'post','public_form');
 	}
 	
-	public function test2(){
+	public function test2(){   //列表
 		$selected = selected(array('type','type2'));
 		
 		$admin = M('admin')->select();
@@ -70,7 +70,7 @@ class testControl extends sysControl{
 			'add',
 			'search',
 			'export' => 'url',
-			'self' => array('name',array('class' => 'func', $path = '')),
+			'self' => array('自定义按钮','',''),
 		));
 		
 		self::form_list(array(
@@ -124,6 +124,20 @@ class testControl extends sysControl{
 		$page = '20170722115055190142';
 		self::setfooter('pachong2');
 		self::display('pachong/list/'.$page);
+	}
+	public function test7(){
+		set_time_limit(3000);
+		$city = array('广州');
+		$city = implode('|',$city);
+		for($i = 0 ; $i < 1000 ;$i ++){
+			$i = 24630651;
+			$html = file_get_contents('https://www.dianping.com/shop/'.$i);
+			$r = preg_match('/'.$city.'/',$html);
+			if($r){
+				$str = preg($html,'<div class="breadcrumb">','<div class="action">');
+				echo $html;
+			}
+		}
 	}
 }
 ?>

@@ -148,8 +148,14 @@ class mysql{
 				}else if($join_where == 'or' || $join_where == 'OR'){
 					$link = ' OR ';
 				}
-				
-				if($join_where_flag == 1){
+				if($join_where_flag > 1){
+					if($join_where[1] == 'and' || $join_where[1] == 'AND'){
+						$link = ' AND ';
+					}
+					if($join_where[1] == 'or' || $join_where[1] == 'OR'){
+						$link = ' OR ';
+					}
+				}else if($join_where_flag == 1){
 					if($join_where[0] == 'and' || $join_where[0] == 'AND'){
 						$link = ' AND ';
 					}
@@ -158,14 +164,7 @@ class mysql{
 					}
 					$join_where_flag ++;
 				}
-				if($join_where_flag > 1){
-					if($join_where[1] == 'and' || $join_where[1] == 'AND'){
-						$link = ' AND ';
-					}
-					if($join_where[1] == 'or' || $join_where[1] == 'OR'){
-						$link = ' OR ';
-					}
-				}
+				
 				$this->where .= $link;  //$link 可能是and或者or连接
 				$num1 = substr($v,0,1);
 				$num2 = substr($v,0,2);

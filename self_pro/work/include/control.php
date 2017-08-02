@@ -87,7 +87,7 @@ class control{
 					if(!empty($val) && is_array($val)){
 						foreach($val as $k => $v){
 							$e = explode('/',$k); 
-							$selected .= '<div class="layui-input-inline"><select style="min-width:190px;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$e[0].'" class="__web-inspector-hide-shortcut__">';
+							$selected .= '<div class="layui-input-inline"><select style="display:none;width:100%;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$e[0].'" class="__web-inspector-hide-shortcut__">';
 								foreach($v as $kk => $vv){
 									if(isset($e[1]) && !empty($e[1]) && $e[1] == $kk){
 										$selected .= '<option selected="selected" value="'.$kk.'">'.$vv.'</option>';
@@ -174,17 +174,26 @@ class control{
 				$td .= '<tr>';
 				foreach($field as $k => $v){
 					switch($v[0]){
-						case 'checkbox':
+						case 'checkbox': //主键给个复选框
 							$td .= '<th><input value="'.$val[$id].'" class="checked" type="checkbox" >'.$val[$v[1]].'</th>';
 						break;
-						case 'label':
+						case 'label':  //普通标签直接显示
 							$td .= '<td>'.$val[$v[1]].'</td>';
 						break;
-						case 'time':
+						case 'time':  //时间转换
 							$val[$v[1]] = isset($val[$v[1]]) ? date('Y-m-d H:i:s',$val[$v[1]]) : '';
 							$td .= '<td>'.$val[$v[1]].'</td>';
 						break;
-						case 'image':
+						case 'image':  //图片放地址
+							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
+						break;
+						case 'radio':
+							if(is_array($v[3]) && isset( $v[3][$val[$v[1]]] )){
+								$td .= '<td>'. $v[3][$val[$v[1]]]  .'</td>';
+							}
+						//	$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
+						break;
+						case 'href':  //普通标签直接显示
 							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
 						break;
 						case 'menu':
@@ -203,9 +212,9 @@ class control{
 					}
 				}
 				$td .= '</tr>';
+				//此句是把这个字符串改成id号
+				$td = str_replace('__ID__',$val[$id],$td);
 			}
-			//此句是把这个字符串改成id号
-			$td = str_replace('__ID__',$val[$id],$td);
 			$form_list .= $td;
 		}
 		self::output('form_list',$form_list);
@@ -292,6 +301,12 @@ class control{
 		
 		self::output('method',$met);
 		self::output('form',$form);
+		if($action == 'this' || $action == ''){
+			$action = 'action="?act='.$_GET['act'].'&op='.$_GET['op'].'"';
+		}else{
+			$action = 'action="'.$action.'"';
+		}
+		self::output('form_url',$action);
 		self::display($page);
 	}
 	
@@ -320,8 +335,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'time'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			if(!empty($content)){
@@ -370,8 +385,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'hidden'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			$str = '<input '.$attr.' type="hidden" name="'.$data[1].'" value="'.$content.'"  >';
@@ -384,8 +399,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'text'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			$str = '<tr><td>'.$data[2].':</td><td><div class="layui-input-inline"><input '.$attr.' class="layui-input" type="text" name="'.$data[1].'" value="'.$content.'"  ></div></td></tr>';
@@ -399,8 +414,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'editor'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			$str = '<tr><td>'.$data[2].':</td><td><textarea class="select_editor_label" '.$attr.' id="'.$data[1].'" name="'.$data[1].'" style="width:90%;height:250px;visibility:hidden;">'.$content.'</textarea></td></tr>';
@@ -412,8 +427,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'label'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			$str = '<tr><td>'.$data[2].':</td><td><div class="layui-input-inline"><input '.$attr.' class="layui-input input-label" readonly="readonly" type="text" name="'.$data[1].'" value="'.$content.'"  ></div></td></tr>';
@@ -426,11 +441,11 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'password'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
-			$str = '<tr><td>'.$data[2].':</td><td><input '.$attr.' class="layui-input" type="password" name="'.$data[1].'" value="'.$content.'"  ></td></tr>';
+			$str = '<tr><td>'.$data[2].':</td><td><input '.$attr.' class="layui-input" type="password" name="'.$data[1].'" ></td></tr>';
 		}
 		return $str;
 	}
@@ -447,9 +462,9 @@ class control{
 			if(is_array($data[3])){
 				foreach($data[3] as $key => $val){
 					if(isset(self::$select_data[$data[1]]) && $key == self::$select_data[$data[1]]){
-						$radio .= '<input '.$attr.' type="radio" checked="checked" name="'.$data[1].'" value="'.$key.'" >'.$val.' ';
+						$radio .= '<input '.$attr.' style="display:none" type="radio" checked="checked" name="'.$data[1].'" value="'.$key.'" title="'.$val.'">';
 					}else{
-						$radio .= '<input '.$attr.' type="radio" name="'.$data[1].'" value="'.$key.'" >'.$val.' ';
+						$radio .= '<input '.$attr.' style="display:none" type="radio" name="'.$data[1].'" value="'.$key.'" title="'.$val.'">';
 					}
 					
 				}
@@ -475,11 +490,12 @@ class control{
 						$selecked = explode(',',self::$select_data[$data[1]]);
 					}
 					if(in_array($key,$selecked)){
-						$radio .= '<input '.$attr.' type="checkbox" name="'.$data[1].'" checked="checked" value="'.$key.'" >'.$val.' ';
+						$radio .= '<input '.$attr.' style="display:none" type="checkbox" name="'.$data[1].'"  checked="checked" value="'.$key.'" title="'.$val.'">';
 					}else{
-						$radio .= '<input '.$attr.' type="checkbox" name="'.$data[1].'" value="'.$key.'" >'.$val.' ';
+						$radio .= '<input '.$attr.' style="display:none" type="checkbox" name="'.$data[1].'"   value="'.$key.'" title="'.$val.'">';
 					}
 				}
+
 			}
 			$str = '<tr><td>'.$data[2].':</td><td>'.$radio.'</td></tr>';
 		}
@@ -491,8 +507,8 @@ class control{
 		$str = '';
 		if(!empty($data) && $data[0] == 'textarea'){
 			$attr = '';
-			if(isset($data[4]) && !empty($data[4])){
-				$attr = self::createattr($data[4]);
+			if(isset($data[3]) && !empty($data[3])){
+				$attr = self::createattr($data[3]);
 			}
 			$content = isset(self::$select_data[$data[1]]) ? self::$select_data[$data[1]]: '';
 			$str = '<tr><td>'.$data[2].':</td><td><textarea '.$attr.' class="layui-textarea" name="'.$data[1].'" >'.$content.'</textarea></td></tr>';
@@ -510,7 +526,7 @@ class control{
 			}
 			$selected = '';
 			if(is_array($data[3])){
-				$selected .= '<select '.$attr.' style="min-width:190px;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$data[1].'" >';
+				$selected .= '<select '.$attr.' style="display:none;min-width:190px;height: 38px; line-height: 38px;border: 1px solid #e6e6e6;" name="'.$data[1].'" >';
 				foreach($data[3] as $key => $val){
 					if(isset(self::$select_data[$data[1]]) && $key == self::$select_data[$data[1]]){
 						$selected .= '<option selected="selected" value="'.$key.'">'.$val.'</option>';
