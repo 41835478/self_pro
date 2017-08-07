@@ -19,8 +19,10 @@
             <blockquote class="layui-elem-quote">
                 欢迎!<!--使用x-admin 后台模版！<span class="f-14">v1.0</span>-->
             </blockquote>
-            <p>登录次数：18 </p>
-            <p>上次登录IP：222.35.131.79.1  上次登录时间： 2017-01-01 11:19:55</p>
+			<p>登录次数：<?php echo $output['data']['login']['login_num'];?></p>
+			<?php if(isset($output['data']['login']['login_ip'])){ ?>
+            <p>上次登录IP：<?php echo $output['data']['login']['login_ip'];?>  上次登录时间： <?php echo $output['data']['login']['login_time'];?></p>	
+			<?php } ?>
             <fieldset class="layui-elem-field layui-field-title site-title">
               <legend><a name="default">信息统计</a></legend>
             </fieldset>
@@ -125,13 +127,7 @@
         <script src="<?php echo TPL;?>/lib/layui/layui.js" charset="utf-8"></script>
         <script src="<?php echo TPL;?>/js/x-admin.js"></script>
         <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
+        
         </script>
     </body>
 </html>

@@ -56,6 +56,6 @@ layui.use(['element'], function(){
 		element.tabChange('x-tab', $('.layui-tab-title li').length-1);
 
     	$('.layui-tab-title li').eq(0).find('i').remove();
-  });
+	});
 });
 

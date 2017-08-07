@@ -3,6 +3,10 @@
 * 	配置账号信息
 */
 
+define('WX_APPID',SYS('wx_pay.appid'));
+define('WX_MCHID',SYS('wx_pay.mchid'));
+define('WX_KEY',SYS('wx_pay.key'));
+define('WX_APPSECRET',SYS('wx_pay.appsecret'));
 class WxPayConfig
 {
 	//=======【基本信息设置】=====================================
@@ -22,10 +26,11 @@ class WxPayConfig
 	 * 获取地址：https://mp.weixin.qq.com/advanced/advanced?action=dev&t=advanced/dev&token=2005451881&lang=zh_CN
 	 * @var string
 	 */
-	const APPID = 'wxd9798daf783a0deb';
-	const MCHID = '1455407902';
-	const KEY = 'bc36ce5b002ddc34d30bbcfc22ebc42d';  //heiyanquan
-	const APPSECRET = '68544501e8547e8391db48b6a2c6383e';
+	 
+	const APPID = WX_APPID;
+	const MCHID = WX_MCHID;
+	const KEY = WX_KEY;  //heiyanquan
+	const APPSECRET = WX_APPSECRET;
 	
 	//=======【证书路径设置】=====================================
 	/**

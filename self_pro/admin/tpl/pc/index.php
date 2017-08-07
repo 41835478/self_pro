@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            X-admin v1.0
+            <?php echo SYS('web_conf.admin_name');?>
         </title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,15 +20,17 @@
             <div class="layui-header header header-demo">
                 <div class="layui-main">
                     <a class="logo" href="?act=index&op=index">
-                        X-admin v1.0
+                        <?php echo SYS('web_conf.admin_name');?>
                     </a>
                     <ul class="layui-nav" lay-filter="">
-                      <li class="layui-nav-item"><img src="<?php echo TPL;?>/images/logo.png" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt=""></li>
-                      <li class="layui-nav-item">
-                        <a href="javascript:;">admin</a>
+                      <!--
+					  <li class="layui-nav-item"><img src="<?php echo TPL;?>/images/logo.png" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt=""></li>
+                      -->
+					  <li class="layui-nav-item">
+                        <a href="javascript:;"><?php echo $_SESSION['admin']['username'];?></a>
                         <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                          <dd><a href="">个人信息</a></dd>
-                          <dd><a href="">切换帐号</a></dd>
+                          <dd><a onclick="clear_cache('清除缓存','?act=cache&op=clearcache')">清除缓存</a></dd>
+                          <dd><a onclick="question_edit('修改密码','?act=admin&op=reset_password','','400','300')">修改密码</a></dd>
                           <dd><a href="?act=login&op=logout">退出</a></dd>
                         </dl>
                       </li>
@@ -37,7 +39,7 @@
                             <i class="layui-icon" style="top: 1px;">&#xe63a;</i>
                         </a>
                         </li> -->
-                      <li class="layui-nav-item x-index"><a href="/">前台首页</a></li>
+                      <li class="layui-nav-item x-index"><a target="_blank" href="/">前台首页</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +48,7 @@
                     <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe607;</i><cite>问题管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>问题管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -67,13 +69,20 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe62d;</i><cite>产品管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>产品管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
                                     <dd class="">
-                                        <a href="javascript:;" _href="<?php echo TPL;?>/welcome.html">
-                                            <cite>产品列表（待开发）</cite>
+                                        <a href="javascript:;" _href="?act=goods&op=goods_list">
+                                            <cite>产品列表</cite>
+                                        </a>
+                                    </dd>
+                                </dd>
+								<dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="?act=cat&op=cat_list">
+                                            <cite>产品分类</cite>
                                         </a>
                                     </dd>
                                 </dd>
@@ -98,18 +107,11 @@
                                         </a>
                                     </dd>
                                 </dd>
-                                <dd class="">
-                                    <dd class="">
-                                        <a href="javascript:;" _href="<?php echo TPL;?>/category.html">
-                                            <cite>产品分类</cite>
-                                        </a>
-                                    </dd>
-                                </dd>
                             </dl>
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe634;</i><cite>轮播管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>轮播管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -123,7 +125,7 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe642;</i><cite>订单管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>订单管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -137,19 +139,19 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe630;</i><cite>分类管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>导航</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo TPL;?>/category.html">
-                                        <cite>分类列表</cite>
+                                    <a href="javascript:;" _href="?act=nav&op=nav_list">
+                                        <cite>导航列表</cite>
                                     </a>
                                 </dd>
                             </dl>
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe606;</i><cite>评论管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>评论管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -166,7 +168,7 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe612;</i><cite>会员管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>会员管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -203,12 +205,17 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe613;</i><cite>管理员管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>管理员管理</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
                                     <a href="javascript:;" _href="?act=admin&op=admin_list">
                                         <cite>管理员列表</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=admin&op=admin_log_list">
+                                        <cite>管理员操作日志</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
@@ -230,7 +237,7 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe629;</i><cite>系统统计</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>系统统计</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -282,7 +289,7 @@
                         </li>
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>系统设置</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>系统设置</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -291,13 +298,13 @@
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo TPL;?>/sys-data.html">
-                                        <cite>数字字典</cite>
+                                    <a href="javascript:;" _href="?act=value&op=value_list">
+                                        <cite>系统变量</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo TPL;?>/sys-shield.html">
-                                        <cite>屏蔽词</cite>
+                                    <a href="javascript:;" _href="?act=payment&op=payment_index">
+                                        <cite>支付配置</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
@@ -317,9 +324,38 @@
                                 </dd>
                             </dl>
                         </li>
+						<li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>微信相关</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <a href="javascript:;" _href="?act=wechat&op=wechat_menu">
+                                        <cite>微信菜单</cite>
+                                    </a>
+                                </dd>
+								<dd class="">
+                                    <a href="javascript:;" _href="?act=wechat&op=test">
+                                        <cite>测试</cite>
+                                    </a>
+                                </dd>
+                            </dl>
+                        </li>
+						<li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>友情链接</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <a href="javascript:;" _href="?act=link&op=link_list">
+                                        <cite>友情链接</cite>
+                                    </a>
+                                </dd>
+                            </dl>
+                        </li>
 						 <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>测试页面</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe617;</i><cite>测试页面</cite>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
@@ -361,11 +397,8 @@
                                 </dd>
                             </dl>
                         </li>
-                        <li class="layui-nav-item" style="height: 30px; text-align: center">
-                        </li>
                     </ul>
                 </div>
-
             </div>
             <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true">
                 <div class="x-slide_left"></div>
@@ -384,7 +417,28 @@
             <div class="site-mobile-shade">
             </div>
         </div>
-        <script src="<?php echo TPL?>/lib/layui/layui.js" charset="utf-8"></script>
-        <script src="<?php echo TPL?>/js/x-admin.js"></script>
+		<script src="<?php echo TPL;?>/lib/layui/layui.js" charset="utf-8"></script>
+        <script src="<?php echo TPL;?>/js/x-layui.js" charset="utf-8"></script>
+        <script src="<?php echo TPL;?>/js/x-admin.js"></script>
+		<script>
+		layui.use(['laydate','element','layer','form'], function(){
+                $ = layui.jquery;//jquery
+              laydate = layui.laydate;//日期插件
+              lement = layui.element();//面包导航
+        //      laypage = layui.laypage;//分页
+              layer = layui.layer;//弹出层
+		});
+		function clear_cache(title,url){
+			$.post(url,{data:'all'},function(res){
+				layer.msg(res.msg,{icon:1,time:2000});
+				setTimeout(function(){
+					location.href = location.href
+				},2100);
+			},'json');
+		}
+		function question_edit (title,url,id,w,h) {
+			x_admin_show(title,url,w,h); 
+		}
+		</script>
     </body>
 </html>

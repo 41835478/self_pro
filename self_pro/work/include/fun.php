@@ -155,6 +155,37 @@ function get_setting($name = 'web_config'){
 	return null;
 }
 
+function SYS($field = ''){
+	if(is_string($field) && !empty($field)){
+		$exp = explode('.',$field);
+		if(count($exp) == 2){
+			if(isset($_SESSION['private'][$exp[1]])){
+				return $_SESSION['private'][$exp[1]];
+			}
+			$conf = M('config')->where(array('name' => $exp[0]))->find();
+			if(!empty($conf)){
+				$c = unserialize($conf['value']);
+				if(isset($c[$exp[1]]) && !empty($c[$exp[1]]) && $conf['is_del'] == 0 ){
+					$_SESSION['private'][$exp[1]] = $c[$exp[1]];
+					return $c[$exp[1]];
+				}
+			}
+		}else if(count($exp) == 1){
+			if(isset($_SESSION['private'][$exp[0]])){
+				return $_SESSION['private'][$exp[0]];
+			}
+			$conf = M('config')->where(array('name' => $exp[0]))->find();
+			if(!empty($conf) && $conf['is_del'] == 0){
+				if(isset($conf['value']) && !empty($conf['value'])){
+					$_SESSION['private'][$exp[0]] = $conf['value'];
+					return $conf['value'];
+				}
+			}
+		}
+	}
+	return null;
+}
+
 //时间正运算
 function date_en($d1,$d2){
 	if($d2 == 0){
@@ -605,6 +636,23 @@ function selected($where = array()){
 }
 //查询
 function search($where=array(),$other=''){
+	global $config;
+	$affix = '';
+	if(!empty($config['left_affix'])){
+		$affix = $config['left_affix'];
+	}else if(!empty($config['right_affix'])){
+		$affix = $config['right_affix'];
+	}else{
+		$affix = $config['affix'];
+	}
+	if(is_string($where) && !empty($where)){
+		$where = str_replace('__AFFIX__',$affix,$where);
+	}
+	if(is_array($where) && !empty($where)){
+		foreach($where as $key => $val){
+			$where[$key] = str_replace('__AFFIX__',$affix,$val);
+		}
+	}
 	$keywords = isset($_POST['keyword'])?$_POST['keyword']:'';
 	$str = '';
 	if(!empty($other)){

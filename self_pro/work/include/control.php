@@ -18,7 +18,7 @@ class control{
 	private static $time_data = array();
 	
 	public function __construct(){
-		self::is_login();
+	//	self::is_login();
 	}
 	public static function _unset($val){
 		if(isset(self::$output[$val])){
@@ -47,15 +47,16 @@ class control{
 		}
 	}
 	//后台是否登录
+	/*
 	public static function is_login(){
-		/*
+		
 		if(!isset($_SESSION['login_state']) && $_GET['act'] != 'login' && defined('ADMIN') && ADMIN == true		//后台登录
 		){
 			header('Location:index.php?act=login&op=index');
 		}
-		*/
+		
 	}
-	
+	*/
 	//实例化一个
 	public static function getInstance( )
 	{
@@ -188,9 +189,11 @@ class control{
 							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
 						break;
 						case 'radio':
+							$td .= '<td>';
 							if(is_array($v[3]) && isset( $v[3][$val[$v[1]]] )){
-								$td .= '<td>'. $v[3][$val[$v[1]]]  .'</td>';
+								$td .= $v[3][$val[$v[1]]];
 							}
+							$td .= '</td>';
 						//	$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
 						break;
 						case 'href':  //普通标签直接显示

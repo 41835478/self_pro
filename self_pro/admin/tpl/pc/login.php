@@ -36,7 +36,7 @@
                     <img src="<?php echo TPL;?>/images/logo.png" alt="">
                 </div>
                 <div class="input">
-                    <form class="layui-form">
+                    <form class="layui-form" action="?act=login&op=login"  method="post">
                         <div class="layui-form-item x-login-box">
                             <label for="username" class="layui-form-label">
                                 <i class="layui-icon">&#xe612;</i>
@@ -51,7 +51,7 @@
                                 <i class="layui-icon">&#xe628;</i>
                             </label>
                             <div class="layui-input-inline">
-                                <input type="password" id="pass" name="pass" required="" lay-verify="pass"
+                                <input type="password" id="pass" name="password" required="" lay-verify="pass"
                                 autocomplete="off" placeholder="密码" class="layui-input">
                             </div>
                         </div>
@@ -86,15 +86,25 @@
                 //监听提交
                 form.on('submit(save)',
                 function(data) {
-                    console.log(data);
-                    layer.alert(JSON.stringify(data.field), {
-                      title: '最终的提交信息'
-                    },function  () {
-                        location.href = "?act=index&op=index";
-                    })
+					var url = data.form.action;
+					var type = data.form.method;
+					$.ajax({
+						url:url,
+						type:type,
+						data:data.field,
+						async:false, //同步
+						success:function(res){
+							if(res.code == '1'){
+								location.href = "?act=index&op=index";
+							}else{
+								layer.msg(res.msg,{icon:1,time:1500});
+							}
+						},
+						dataType:'json'
+					});
+					
                     return false;
                 });
-
             });
 
         </script>

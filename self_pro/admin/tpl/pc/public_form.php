@@ -82,11 +82,12 @@
 						async:false, //同步
 						success:function(res){
 							if(res.code == '1'){
-								layer.alert(res.msg, {icon: 6},function () {
+								layer.alert(res.msg, {icon: 6 },function () {
 									// 获得frame索引
 									var index = parent.layer.getFrameIndex(window.name);
 									//关闭当前frame
 									parent.layer.close(index);
+									
 								});
 							}else{
 								layer.msg(res.msg,{icon:1,time:1500});

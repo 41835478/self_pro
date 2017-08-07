@@ -58,14 +58,14 @@ class table{
 		return $this;
 	}
 	
-	public function commit(){
+	public function commit($t = ''){
 		$res = '';
 		if(!empty($this->auto_key)){
 			//update
 			if(isset($this->other['update']) && !empty($this->other['update'])){
 				$this->field = array_merge($this->other['update'],$this->field);
 			}
-			$res = M($this->table)->where($this->where)->update($this->field);
+			$res = M($this->table)->where($this->where)->update($this->field,$t);
 			$this->state['M'] = 'update';
 		}else{
 			//add
@@ -83,7 +83,7 @@ class table{
 				$this->field = array_merge($this->other['add'],$this->field);
 			}
 			
-			$res = M($this->table)->add($this->field);
+			$res = M($this->table)->add($this->field,$t);
 			$this->state['M'] = 'add';
 			$this->state['id'] = $res;
 		}

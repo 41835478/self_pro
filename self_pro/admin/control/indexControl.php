@@ -125,33 +125,13 @@ class indexControl extends sysControl{
 		
 		$data['web_port']  		= $_SERVER['SERVER_PORT'];
 		$data['gd']  			= function_exists('gd_info')?'支持':'不支持';
-		/*
-		$day7 = strtotime(date('Y-m-d',time()-3600*24*7)); //一个礼拜前的时间
-		//新进用户数
-		$new_user_num = M('user')->where(array('add_time'=>'>'.$day7))->count();
-		//用户数
-		$all_user_num = M('user')->count();
-		//商品数
-		$goods_where = array(
-			'is_show'  => 1,
-			'goods_type'  => 2,
-		//	'end_time' => '>'.time(),
-		);
-		$all_goods = M('goods')
-					->where(array('is_show' =>1,'end_time' => '>'.time()))
-				//	->where(array('end_time' => '0'),'OR')
-					->count();
-		//商铺数，
-		$store_where = array(
-			'is_open' => 1,
-		);
-		$all_store = M('store')->where($store_where)->count();
-		$data['new_user_num'] = $new_user_num;
-		$data['all_user_num'] = $all_user_num;
-		$data['all_goods'] = $all_goods;
-		$data['all_store'] = $all_store;
-	//	var_dump($new_user_num);die;
-		*/
+		$data['login']['login_num'] = M('admin_log')->where(array( 'admin_type' => 1 ))->count();
+		$login 	= M('admin_log')->where(array( 'admin_type' => 1 ))->limit(2)->order('id desc')->select();
+		if(isset($login[1]) && !empty($login[1])){
+			$data['login']['login_ip'] 	= $login[1]['ip'];
+			$data['login']['login_time'] 	= date('Y-m-d H:i:s',$login[1]['create_time']);
+		}
+		
 		self::output("data",$data);
 		
 		self::display();

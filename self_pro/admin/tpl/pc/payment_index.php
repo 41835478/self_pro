@@ -23,59 +23,10 @@
             </span>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
-        <div class="x-body">
-            <form class="layui-form x-center formsearch" action="?act=<?php echo $_GET['act']?>&op=<?php echo $_GET['op']?>" method="post" style="width:100%">
-                <div class="layui-form-pane" style="margin-top: 15px;">
-                  <div class="layui-form-item">
-					<?php if($output['form_top_hujdfisahjhj']['selected']){ echo $output['form_top_hujdfisahjhj']['selected'];};?>
-                   
-					<?php if($output['form_top_hujdfisahjhj']['start_time']){ ?>
-					<div class="layui-input-inline">
-                      <input name="start_time" value="<?php echo $output['form_top_hujdfisahjhj']['start_time'] == KEY ? '' :  $output['form_top_hujdfisahjhj']['start_time'];?>" class="layui-input" placeholder="开始时间" id="LAY_demorange_s">
-                    </div>
-					<?php } ?>
-                    <?php if($output['form_top_hujdfisahjhj']['end_time']){ ?>
-					<div class="layui-input-inline">
-                      <input name="end_time" value="<?php echo $output['form_top_hujdfisahjhj']['end_time'] == KEY ? '' :  $output['form_top_hujdfisahjhj']['end_time'];?>"  class="layui-input" placeholder="结束时间" id="LAY_demorange_e">
-                    </div>
-					<?php } ?>
-                    <?php if($output['form_top_hujdfisahjhj']['keyword']){ ?>
-					<div class="layui-input-inline">
-                      <input type="text" name="keyword"  placeholder="关键字" value="<?php echo $output['form_top_hujdfisahjhj']['keyword'] == KEY ? '' : $output['form_top_hujdfisahjhj']['keyword'] ;?>" autocomplete="off" class="layui-input">
-                    </div>
-					<?php } ?>
-					<?php if($output['form_top_hujdfisahjhj']['search']){ ?>
-					<div class="layui-input-inline" style="width:80px">
-                        <a class="layui-btn" onclick="search_keyword()"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</a>
-                    </div>
-					<?php } ?>
-                  </div>
-                </div> 
-				
-				<input id="form_page" type="hidden" name="page" value="" >
-				
-            </form>
-            <xblock>
-			
-			<?php if($output['form_top_hujdfisahjhj']['self']){ echo $output['form_top_hujdfisahjhj']['self'];};?>
-			
-			<?php if($output['form_top_hujdfisahjhj']['export']){ ?>
-			<button class="layui-btn layui-btn-danger layui-export" href="<?php echo $output['form_top_hujdfisahjhj']['export']?>">导出execl</button>	
-			<?php } ?>
-			<?php if($output['form_top_hujdfisahjhj']['all_del']){ ?>
-			<button class="layui-btn layui-btn-danger" onclick="delAll('<?php echo $output['form_top_hujdfisahjhj']['all_del']?>')"><i class="layui-icon">&#xe640;</i>批量删除</button>	
-			<?php } ?>
-			<?php if($output['form_top_hujdfisahjhj']['add']){ ?>
-			<button class="layui-btn" onclick="question_add('添加','<?php echo $output['form_top_hujdfisahjhj']['add']?>','','')"><i class="layui-icon">&#xe608;</i>添加</button>
-			<?php } ?>
-			<span class="x-right" style="line-height:40px">共有数据：<?php echo isset($output['count']) ? intval($output['count']) : '0' ;?> 条</span>
-			</xblock>
-			<table class="layui-table">
-				<?php echo $output['form_list'];?>
-			</table>
-			<?php echo isset($output['page']) && !empty($output['page']) ? $output['page'] : '';?>
-           
-        </div>
+		<div class="x-body">
+		<a class="layui-btn" href="javascript:;" onclick="question_edit('编辑','?act=payment&op=wx_pay','','','510')" >微信支付</a>
+		<a class="layui-btn" href="javascript:;" onclick="question_edit('编辑','?act=payment&op=ali_pay','','','510')" >支付宝支付</a>
+		</div>
         <script src="<?php echo TPL;?>/lib/layui/layui.js" charset="utf-8"></script>
         <script src="<?php echo TPL;?>/js/x-layui.js" charset="utf-8"></script>
         <script>
