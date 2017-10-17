@@ -1,0 +1,135 @@
+/*公共样式*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.w100{
+    width: 100%;
+}
+
+.w50{
+    width: 50%;
+}
+a{
+    text-decoration:none;
+}
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.fl{float:left;}
+.fr{float:right;}
+
+
+/*head*/
+.head{
+    height:50px;
+    position: relative;
+    overflow: hidden;
+    background: #0E8EF9;
+}
+.head_box{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+}
+.left_img img{
+    display: block;
+    width:20px;
+    margin:15px;
+}
+.head_txt{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    box-sizing:border-box;
+}
+
+/*搜索框*/
+#myPageTop {
+    position: relative;
+    /*padding: 0 15px;*/
+    height: 35px;
+    /*top: 5px;*/
+    right: 0;
+    /*background: #fff none repeat scroll 0 0;*/
+    /*border: 1px solid #ccc;*/
+    margin: 5px 10px;
+    /*padding: 6px;*/
+    /*font-family: "Microsoft Yahei", "΢���ź�", "Pinghei";*/
+    /*font-size: 14px;*/
+
+}
+#myPageTop input {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+}
+
+.margin {
+    height: 15px;
+    background-color: #EEEEEE;
+    margin-top: 10px;
+}
+
+/*当前定位*/
+#nowLocation  {
+    padding: 20px 15px 10px 15px;
+}
+#nowLocation img {
+    vertical-align: middle;
+    width: 20px;
+    padding-right: 5px;
+}
+
+/*附近建筑物列表*/
+.list {
+    padding: 10px 16px 10px 16px;
+}
+.list .title {
+    padding-bottom: 10px;
+}
+.list li {
+    list-style-type:none;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px solid #EEEEEE;
+}
+.list .detail {
+    line-height: 15px;
+}
+.list .address {
+    color: gray;
+    font-size: 12px;
+}
+.list .distance {
+    color: gray;
+    font-size: 12px;
+}
+.list .distance img {
+    position: absolute;
+    right: 50px;
+    vertical-align: middle;
+    width: 10px;
+}
+
+/*地图*/
+#container {
+    width: 0;
+    height: 0;
+}
+
+#panel {
+    position: fixed;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+    top: 10px;
+    right: 200px;
+    width: 0px;
+    border-bottom: solid 1px silver;
+}

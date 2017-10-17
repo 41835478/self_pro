@@ -1,7 +1,7 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
 class registerControl extends control{
-	
+	/*
 	public function index(){
 		//普通注册
 		self::output('pt_register',true);
@@ -13,6 +13,17 @@ class registerControl extends control{
 		self::setheader('register_header');
 		
 		self::display('register');
+	}
+	*/
+	
+	public function bind_phone(){
+		$id = isset($_GET['id']) ?  $_GET['id'] : '';
+		$id = intval(de_key($id,KEY));
+		$data = array(
+			'id' =>  $id,
+		);
+		self::output('data',$data);
+		self::display('login/bind_phone');
 	}
 }
 ?>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<!-- head -->
+<!--<div class="head" id="head">-->
+<!--<img src="images/sports.jpg">-->
+<!--</div>-->
+<div class="head">
+    <div class="head_box col-xs-12">
+        <div class="left_img col-xs-2 fl"><a href="javascript:;"><img src="img/back.png"/></a></div>
+        <div class="head_txt col-xs-8 fl">登录</div>
+        <div class="right_img col-xs-2 fl"></div>
+    </div>
+</div>
+<div class="grayMargin"></div>
+
+<!-- phone-number -->
+<div class="phone-number-box col-xs-12">
+    <div class="phone-num">
+        <img class="fl" src="img/shouji.png"/>
+        <input type="text" id="tel-number" placeholder="请输入手机号码">
+    </div>
+    <div class="passwd">
+        <img class="fl" src="img/mima.png"/>
+        <input type="password" id="passwd" placeholder="请输入密码">
+        <img class="pwd-img col-xs-2 fr" src="img/eyeopen.png"/>
+    </div>
+    <div class="phone-test" id="login-btn">登录</div>
+    <div class="rel-login">
+        <p class="col-xs-6 fl"><a href="new-pwd.html">忘记密码?</a></p>
+        <p class="col-xs-6 fl"><a href="register.html">立即注册></a></p>
+    </div>
+</div>
+<!-- other-login -->
+<div class="other-login col-xs-12">
+    <div class="other-title clearFix col-xs-12">
+        <img src="img/lineleft.png" alt="" class="fl"/>
+        <p class=" fl">快捷登录</p>
+        <img src="img/lineright.png" alt="" class="fl"/> </div>
+    <!-- 微信登录 -->
+    <div class="weixin-login col-xs-12 fl">
+        <a id="wx_login" href="?act=login&op=wx_login">
+			<img src="img/wxlogin.png"/>
+		</a>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="../js/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	var wx_url = 'http://' + window.location.host + '?act=login&op=wx_login';
+	$('#wx_login').attr('href',wx_url);
+</script>
+</html>

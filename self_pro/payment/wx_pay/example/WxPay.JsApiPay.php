@@ -45,15 +45,23 @@ class JsApiPay
 	{
 		//通过code获得openid
 		if (!isset($_GET['code'])){
+			if(isset($_SESSION['openid'])){
+				return $_SESSION['openid'];
+			}
 			//触发微信返回code码
 			$baseUrl = urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].$_SERVER['QUERY_STRING']);
 			$url = $this->__CreateOauthUrlForCode($baseUrl);
+		//	var_dump($url);die;
 			Header("Location: $url");
 			exit();
 		} else {
 			//获取code码，以获取openid
+			if(isset($_SESSION['openid'])){
+				return $_SESSION['openid'];
+			}
 		    $code = $_GET['code'];
 			$openid = $this->getOpenidFromMp($code);
+			$_SESSION['openid'] = $openid;
 			return $openid;
 		}
 	}
@@ -208,7 +216,7 @@ class JsApiPay
 		$urlObj["appid"] = WxPayConfig::APPID;
 		$urlObj["redirect_uri"] = "$redirectUrl";
 		$urlObj["response_type"] = "code";
-		$urlObj["scope"] = "snsapi_base";
+		$urlObj["scope"] = "snsapi_userinfo";  //snsapi_userinfo
 		$urlObj["state"] = "STATE"."#wechat_redirect";
 		$bizString = $this->ToUrlParams($urlObj);
 		return "https://open.weixin.qq.com/connect/oauth2/authorize?".$bizString;

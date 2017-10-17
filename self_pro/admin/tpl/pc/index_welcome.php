@@ -31,8 +31,8 @@
                     <tr>
                         <th>统计</th>
                         <th>管理员</th>
-                        <th>店铺(开启)</th>
-                        <th>商品(正在出售)</th>
+                        <th>社区</th>
+                        <th>资源</th>
                         <th>用户</th>
                         <!--
 						<th>用户</th>
@@ -43,17 +43,10 @@
                 <tbody>
                     <tr>
                         <td>总数</td>
-                        <td>92</td>
-                        <td>9</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-					<tr>
-                        <td>一周</td>
-                        <td>92</td>
-                        <td>9</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td><?php echo $output['data']['admin_count'];?></td>
+                        <td><?php echo $output['data']['community_count'];?></td>
+                        <td><?php echo $output['data']['goods_count'];?></td>
+                        <td><?php echo $output['data']['user_count'];?></td>
                     </tr>
                 </tbody>
             </table>

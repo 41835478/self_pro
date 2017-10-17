@@ -11,8 +11,9 @@ class wechatControl extends baseControl{
 	}
 	
 	public function init(){
-		$wechat = M('payment_config')->where(array('payment_type'=>'wx'))->find();
-		if($wechat['is_open'] != 1){
+		$wechat = M('config')->where(array('name'=>'wx_pay'))->find();
+		
+		if($wechat['is_open'] != 0){
 			die;
 		}
 		$config = unserialize($wechat['value']);
@@ -24,7 +25,6 @@ class wechatControl extends baseControl{
 				'appid'=>trim($config['app_id']), //填写高级调用功能的app id
 				'appsecret'=>trim($config['appsecret']), //填写高级调用功能的密钥
 			);
-		
 		$weObj = new Wechat($options);
 		$this->weixin = $weObj;
 		$weObj->valid();//明文或兼容模式可以在接口验证通过后注释此句，但加密模式一定不能注释，否则会验证失败
@@ -64,47 +64,34 @@ class wechatControl extends baseControl{
 					$wx_user = $this->weixin->http_get($url);
 					$wx_user = json_decode($wx_user,true);
 					$data = array(
-						'is_guanzhu' => $wx_user['subscribe'],
-						'update_time'=>	$wx_user['subscribe_time'],
-						'user_logo'=>	$wx_user['headimgurl'],
+						'subscribe' => $wx_user['subscribe'],
+						'image'=>	$wx_user['headimgurl'],
 					);
 					$data['openid']		= $wx_user['openid'];
-					$data['nickname'] 	= str_replace("'",'’',$wx_user['nickname']);
-					$data['user_sex'] 	= $wx_user['sex'];  //1男 2 女
-					$data['city'] 		= $wx_user['city'];  
-					$data['country'] 	= $wx_user['country'];  
-					$data['province'] 	= $wx_user['province'];  
-					$data['user_logo'] 	= $wx_user['headimgurl'];  
-					$data['language'] 	= $wx_user['language'];  
+					$data['name'] 	= str_replace("'",'’',$wx_user['nickname']);
+					$data['u_sex'] 	= $wx_user['sex'];  //1男 2 女
+					$data['city'] 		= $wx_user['city'];   
+					$data['province'] 	= $wx_user['province'];   
 					$data['remark'] 	= str_replace("'",'’',$wx_user['remark']);  
-					$data['groupid'] 	= $wx_user['groupid'];  
-					$data['user_type'] 	= 'wx';
-					if(isset($wx_user['unionid'])){
-						$data['unionid'] = $wx_user['unionid'];
-					}
+					$data['groupid'] 	= $wx_user['groupid']; 
 					if($user){
-						if(empty($user['invitation'])){
-							$data['invitation'] = substr(md5($wx_user['subscribe_time'].rand(10000,99999)),0,6);  
-						}
 						M('user')->where(array('openid'=>$getRevFrom))->update($data);
 					}else{
-						$data['add_time'] 	= $wx_user['subscribe_time'];  
-						$data['invitation'] = substr(md5($wx_user['subscribe_time'].rand(10000,99999)),0,6);  
 						M('user')->add($data);
 					}
-				//	$this->weixin->text($sql)->reply();die;
+					/*
 					$huifu = M('setting')->where(array('name'=>'wx_config'))->find();
 					$huifu = unserialize($huifu['value']);
-					
 					if(!empty($huifu['guanzhuhuifu'])){
 						$this->weixin->text(trim($huifu['guanzhuhuifu']))->reply();
 					}
+					*/
 					break;
 			case Wechat::EVENT_UNSUBSCRIBE:  //取消关注
 					$getRevFrom = $this->weixin->getRevFrom();  //openid
 					if($getRevFrom){
 						$update = array(
-							'is_guanzhu'=> 0
+							'subscribe'=> 0
 						);
 						M('user')->where(array('openid'=>$getRevFrom))->update($update);
 					}

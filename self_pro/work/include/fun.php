@@ -1,5 +1,9 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 header("Content-type: text/html; charset=utf-8"); 
 function space_replace(& $data,$type = ''){  //递归
 	$str_replace1 = array(' ',"'",'"');
@@ -668,6 +672,34 @@ function search($where=array(),$other=''){
 	return $str;
 }
 
+//多少时间之前
+function d_time($t = ''){
+	$time = time();
+	$time2 = $t;
+	$t = $time - $time2;
+	$tt = '';
+	if($t > 0 && $t <60){  //
+		$tt = $t.'秒前';
+	}
+	
+	if($t >= 60 && $t < 3600){
+		$s = (int)($t/60);
+		$tt = $s.'分前';
+	}
+	
+	if($t >= 3600 && $t < 86400){
+		$h = (int)($t/3600);
+		$tt = $h.'小时前';
+	}
+	if($t >= 86400 && $t < 86400*30 ){
+		$d = (int)($t/86400);
+		$tt = $d.'天前';
+	}
+	if($t >= 86400*30){
+		$tt = date('Y年m月d日',$time2);
+	}
+	return $tt;
+}
 //获取文件后缀
 function get_file_type( $str )
 {

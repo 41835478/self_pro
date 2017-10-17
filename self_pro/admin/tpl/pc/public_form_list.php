@@ -52,7 +52,7 @@
                   </div>
                 </div> 
 				
-				<input id="form_page" type="hidden" name="page" value="" >
+				<input id="form_page" type="hidden" name="page" value="1" >
 				
             </form>
             <xblock>
@@ -66,7 +66,7 @@
 			<button class="layui-btn layui-btn-danger" onclick="delAll('<?php echo $output['form_top_hujdfisahjhj']['all_del']?>')"><i class="layui-icon">&#xe640;</i>批量删除</button>	
 			<?php } ?>
 			<?php if($output['form_top_hujdfisahjhj']['add']){ ?>
-			<button class="layui-btn" onclick="question_add('添加','<?php echo $output['form_top_hujdfisahjhj']['add']?>','','')"><i class="layui-icon">&#xe608;</i>添加</button>
+			<button class="layui-btn" onclick="question_add('添加','<?php echo $output['form_top_hujdfisahjhj']['add']?>','1024','768')"><i class="layui-icon">&#xe608;</i>添加</button>
 			<?php } ?>
 			<span class="x-right" style="line-height:40px">共有数据：<?php echo isset($output['count']) ? intval($output['count']) : '0' ;?> 条</span>
 			</xblock>
@@ -115,7 +115,18 @@
              function delAll (url) {
                 layer.confirm('确认要删除吗？',function(index){
                     //捉到所有被选中的，发异步进行删除
-                    layer.msg('删除成功', {icon: 1});
+					var ids = '';
+					$('.checked').each(function(){
+						if($(this).context.checked){
+							ids += $(this).val() + ',';
+						}
+					});
+					$.post(url,{ids:ids},function(res){
+						layer.msg(res.msg, {icon: 1,time:1500});
+						setTimeout(function(){
+							window.location.href = window.location.href;
+						},1500);
+					},'json');
                 });
              }
 
@@ -123,12 +134,25 @@
                 layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
              }
              /*添加*/
+            var win = window;
+			win.width 	= window.innerWidth;
+			win.height 	= window.innerHeight ;
+			var bodyer = {};
+			
+			bodyer.width 	= document.body.scrollWidth ;
+			bodyer.height 	= document.body.scrollHeight ;
             function question_add(title,url,w,h){
-                x_admin_show(title,url,w,h);
+            //  x_admin_show(title,url,w,h);
+			//	alert(win.height + '...' + bodyer.height);
+                x_admin_show(title,url,win.width,win.height);
             }
             //编辑 
-           function question_edit (title,url,id,w,h) {
-                x_admin_show(title,url,w,h); 
+			
+			function question_edit (title,url,id,w,h) {
+            //    x_admin_show(title,url,w,h); 
+			//	alert(bodyer.height);
+			//	alert(win.height + '...' + bodyer.height);
+				x_admin_show(title,url,win.width,win.height);
             }
 
             /*删除*/
@@ -201,3 +225,6 @@
     font-size: 12px;
 }
 </style>
+<script>
+	
+</script>

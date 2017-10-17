@@ -1,6 +1,10 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
 //匹配验证，需要的自己写，我只写了简单的验证规则
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 class preg{
 	private $min_length = 0;
 	private $max_length = 0;

@@ -1,0 +1,170 @@
+
+
+/*head*/
+.head{
+    height:50px;
+    position: relative;
+    overflow: hidden;
+    background: #0E8EF9;
+}
+.head_box{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+}
+.left_img img{
+    display: block;
+    width:20px;
+    margin:15px;
+}
+.head_txt{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    box-sizing:border-box;
+}
+.grayMargin{
+    height: 20px;
+}
+/*phone-number*/
+.phone-number-box{
+    overflow: hidden;
+}
+.phone-num {
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    font-size: 16px;
+    color:#555;
+    height: 50px;
+    line-height: 40px;
+    margin:0px 5%;
+}
+.phone-num img,.phone-code img, .passwd img, .username img{
+    width:6%;
+    margin: 15px 10px 0 10px;
+}
+.phone-code, .passwd, .username{
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    font-size: 12px;
+    color:#555;
+    margin-top:10px;
+    margin-left: 5%;
+    margin-right:5%;
+}
+.phone-num > input{
+    border:none;
+    height: 50px;
+    font-size: 16px;
+}
+.phone-code > input ,.passwd > input ,.username > input{
+    /*display: block;*/
+    border:none;
+    height: 50px;
+    font-size: 16px;
+}
+.phone-code > button{
+    background: #0E8EF9;
+    color:#fff;
+    /*border-radius: 5px;*/
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    width:100px;
+    font-size: 15px;
+    text-align: center;
+}
+.get-code {
+    margin-left: 10px;
+}
+
+/*密码*/
+.passwd .pwd-img {
+    z-index: 99;
+
+}
+
+/*注册协议*/
+.agreement {
+    margin:10px 5%;
+}
+.agreement-img img{
+    width:15px;
+    vertical-align:middle;
+    line-height:30px;
+    margin-right:5px;
+}
+.read-text{
+    font-size: 13px;
+}
+.clause {
+    border-bottom: 1px solid #0E8EF9;
+    font-size: 13px;
+    margin-left: 3px;
+    color:#0E8EF9;
+}
+
+.phone-test{
+    width:90%;
+    margin-left: 5%;
+    margin-top:30px;
+    background: #0E8EF9;
+    font-size:16px;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+    /*border-radius: 5px;*/
+}
+
+
+
+/*登陆*/
+.rel-login{
+    width:90%;
+    margin-left: 5%;
+    font-size: 13px;
+    margin-top:15px;
+}
+.rel-login a {
+    color:#0E8EF9;
+}
+.rel-login > p:nth-child(2){
+    text-align: right;
+}
+/*other-login*/
+.other-login{
+    overflow: hidden;
+    margin-top:170px;
+}
+.other-title{
+    color:#555;
+    font-size: 12px;
+    text-align: center;
+}
+.other-title img{
+    display: block;
+    height: 1px;
+    margin-top: 10px;
+    width: 38%;
+}
+.other-title p{
+    width: 24%;
+    font-size: 14px;
+    color:#0E8EF9;
+}
+.weixin-login{
+    margin-top:25px;
+    text-align: center;
+    box-sizing:border-box;
+}
+.weixin-login img{
+    width:54px;
+}
+.login-submit > .bj{
+    background:#E14948;
+}
+.login-submit>span{
+    color:#fff;
+}

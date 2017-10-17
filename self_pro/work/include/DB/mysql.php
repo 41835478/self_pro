@@ -1,4 +1,9 @@
 <?php
+/*
+	time 	2017-10-12
+	auth	李凯
+	mysql	
+*/
 class mysql{
 	private $config = '';
 	private $where  = ' WHERE 1 ';
@@ -100,6 +105,7 @@ class mysql{
 		$res = mysql_query($this->sql);
 		$this->reset();
 		!$res?show_message($this->sql.' error'):'';
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$data = array();
 		while($row = mysql_fetch_assoc($res)){
 			$data[] = $row;
@@ -107,7 +113,7 @@ class mysql{
 		if(!empty($data)){
 			return $data[0]['num'];
 		}
-		return null;
+		return 0;
 	}
 	/*
 	*   参数 $join_where = 1 时显示where子句
@@ -187,6 +193,7 @@ class mysql{
 			
 		}
 		$this->where = str_replace('__AFFIX__',$this->affix,$this->where);
+		$this->where = str_replace('WHERE 1  OR','WHERE 1 AND',$this->where);  //强制转换
 	//	$this->where = str_replace($table,'',$this->where);
 		if($join_where=='1'){
 			show_message($this->where);
@@ -228,6 +235,7 @@ class mysql{
 		}
 		
 		$res = mysql_query($this->sql);
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		if($res){  //返回主键id
 			return mysql_insert_id();
@@ -273,6 +281,7 @@ class mysql{
 			show_message($this->sql);
 		}
 		$res = mysql_query($this->sql);
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		return $res;
 	}
@@ -315,6 +324,7 @@ class mysql{
 		}
 		$res = mysql_query($this->sql);
 		!$res?show_message($this->sql.' error'):'';
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		$data = array();
 		while($row = mysql_fetch_assoc($res)){
@@ -333,6 +343,7 @@ class mysql{
 		}
 		$res = mysql_query($this->sql);
 		!$res?show_message($this->sql.' error'):'';
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		$data = array();
 		while($row = mysql_fetch_assoc($res)){
@@ -367,6 +378,7 @@ class mysql{
 		
 		$res = mysql_query($this->sql);
 		!$res?show_message($this->sql.' error'):'';
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$data = array();
 		while($row = mysql_fetch_assoc($res)){
 			$data[] = $row;
@@ -415,6 +427,7 @@ class mysql{
 		}
 		
 		$res = mysql_query($this->sql);
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		return $res;
 	}
@@ -466,6 +479,7 @@ class mysql{
 			show_message($this->sql);
 		}
 		$res = mysql_query($this->sql);
+		file_put_contents(BasePath.DS.'log/select/'.date('Ymd').'.log' , $this->sql." \n" , FILE_APPEND);
 		$this->reset();
 		return $res;
 	}

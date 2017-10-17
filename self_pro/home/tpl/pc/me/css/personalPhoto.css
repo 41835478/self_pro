@@ -1,0 +1,69 @@
+
+body {
+    background-color: #EEEEEE;
+}
+/*标题*/
+.container {
+    padding: 0 10px 10px 10px;
+    background-color: #fff;
+}
+.title {
+    height: 50px;
+    line-height: 50px;
+}
+.title span {
+    font-size: 18px;
+    width: 100%;
+    color: gray;
+}
+
+/*图片*/
+.pic-wrapper {
+    padding: 10px 0;
+}
+.pic-wrapper .pic {
+    margin: 0 4px;
+    width: calc((100% - 20px) /3 - 3px);
+    height: 80px;
+    position: relative;
+}
+.pic-wrapper .delete img {
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+.pic-wrapper .plus img {
+    width: 100%;
+    height: 80px;
+}
+#upfile1, #upfile2, #upfile3 {
+    width:0;
+}
+#pic2-div, #pic3-div, .delete {
+    display: none;
+}
+
+/*保存*/
+.footer {
+    position: fixed;
+    background-color: #fff;
+    height: 70px;
+    line-height: 50px;
+    text-align: center;
+    color: #ba1712;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.sendBtn {
+    width: 94%;
+    margin: 10px auto;
+    background-color: #0E8EF9;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+}

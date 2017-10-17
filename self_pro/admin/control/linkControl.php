@@ -9,11 +9,11 @@ class linkControl extends sysControl{
 		$selected = selected(array('is_show'));
 		$Mlink = M('link');
 		$is_del = array('is_del' => '0');
-		$Mlink->where($is_del);
-		$page= isset($_POST['page']) ? intval($_POST['page']) : (isset($_GET['page']) ? intval($_GET['page']) : 1);
+		$page= isset($_POST['page']) && !empty($_POST['page']) ? intval($_POST['page']) : (isset($_GET['page']) && !empty($_GET['page']) ? intval($_GET['page']) : 1);
 		$num = 10;  	//显示的数量
 		
 		$link = $Mlink
+				 ->where($is_del)
 				 ->page($page,$num)->select();
 		$count = $Mlink
 				 ->where($is_del)

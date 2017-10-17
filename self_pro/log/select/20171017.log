@@ -1,0 +1,830 @@
+INSERT INTO `ysl_activity`(`u_id`,`create_time`,`title`,`image`,`start_time`,`end_time`,`content`,`address`) VALUES('5','1508208303','羽毛球娱乐赛','/uploads/default/20171017/8fa58d53db763dfa376fccd540b0e5ce.jpg','1508294172','1508466974','羽毛球比赛，娱乐局，欢迎参加<img&nbspsrc=\"/uploads/editor/image/20171017/20171017104442_77489.jpg\"&nbspalt=\"\"&nbsp/>','上海市闵行体育公园') 
+SELECT * FROM ysl_activity WHERE 1  AND id='2' limit 1  
+INSERT INTO `ysl_admin_log`(`admin_id`,`create_time`,`ip`,`other`) VALUES('','1508208303','180.168.196.120','在2017-10-17 10:45:03时添加了友情链接,链接id是2') 
+SELECT * FROM ysl_activity WHERE 1  AND is_del='0' AND u_id='5' limit 0,10 
+ 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='6' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_user WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND phone='18939892726' AND is_del='0' limit 1  
+INSERT INTO `ysl_user_log`(`u_id`,`ip`,`create_time`) VALUES('5','180.168.196.120','1508209432') 
+UPDATE ysl_user SET sign='phvJdVydcxYTbw9EtuxeD1xk1f1fGbhZAdj4ZtB2FqxPIev1udnhsNcw8R5hZQphrBdQlScaxUMbA4T' WHERE 1  AND phone='18939892726' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+ 
+ 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+ 
+ 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND name='解放大厦(富都路)' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND name LIKE '%解放大厦(富都路)%' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND is_del='0' AND c_type='1' limit 0,10 
+ 
+SELECT * FROM ysl_area WHERE 1  AND is_del='0' 
+SELECT * FROM ysl_community WHERE 1  AND id='1' limit 1  
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_config WHERE 1  AND name='map_key' limit 1  
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_community WHERE 1  AND id='1' limit 1  
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND id='1' limit 1  
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+SELECT id,name FROM ysl_community WHERE 1  AND is_del='0' 
+SELECT ysl_goods.*,ysl_community.name as community FROM ysl_goods  LEFT JOIN  ysl_community ON ysl_goods.comm_id = ysl_community.id WHERE 1  AND ysl_goods.is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_goods_cat WHERE 1  AND is_del='0' AND pid='0' 
+SELECT * FROM ysl_goods_cat WHERE 1  AND is_del='0' AND pid>0  
+SELECT * FROM ysl_goods_cat WHERE 1  AND pid='1' AND is_del='0' 
+SELECT * FROM ysl_goods_cat WHERE 1  AND pid='2' AND is_del='0' 
+SELECT * FROM ysl_goods_cat WHERE 1  AND pid='10' AND is_del='0' 
+SELECT * FROM ysl_activity WHERE 1  AND is_del='0' AND u_id='6' limit 0,10 
+ 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='6' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='6' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='6' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+INSERT INTO `ysl_helpInfo`(`u_id`,`create_time`,`title`,`price`,`content`) VALUES('6','1508210462','标题','10','123123') 
+SELECT * FROM ysl_helpInfo WHERE 1  AND id='1' limit 1  
+INSERT INTO `ysl_admin_log`(`admin_id`,`create_time`,`ip`,`other`) VALUES('','1508210462','101.81.102.204','在2017-10-17 11:21:02时添加了友情链接,链接id是1') 
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='6' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_helpInfo WHERE 1  AND id='1' limit 1  
+UPDATE ysl_helpInfo SET title='标题',price='10.00',content='123123' WHERE 1  AND id='1' 
+SELECT * FROM ysl_helpInfo WHERE 1  AND id='1' limit 1  
+INSERT INTO `ysl_admin_log`(`admin_id`,`create_time`,`ip`,`other`) VALUES('','1508210891','101.81.102.204','在2017-10-17 11:28:11时修改了友情链接,链接id是1') 
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+ 
+ 
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+ 
+ 
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='22' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='22' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='22' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='22' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='22' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='22' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='22' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='22' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='22' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='22' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='22' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='22' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='5' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_helpInfo WHERE 1  AND is_del='0' limit 0,10 
+ 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='5' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='5' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='5' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND id='5' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='5' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='5' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='5' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='5' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='5' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='4' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='4' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='4' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='3' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='3' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='3' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='1' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='1' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='1' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='2' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='2' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='2' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='4' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='4' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='4' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='2' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='2' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='2' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='5' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='5' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='5' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='6' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='6' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='6' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='6' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='6' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='6' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='9' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='9' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='9' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='3' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='3' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='3' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='4' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='4' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='4' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_goods WHERE 1  AND id='3' limit 1  
+ 
+ 
+ 
+SELECT * FROM ysl_goods_comment WHERE 1  AND g_id='3' 
+SELECT * FROM ysl_goods_collection WHERE 1  AND g_id='3' AND is_open='1' AND type='2' AND u_id='5' limit 1  
+SELECT * FROM ysl_userAuser WHERE 1  AND u_id='5' AND is_open='1' AND is_del='0' AND type='1' AND p_id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user WHERE 1  AND id='5' limit 1  
+SELECT * FROM ysl_user_label WHERE 1  AND is_del='0' AND id in (3,4,5) 
+SELECT * FROM ysl_community WHERE 1  AND id='2' limit 1  
+ 
+ 
+SELECT * FROM ysl_userAuser WHERE 1  AND p_id='5' AND u_id='5' limit 1  
+SELECT * FROM ysl_goods WHERE 1  AND is_del='0' AND is_show='1' AND u_id='5' ORDER BY create_time desc limit 999  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT * FROM ysl_user WHERE 1  AND c_id='2' AND role_id='5' AND is_del='0' limit 1  
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_admin WHERE 1  AND id='' limit 1  
+ 
+SELECT * FROM ysl_admin_log WHERE 1  AND u_id='5' AND admin_type='1' ORDER BY id desc limit 2  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_adv WHERE 1  AND is_del='0' AND is_open='1' AND type='0' 
+SELECT * FROM ysl_mobile_menu WHERE 1  ORDER BY m_sort asc 
+SELECT id,name,image,u_label2 FROM ysl_user WHERE 1  AND is_del='0' AND role_id in (4,5) ORDER BY create_time desc 
+SELECT ysl_goods.*,ysl_user.name as nickname FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.is_del='0' AND ysl_goods.is_show='1' ORDER BY update_time desc limit 4  
+SELECT * FROM ysl_community WHERE 1  AND id='2' AND is_del='0' limit 1  
+SELECT id,c_id FROM ysl_user WHERE 1  AND c_id='2' AND is_del='0' 
+SELECT ysl_goods.*,ysl_user.name as nickname,ysl_user.image as u_logo FROM ysl_goods  LEFT JOIN  ysl_user ON ysl_goods.u_id = ysl_user.id WHERE 1  AND ysl_goods.u_id in (5,6) AND ysl_goods.is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_helpInfo WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 
+SELECT * FROM ysl_activity WHERE 1  AND u_id in (5,6) AND is_del='0' ORDER BY create_time desc 

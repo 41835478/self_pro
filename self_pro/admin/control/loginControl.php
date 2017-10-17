@@ -41,6 +41,9 @@ class loginControl extends control{
 				if($damin['is_del'] == '1'){
 					show_message(array('code' => '-1' , 'msg' => '不存在的账户'),'json');
 				}
+				if($damin['user_type'] != '1' && empty($damin['weight'])){
+					show_message(array('code' => '-1' , 'msg' => '没有权限登录'),'json');
+				}
 				$d['id'] 		= $damin['id'];
 				$d['username'] 	= $damin['username'];
 				$d['pid'] 		= $damin['pid'];

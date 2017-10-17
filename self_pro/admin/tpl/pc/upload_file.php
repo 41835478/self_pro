@@ -111,7 +111,6 @@ jQuery(function() {
 		//multiple:true,  //多文件上传
 		
 		chunkRetry : 3,  //失败会重新上传3次为上限
-				
 		method :'POST',   //post上传模式
 		// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
 		resize: false

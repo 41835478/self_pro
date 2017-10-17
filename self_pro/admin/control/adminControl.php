@@ -9,8 +9,7 @@ class adminControl extends sysControl{
 		$selected = selected(array('user_type'));
 		$Madmin = M('admin');
 		$is_del = array('is_del' => '0');
-		$Madmin->where($is_del);
-		$page= isset($_POST['page']) ? intval($_POST['page']) : (isset($_GET['page']) ? intval($_GET['page']) : 1);
+		$page= isset($_POST['page']) && !empty($_POST['page']) ? intval($_POST['page']) : (isset($_GET['page']) && !empty($_GET['page']) ? intval($_GET['page']) : 1);
 		$num = 10;  	//显示的数量
 		$where = search('mobile|username');
 		$where2 = array();
@@ -25,10 +24,11 @@ class adminControl extends sysControl{
 		
 		$admin = $Madmin
 				 ->where($is_del)
+				 ->where($where)
 				 ->where($where2)
 				 ->page($page,$num)->select();
 		$count = $Madmin
-				 ->where($where)
+				 ->where($is_del)
 				 ->where($where)
 				 ->where($where2)
 				 ->count();
@@ -59,12 +59,14 @@ class adminControl extends sysControl{
 			array('time','add_time','创建时间'),
 			array('menu',array(
 					array('编辑','javascript:;',array('style'=>'background:#FF5722','onclick' => "question_edit('编辑','?act=admin&op=admin_edit&id=__ID__','','','')")),
+					array('编辑权限','javascript:;',array('style'=>'background:#c022ff','onclick' => "question_edit('权限编辑','?act=admin&op=weight&id=__ID__','','','')")),
 					array('删除','javascript:;',array('onclick' => "question_del(this,'?act=admin&op=admin_del&id=__ID__')")),
 					),'操作'),
 		),$admin,'id');
 	}
 	
 	public function admin_add(){
+		$admin = M('admin')->where(array('id' => $_SESSION['admin']['id']))->find();
 		if($_POST){
 			if(strlen($_POST['password']) < 6 || strlen($_POST['password']) > 30){
 				show_message(array( 'msg' =>'长度请设置6-30位' , 'code' => '-1'),'json');
@@ -72,6 +74,34 @@ class adminControl extends sysControl{
 			
 			$this->commit();
 		}
+		
+		$area_where = array(
+			'is_del' => '0',
+			'p_id' => '0',
+		);
+		$area_where2 = array(
+			'is_del' => '0',
+			'p_id' => '>0',
+		);
+		$list = M('area')->where($area_where)->select();
+		$list2 = M('area')->where($area_where2)->select();
+		$this->area_list[] = '请选择地区';
+		if(!empty($list2)){
+			foreach($list2 as $key => $val){
+				$this->area_list_d[$val['p_id']][] = $val;
+			}	
+		}
+		if(!empty($list)){
+			foreach($list as $key => $val){
+				$this->area_list[$val['id']] = $val['name'];
+				$li = M('area')
+					  ->where(array( 'p_id' => $val['id'] , 'is_del' => '0'))
+					  ->select();
+				$this->get_area_list($li , 0);
+			
+			}
+		}
+		
 		self::form("this",array(
 			array('hidden','id','ID'),
 			array('text','username','用户名'),
@@ -80,8 +110,86 @@ class adminControl extends sysControl{
 			array('text','email','邮箱'),
 			array('text','mobile','手机号'),
 			array('radio','state','是否启用',array('启用','禁止')),
-			array('selected','user_type','下拉',array('1' => '超级管理员', '2' => '普通管理员')),
+			array('selected','area_id','地区管理',$this->area_list),
+			array('selected','user_type','管理员类型',array('1' => '超级管理员', '2' => '普通管理员')),
 		),'','post','public_form');
+	}
+	
+	private $area_list = array();
+	private $area_list_d = array();  //未了吥连续查询
+	//编辑页面递归
+	private function get_area_list($li,$num){
+		if(!empty($li)){
+			foreach($li as $key => $val){
+				$str = '--';
+				for($i = 0 ; $i < $num ; $i++){
+					$str .= '--';
+				}
+				$this->area_list[$val['id']] = $str.$val['name'];
+				$d = '';
+				
+				if(isset($this->area_list_d[$val['id']])){
+					$d = $this->area_list_d[$val['id']];
+				}
+			//	$d = M('area')->where(array( 'pid' => $val['id'] ,'is_del' => '0'))->select();
+				if(!empty($d)){
+					$num++;
+					$s = $num;
+					$this->get_area_list($d , $s);
+				}
+			}
+		}
+	}
+	
+	//权限编辑
+	public function weight(){
+		if($_POST){
+			$this->weight_commit();
+		}
+		
+		$id = intval($_GET['id']);
+		if($id > 0){
+			$admin = M('admin')->where(array('id' => $id))->find();
+			if(!empty($admin['weight'])){
+				$admin['weight'] = unserialize($admin['weight']);
+			}
+			self::output('admin',$admin);
+		}
+		
+		$menu = read_language('menu');
+		self::output("menu",$menu);
+		
+		self::display("weight");
+	}
+	
+	//权限提交
+	private function weight_commit(){
+		$id = intval($_POST['id']);
+		if($id > 0){
+			$d = $_POST;
+			unset($d['id']);
+			unset($d['name']);
+			$d['0_0'] = '0';  	//固定
+			$d['0_1'] = '0';	//固定
+			$data['weight'] = serialize($d);
+			
+			$res = M('admin')->where(array('id' => $id))->update($data);
+			$admin = M('admin')->where(array('id' => $id))->find();
+			if($res){
+				$log = array(
+					'admin_id' => $_SESSION['admin']['id'],
+					'create_time' => time(),
+					'ip' => getIp(),
+				);
+				$log['other'] = $_SESSION['admin']['username'].'在'.date('Y-m-d H:i:s').'时修改了'.$admin['username'].'用户权限';
+				M('admin_log')->add($log);
+				show_message(array( 'msg' =>'设置权限成功' , 'code' => '1'),'json');
+			}else{
+				show_message(array( 'msg' =>'设置权限失败' , 'code' => '-1'),'json');
+			}
+		}else{
+			show_message(array( 'msg' =>'未知错误！' , 'code' => '-1'),'json');
+		}
 	}
 	
 	public function admin_edit(){
@@ -92,6 +200,33 @@ class adminControl extends sysControl{
 		if(isset($_GET['id']) && $_GET['id'] > 0){
 			$admin = M('admin')->where(array('id' => intval($_GET['id'])))->find();
 		}
+		
+		$area_where = array(
+			'is_del' => '0',
+			'p_id' => '0',
+		);
+		$area_where2 = array(
+			'is_del' => '0',
+			'p_id' => '>0',
+		);
+		$list = M('area')->where($area_where)->select();
+		$list2 = M('area')->where($area_where2)->select();
+		$this->area_list[] = '请选择地区';
+		if(!empty($list2)){
+			foreach($list2 as $key => $val){
+				$this->area_list_d[$val['p_id']][] = $val;
+			}	
+		}
+		if(!empty($list)){
+			foreach($list as $key => $val){
+				$this->area_list[$val['id']] = $val['name'];
+				$li = M('area')
+					  ->where(array( 'p_id' => $val['id'] , 'is_del' => '0'))
+					  ->select();
+				$this->get_area_list($li , 0);
+			
+			}
+		}
 		self::form("this",array(
 			array('hidden','id','ID'),
 			array('text','username','用户名',array('disabled' => 'disabled')),
@@ -100,6 +235,7 @@ class adminControl extends sysControl{
 			array('text','email','邮箱'),
 			array('text','mobile','手机号'),
 			array('radio','state','是否启用',array('启用','禁止')),
+			array('selected','area_id','地区管理',$this->area_list),
 			array('selected','user_type','下拉',array('1' => '超级管理员', '2' => '普通管理员')),
 		),$admin,'post','public_form');
 	}
@@ -122,9 +258,9 @@ class adminControl extends sysControl{
 				show_message(array( 'msg' => '两次密码设置不一致' , 'code' => '-1'),'json');
 			}
 			$_POST['password'] = MD5(MD5($_POST['password'].KEY).KEY);
-			$field = array('id','username','password','mobile','email','state','user_type');
+			$field = array('id','username','password','mobile','email','state','user_type','area_id');
 		}else{
-			$field = array('id','username','mobile','email','state','user_type');
+			$field = array('id','username','mobile','email','state','user_type','area_id');
 		}
 		$table = new table('admin');
 		$res = $table
@@ -135,25 +271,21 @@ class adminControl extends sysControl{
 			  ->other('update',array( 'update_time' => time()))						//更新的时候附加的值
 			  ->commit();
 		$data = $table->get_state();
+		
+		$log = array(
+			'admin_id' => $_SESSION['admin']['id'],
+			'create_time' => time(),
+			'ip' => getIp(),
+		);
+		
 		if(!empty($data) && $data['M'] == 'add'){
 			$u = M('admin')->where(array('id' => $res))->find();
-			$log = array(
-				'admin_id' => $_SESSION['admin']['id'],
-				'create_time' => time(),
-				'ip' => getIp(),
-				'other' => $_SESSION['admin']['username'].'在'.date('Y-m-d H:i:s').'时添加了用户'.$u['username'],
-			);
-			M('admin_log')->add($log);
+			$log['other'] = $_SESSION['admin']['username'].'在'.date('Y-m-d H:i:s').'时添加了用户'.$u['username'];
 		}else if(!empty($data) && $data['M'] == 'update'){
 			$u = M('admin')->where(array('id' => $_POST['id']))->find();
-			$log = array(
-				'admin_id' => $_SESSION['admin']['id'],
-				'create_time' => time(),
-				'ip' => getIp(),
-				'other' => $_SESSION['admin']['username'].'在'.date('Y-m-d H:i:s').'时修改了用户'.$u['username'],
-			);
-			M('admin_log')->add($log);
+			$log['other'] = $_SESSION['admin']['username'].'在'.date('Y-m-d H:i:s').'时修改了用户'.$u['username'];
 		}
+		M('admin_log')->add($log);
 		if($res){
 			show_message(array('code' => '1' ,'msg' => '操作成功'),'json');
 		}else{
@@ -238,6 +370,7 @@ class adminControl extends sysControl{
 			array('password','password2','重复密码'),
 		),$admin,'post','public_form');
 	}
+	
 	
 	/*
 	public function admin_list2(){

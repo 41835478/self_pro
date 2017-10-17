@@ -3,49 +3,48 @@ if(!defined('PROJECT_NAME')) die('project empty');
 class indexControl extends sysControl{
 	
 	public function index(){
-		/*
-		$data = array();
-		$data['mysql_v']  	= @mysql_get_server_info();
-		$data['day7'] 			= date('Y-m-d',time()-3600*24*7);
-		$data['day0'] 			= date('Y-m-d',time());
-		$data['current_time'] 	= date('Y-m-d H:i:s',time());
-		$data['system'] 		= PHP_OS;
-		$data['php_v'] 			= PHP_VERSION;
-	//	$data['cpu_num'] 		= $_SERVER['PROCESSOR_IDENTIFIER'];
-		$data['url'] 			= $_SERVER['HTTP_HOST'];
-		$data['language']    	= $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-		$data['php_run_state'] 	= php_sapi_name();
-		
-		$data['web_port']  		= $_SERVER['SERVER_PORT'];
-		$data['gd']  			= function_exists('gd_info')?'支持':'不支持';
-		$day7 = strtotime(date('Y-m-d',time()-3600*24*7)); //一个礼拜前的时间
-		//新进用户数
-		$new_user_num = M('user')->where(array('add_time'=>'>'.$day7))->count();
-		//用户数
-		$all_user_num = M('user')->count();
-		//商品数
-		$goods_where = array(
-			'is_show'  => 1,
-			'goods_type'  => 2,
-		//	'end_time' => '>'.time(),
-		);
-		$all_goods = M('goods')
-					->where(array('is_show' =>1,'end_time' => '>'.time()))
-				//	->where(array('end_time' => '0'),'OR')
-					->count();
-		//商铺数，
-		$store_where = array(
-			'is_open' => 1,
-		);
-		$all_store = M('store')->where($store_where)->count();
-		$data['new_user_num'] = $new_user_num;
-		$data['all_user_num'] = $all_user_num;
-		$data['all_goods'] = $all_goods;
-		$data['all_store'] = $all_store;
-	//	var_dump($new_user_num);die;
-		self::output("data",$data);
-		*/
+		$this->menu();  //设置左边菜单
 		self::display("index");
+	}
+	
+	private function menu(){
+		$defaut = '?act=index&op=welcome';
+		$menu = read_language('menu');
+		$admin = $_SESSION['admin'];
+		$admin_info = M('admin')->where(array('id' => $admin['id']))->find();
+		foreach($menu['top'] as $key => $val){
+			if(isset($val[1])){
+				$s = '';
+				foreach($val[1] as $k => $v){
+					$s[] = $k.'="'.$v.'"';
+				}
+				$menu['top'][$key][1]= implode(' ',$s);
+			}
+			foreach($menu['left'][$key] as $kk => $vv){
+				if(isset($vv[2])){
+					$s = '';
+					foreach($vv[2] as $kkk => $vvv){
+						$s[] = $kkk.'="'.$vvv.'"';
+					}
+					$menu['left'][$key][$kk][2]= implode(' ',$s);
+				}
+			}
+		}
+		if($admin_info['user_type'] != 1){	//1是超级管理员
+			$admin_info['weight'] = unserialize($admin_info['weight']);
+			$data = array();
+			foreach($admin_info['weight'] as $key => $val){
+				$weight = explode('_',$key);
+				if(!isset($data[$weight[0]])){
+					$data['top'][$weight[0]] = $menu['top'][$weight[0]];
+				}
+				if(!isset($data['left'][$weight[0]][$weight[1]])){
+					$data['left'][$weight[0]][$weight[1]] = $menu['left'][$weight[0]][$weight[1]];
+				}
+			}
+			$menu = $data;
+		}
+		self::output("menu",$menu);
 	}
 	
 	public function index_list(){
@@ -106,7 +105,6 @@ class indexControl extends sysControl{
 	
 	//欢迎页面，首页
 	public function welcome(){
-		
 		$data = array();
 		$data['mysql_v']  	= @mysql_get_server_info();
 		$data['day7'] 			= date('Y-m-d',time()-3600*24*7);
@@ -125,13 +123,17 @@ class indexControl extends sysControl{
 		
 		$data['web_port']  		= $_SERVER['SERVER_PORT'];
 		$data['gd']  			= function_exists('gd_info')?'支持':'不支持';
-		$data['login']['login_num'] = M('admin_log')->where(array( 'admin_type' => 1 ))->count();
-		$login 	= M('admin_log')->where(array( 'admin_type' => 1 ))->limit(2)->order('id desc')->select();
+		$data['login']['login_num'] = M('admin_log')->where(array( 'admin_id' => $_SESSION['admin']['id'],'admin_type' => 1 ))->count();
+		$login 	= M('admin_log')->where(array('admin_id' => $_SESSION['admin']['id'] , 'admin_type' => 1 ))->limit(2)->order('id desc')->select();
 		if(isset($login[1]) && !empty($login[1])){
 			$data['login']['login_ip'] 	= $login[1]['ip'];
 			$data['login']['login_time'] 	= date('Y-m-d H:i:s',$login[1]['create_time']);
 		}
 		
+		$data['admin_count'] = M('admin')->count();
+		$data['community_count'] = M('community')->count();
+		$data['goods_count'] = M('goods')->count();
+		$data['user_count'] = M('user')->count();
 		self::output("data",$data);
 		
 		self::display();

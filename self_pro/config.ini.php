@@ -9,15 +9,15 @@ $config['driver'] 	= 'mysql';
 //数据库
 $config['host'] 	= '127.0.0.1';
 $config['user'] 	= 'root';
-$config['pwd']  	= '123456';
-$config['db']   	= 'shop';
+$config['pwd']  	= 'yushelian1709';
+$config['db']   	= 'ysl';
 $config['charset'] 	= 'UTF-8';
 $config['port']		= '3306';
 
 $config['language'] = 'zh_cn';
 
 //前缀或者后缀
-$config['affix']	= 'lk_';
+$config['affix']	= 'ysl_';
 $config['left_affix']	= '';
 $config['right_affix']	= '';
 

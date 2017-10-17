@@ -44,14 +44,12 @@ class loginControl extends control{
 		self::output( 'login' , $language );
 		self::display('login_index');
 	}
-	//登出
+	
+	//退出
 	public function logout(){
-		unset($_SESSION['user_id']);
-		unset($_SESSION['user_state']);
-		unset($_SESSION['user_name']);
-		unset($_SESSION['user_time']);
-		unset($_SESSION['user_ip']);
-		header('Location:index.php?act=login');
+		unset($_SESSION['user']);
+		$url = URL;  
+		header('Location:'.$url);
 	}
 	//生成验证码
 	public function captcha(){
@@ -222,5 +220,75 @@ class loginControl extends control{
 		$error = '用户名或密码不正确';
 		show_message($error,'html','-1');
 	}
+	
+	public function wx_login(){
+	//	$this->is_wxopen();
+		require_once(BasePath.DS.'payment/wx_pay/example/WxPay.JsApiPay.php');
+		$tools = new JsApiPay();
+		$openId = $tools->GetOpenid();
+		$user = M('user')->where(array('openid'=>$openId))->find();
+		if(empty($user)){  //如果没有
+			$wechat = M('config')->where(array('name'=>'wx_pay'))->find();
+			if($wechat['is_open'] != 0){
+				die;
+			}
+			$config = unserialize($wechat['value']);
+			include BasePath.DS."plugins".DS."wechat".DS."wechat.class.php";
+			
+			$options = array(
+				'token'		=> 	trim($config['token']), //填写你设定的key
+				'encodingaeskey'=> trim($config['encodingaeskey']), //填写加密用的EncodingAESKey，如接口为明文模式可忽略
+				'appid'		=>	trim($config['appid']), //填写高级调用功能的app id
+				'appsecret'	=>	trim($config['appsecret']), //填写高级调用功能的密钥
+			);
+			
+			$weObj = new Wechat($options);
+			$access_token = $weObj->checkAuth();
+			$url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$access_token.'&openid='.$openId.'&lang=zh_CN';
+			$wx_user = $weObj->http_get($url);
+			$wx_user = json_decode($wx_user,true);
+			$data = array(
+			//	'is_guanzhu' => $wx_user['subscribe'],
+				'update_time'=>	$wx_user['subscribe_time'],
+				'image'      =>	$wx_user['headimgurl'],
+			);
+			$data['openid']		= $wx_user['openid'];
+			$data['name'] 		= str_replace("'",'’',$wx_user['nickname']);
+			$data['u_sex'] 		= $wx_user['sex'];  //1男 2 女
+			$data['city'] 		= $wx_user['city'];   
+			$data['province'] 	= $wx_user['province'];  
+			$data['remark'] 	= str_replace("'",'’',$wx_user['remark']);  
+			$data['groupid'] 	= $wx_user['groupid'];  
+			$u_id = M('user')->add($data);
+			$_SESSION['Muserid'] = $_COOKIE['Muserid'] = $u_id;
+			$url = URL.'?act=register&op=bind_phone&id='.en_key($u_id,KEY);	
+			header('Location:'.$url);
+		}else if(!empty($user) && empty($user['phone'])){
+			$u_id = $user['id'];
+			$url = URL.'?act=register&op=bind_phone&id='.en_key($u_id,KEY);	
+			header('Location:'.$url);
+		}else if(!empty($user) && !empty($user['phone'])){  //跳转到个人中心
+			$user['time'] = date('YmdHis');
+			$user['sign'] = en_key($user['phone'].$user['password'].$user['time'],KEY);
+			M('user')->where(array('phone' => $user['phone']))->update(array( 'sign' => $user['sign']));
+			if(!empty($user['images'])){
+				$user['images'] = explode(',',$user['images']);
+			}
+			$url = URL.'?act=user&op=personal';  //跳转到个人中心
+			$_SESSION['user'] = $user;
+			header('Location:'.$url);
+		}
+	}
+	
+	//是否是微信打开
+	private function is_wxopen(){
+		$is_wx = preg_match('/MicroMessenger/',$_SERVER['HTTP_USER_AGENT']);
+		if(!$is_wx){
+			self::display('weixintishi');
+			die;
+		}
+	}
+	
+	
 }
 ?>

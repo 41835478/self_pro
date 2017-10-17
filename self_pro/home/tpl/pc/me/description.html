@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改自我描述</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../css/common.css">
+    <style type="text/css">
+        .intro-textarea-detail {
+            background-color: #EEEEEE;
+            border-width: 0;
+            height: 150px;
+            width: 90%;
+            margin: 3%;
+            padding: 2%;
+            font-size: 15px;
+        }
+        .saveBtn {
+            margin: 5px 8% 0 8%;
+            line-height: 50px;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            background-color: #0E8EF9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="head_box col-xs-12">
+        <div class="left_img col-xs-2 fl"><a href="javascript:;"><img src="img/back.png"/></a></div>
+        <div class="head_txt col-xs-8 fl">修改自我描述</div>
+        <div class="right_img col-xs-2 fl"></div>
+    </div>
+</div>
+<div class="member-intro-box clearFix">
+    <div class="intro">
+        <textarea class="intro-textarea-detail"></textarea>
+    </div>
+    <div class="saveBtn"> 保存 </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //返回上个页面
+        $(".left_img").click(function () {
+            window.history.back(-1);
+        });
+
+        var userModel = JSON.parse(sessionStorage.userModel);
+        $(".intro-textarea-detail").val(userModel.userDesc);
+
+        //修改自我描述
+        $(".saveBtn").click(function () {
+
+            var desStr = $(".intro-textarea-detail").val();
+            console.log(desStr);
+            $.ajax({
+                type:'POST',
+                url:"http://www.125898.com" + '/api/api.php?commend=avater',
+                data:{u_id:userModel.userId,sign:userModel.sign,u_desc:desStr},
+                success:function(data){
+                    console.log(data);
+                    if (data.code == 1) {
+                        userModel.userDesc = desStr;
+                        var userStr = JSON.stringify(userModel);
+                        sessionStorage.userModel = userStr;
+                        window.history.back(-1);
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</html>

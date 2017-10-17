@@ -29,7 +29,7 @@ $ext_arr = array(
 //最大文件大小
 $max_size = 1000000;
 
-$save_path = realpath($save_path) . '/';
+//$save_path = realpath($save_path) . '/';
 
 //PHP上传失败
 if (!empty($_FILES['imgFile']['error'])) {

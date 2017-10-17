@@ -4,6 +4,7 @@ if(!defined('PROJECT_NAME')) die('project empty');
     file: fileupload.class.php 文件上传类FileUpload
     本类的实例对象用于处理上传文件，可以上传一个文件，也可同时处理多个文件上传
   */
+  
   class FileUpload { 
     private $path = "./uploads";          //上传文件保存的路径
     private $allowtype = array('jpg','gif','png'); //设置限制上传文件的类型
@@ -277,7 +278,7 @@ if(!defined('PROJECT_NAME')) die('project empty');
       }
     }
 	
-	Function zoom($Dw=450,$Dh=450,$Type=1,$Image=''){
+	function zoom($Dw=450,$Dh=450,$Type=1,$Image=''){
 	  if(empty($Image)){
 		$Image = $this->path.$this->newFileName;
 	  }
@@ -363,5 +364,33 @@ if(!defined('PROJECT_NAME')) die('project empty');
 	  ImageJpeg ($nImg,$Image);
 	  Return True;
 	  }
+	}
+	
+	//base64图片转换
+	public function base64($name = ''){
+		if(!empty($name)){
+			header('Content-type:text/html;charset=utf-8');
+			$base64_image_content = $_POST[$name];
+			//匹配出图片的格式
+			if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image_content, $result)){
+			$file_type = $result[2];  //格式
+			$ddd = date('Ymd');
+			$new_file = BasePath.DS.'uploads'.DS.'default'.DS.$ddd.DS;
+			if(!file_exists($new_file))
+			{
+				//检查是否有该文件夹，如果没有就创建，并给予最高权限
+				mk_dir($new_file);
+			}
+			$name = md5(date('YmdHi').get_ip()).'.'.$file_type;
+			$new_file = $new_file.$name;
+			$url = DS.'uploads'.DS.'default'.DS.$ddd.DS.$name;
+			if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image_content)))){
+					return $url;
+				}else{
+					return false;
+				}
+			}
+		}
+		return false;
 	}
   }

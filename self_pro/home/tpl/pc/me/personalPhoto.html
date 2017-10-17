@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人照片</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/personalPhoto.css">
+</head>
+<body>
+<div class="head">
+    <div class="head_box col-xs-12">
+        <div class="left_img col-xs-2 fl"><a href="javascript:;"><img src="img/back.png"/></a></div>
+        <div class="head_txt col-xs-8 fl">个人照片</div>
+        <div class="right_img col-xs-2 fl"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="title">
+        <span class="fl">上传照片，让别人更了解你</span>
+    </div>
+
+    <div class="pic-wrapper col-xs-12 clearfix">
+        <div class="fl pic" id="pic1-div">
+            <span class="delete fl"><img src="img/delete.png" class="fl"></span>
+            <span class="plus fl"><img id="pic1" src="img/imgSelectBtn.png"></span>
+            <input id="upfile1" type="file">
+        </div>
+        <div class="fl pic" id="pic2-div">
+            <span class="delete fl"><img src="img/delete.png" class="fl"></span>
+            <span class="plus fl"><img id="pic2" src="img/imgSelectBtn.png"></span>
+            <input id="upfile2" type="file">
+        </div>
+        <div class="fl pic" id="pic3-div">
+            <span class="delete fl"><img src="img/delete.png" class="fl"></span>
+            <span class="plus fl"><img id="pic3" src="img/imgSelectBtn.png"></span>
+            <input id="upfile3" type="file">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="sendBtn">保存</div>
+</div>
+</body>
+<script type="text/javascript" src="../js/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/personalPhoto.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</html>

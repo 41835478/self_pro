@@ -1,5 +1,9 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 class control{
 	private static $obj = '';
 	public  static $output = array();
@@ -152,6 +156,7 @@ class control{
 		数据
 	*/
 	static public function form_list($field,$data,$id = 'id',$page = 'public_form_list'){
+		
 		$form_list = '';
 		if(!empty($field) && is_array($field)){
 			$th = '<tr>';
@@ -186,8 +191,13 @@ class control{
 							$td .= '<td>'.$val[$v[1]].'</td>';
 						break;
 						case 'image':  //图片放地址
+							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'"><img  src="'.$val[$v[1]].'" style="max-width:180px" alt=""></a></td>';
+						break;
+						/*
+						case 'image':  //图片放地址
 							$td .= '<td><a target="_blank" href="'.$val[$v[1]].'">'.$val[$v[1]].'</a></td>';
 						break;
+						*/
 						case 'radio':
 							$td .= '<td>';
 							if(is_array($v[3]) && isset( $v[3][$val[$v[1]]] )){

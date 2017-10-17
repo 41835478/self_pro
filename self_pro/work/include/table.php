@@ -1,5 +1,9 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 class table{
 	private $table = '';
 	private $field = array();
@@ -7,6 +11,7 @@ class table{
 	private $state = false;
 	private $where = array();
 	private $unique = array();
+	private $unique2 = array();
 	private $other_data = array();
 
 	private $r_id = false;
@@ -27,6 +32,9 @@ class table{
 				if(!empty($this->auto_key) && $this->auto_key == $key){
 					continue;
 				}
+				if($val == 'url' && !empty($_POST[$val])){
+					$_POST[$val] = 'http://'.str_replace('http://','',$_POST[$val]);
+				}
 				$this->field[$val] = isset( $_POST[$val] ) ? $_POST[$val] : '';
 			}
 		}
@@ -34,7 +42,7 @@ class table{
 	}
 	
 	//设置字段的类型
-	public function type($field , $type = 'varchar'){
+	public function type($field , $type = 'varchar' , $where = array()){
 		if(!empty($type)){
 			switch($type){
 				case 'time':
@@ -42,6 +50,10 @@ class table{
 				break;
 				case 'unique':
 				$this->unique[$field] = isset($this->field[$field]) ? $this->field[$field] : (isset($_POST[$field]) ? $_POST[$field] : '');
+				if(!empty($where)){
+					$this->unique2[$field] = $where;
+				}
+				
 				break;
 				case 'auto_key':
 				$this->where[$field] = isset($this->field[$field]) ? $this->field[$field] : (isset($_POST[$field]) ? $_POST[$field] : '');
@@ -70,7 +82,22 @@ class table{
 		}else{
 			//add
 			if(!empty($this->unique)){
-				$res = M($this->table)->where($this->unique,array('and','or'))->find();
+				$tab =  M($this->table);
+				if(!empty($this->unique)){
+					foreach($this->unique as $key => $val){
+						$w1 = array();
+						$w2 = array();
+						if(isset($this->unique2[$key]) && !empty($this->unique2[$key])){
+							foreach($this->unique2[$key] as $k => $v){
+								$w2[$k] = $v;
+							}
+						}
+						$w1[$key] = $val;
+						$tab->where($w2,array('or','and'));
+						$tab->where($w1);
+					}
+				}
+				$res = $tab->find();
 				if($res){
 					$msg = array(
 						'msg' => '已存在的数据,请勿重复添加',
@@ -102,6 +129,26 @@ class table{
 				$this->other['update'][$key] = $val;
 			}
 		}
+		return $this;
+	}
+	
+	//post字段处理一下
+	public function set_field($field , $type){
+		$str = $_POST[$field];
+		if(!empty($str) && !empty($type)){
+			switch($type){
+				case 'time':	//时间戳格式
+				$str = str_replace('&nbsp',' ',$str);
+				$str = strtotime($str);
+				$_POST[$field] = $str;
+				break;
+				case 'date':	//Y-m-d H:i:s格式
+				$str = date('Y-m-d H:i:s',$str);
+				$_POST[$field] = $str;
+				break;
+			}
+		}
+		
 		return $this;
 	}
 	

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/personalInfo.css">
+</head>
+<body>
+<div class="head">
+    <div class="head_box col-xs-12">
+        <div class="left_img col-xs-2 fl"><a href="javascript:;"><img src="img/back.png"/></a></div>
+        <div class="head_txt col-xs-8 fl">个人资料</div>
+        <div class="right_img col-xs-2 fl"></div>
+    </div>
+</div>
+
+<div class="member-info col-xs-12">
+    <ul class="col-xs-12">
+        <li class="fl avater">
+            <div class="avater-box clearFix">
+                <span class="fl">头像</span>
+                <input id="upfile" type="file">
+
+                <div class="avaters fr clearFix">
+                    <span class="fl" style="display: block;">
+                        <img id="avaters-img" src="../images/logo.png" alt=""/>
+                    </span>
+                    <span class="arrow fl" style="display: block;"><img src="img/arrow.png" alt=""/></span>
+                    <div class="phpto-con" id="phpto-con"></div>
+                </div>
+            </div>
+        </li>
+        <li class="fl member-name">
+            <div class="member-name-box clearFix">
+                <span class="fl">昵称</span>
+                <div class="fr">
+                    <span class="userName fl content"></span>
+                    <span class="arrow fl"><img src="img/arrow.png" alt=""/></span>
+                </div>
+            </div>
+        </li>
+        <li class="fl member-sex">
+            <div class="member-sex-box clearFix">
+                <span class="fl">性别</span>
+                <div class="fr">
+                    <span class="userSex fl content"></span>
+                    <span class="arrow fl"><img src="img/arrow.png" alt=""/></span>
+                </div>
+            </div>
+        </li>
+        <li class="fl">
+            <div class="member-tag-box clearFix">
+                <div class="">标签</div>
+                <a href="userLabel.html">
+                <div class="">
+                    <span class="tag">德州扑克</span>
+                    <span class="tag">麻将</span>
+                    <span class="tag">游泳</span>
+                    <span class="tag">羽毛球</span>
+                    <span class="tag">羽毛球</span>
+                    <span class="tag">羽毛球</span>
+                </div>
+                </a>
+            </div>
+        </li>
+        <li class="fl">
+            <div class="member-intro-box clearFix">
+                <span class="">自我描述</span>
+                <div class="intro">
+                    <a href="description.html">
+                    <textarea class="intro-textarea"></textarea>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="fl photo-li">
+            <div class="member-photo-box clearFix">
+                <a href="personalPhoto.html">
+                <span class="">个人照片</span>
+                <div class="photos" id="photos">
+                    <!--<img src="../images/123.jpg">-->
+                    <!--<img src="../images/123.jpg">-->
+                    <!--<img src="../images/123.jpg">-->
+                </div>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<div id="alertView">
+    <!--点击昵称提示框-->
+    <div class="member_tip col-xs-12 name_alert" style="display: none">
+        <div class="member_tip_box col-xs-12">
+            <div class="icon_head">
+                <span>输入新昵称</span>
+            </div>
+            <div class="cont col-xs-12">
+                <input type="text" class="nick-input"/>
+            </div>
+            <div class="select col-xs-12 clearFix">
+                <div class="cancel cancel_qq fl">取消</div>
+                <!--<div class="line fl col-xs-2">|</div>-->
+                <div class="confirm fl" id="nick">确定</div>
+            </div>
+        </div>
+    </div>
+    <!--点击性别提示框-->
+    <div class="member_tip col-xs-12 sex_alert" style="display:none">
+        <div class="member_tip_box col-xs-12">
+            <div class="icon_head">
+                <span>性别</span>
+            </div>
+            <div class="cont col-xs-12">
+                <div class="sex_box">
+                    <div class="boy sex-com col-xs-12">男</div>
+                    <div class="girl sex-com col-xs-12">女</div>
+                </div>
+            </div>
+            <div class="select col-xs-12 clearFix">
+                <div class="cancel cancel_sex fl">取消</div>
+                <div class="confirm fl " id="sex">确定</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/zepto-1.2.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/personalInfo.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</html>

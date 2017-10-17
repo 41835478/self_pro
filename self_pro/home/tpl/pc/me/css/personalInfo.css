@@ -1,0 +1,137 @@
+
+body {
+    background-color: #EEEEEE;
+}
+
+/*member-info*/
+.member-info{
+    overflow: hidden;
+    background: #fff;
+    font-size: 15px;
+}
+.member-info li {
+    width: 90%;
+    line-height: 44px;
+    list-style-type:none;
+    border-bottom: 1px solid #EEEEEE;
+    margin-left:5%;
+}
+.member-info img{
+    width: 11px;
+}
+.avater {
+    line-height: 70px!important;
+}
+.avaters {
+    padding-top: 10px;
+    height: 60px!important;
+}
+#avaters-img{
+    width: 50px;
+    height: 50px;
+    border:1px solid white;
+    border-radius: 50%;
+    /*padding-right: 5px;*/
+}
+#upfile {
+    width:0;
+}
+.arrow img{
+    width: 7px;
+    height: 14px;
+    padding-top: 15px;
+}
+.member-info li .content {
+    padding-right: 10px;
+}
+
+/*个人标签*/
+.member-tag-box .tag {
+    font-size: 14px;
+    margin: 0 2px 0 2px;
+    padding: 3px 8px 3px 8px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    word-break:normal;
+    word-wrap:break-word;
+    white-space:pre-wrap;
+    overflow:hidden;
+}
+.intro-textarea {
+    background-color: #EEEEEE;
+    border-width: 0;
+    height: 60px;
+    width: 94%;
+    padding: 3%;
+    font-size: 13px;
+}
+/*个人照片*/
+.photos img{
+    width: calc(100% /3 - 3px);
+    padding: 0 1px;
+    height: 80px;
+}
+
+/*修改的提示框*/
+.member_tip{
+    color: #666;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.7);
+}
+.member_tip_box{
+    background-color: #fff;
+    margin-top: 45%;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+.icon_head {
+    line-height: 60px;
+}
+.icon_head span{
+    font-size: 18px;
+    color: #444;
+    margin-left: 8px;
+}
+.cont{
+    line-height:48px;
+    border-bottom: 1px solid #ccc;
+}
+/*.cont .boy {*/
+    /*border-bottom: 1px solid #cecece;*/
+/*}*/
+.member_tip_box  input{
+    width: 80%;
+    height: 48px;
+    line-height: 48px;
+    border: none;
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    background-color: #EEEEEE;
+    margin: 0 10px 20px 10px;
+}
+.select {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.select .cancel {
+    border-right:0.5px solid #ccc;
+    width: calc((100% - 1px)/2);
+}
+.select .confirm {
+    border-left:0.5px solid #ccc;
+    width: calc((100% - 3px)/2);
+}
+.sex_box .active {
+    color: #0E8EF9;
+}
+/*.select .active {*/
+    /*color: #ba1712;*/
+/*}*/

@@ -1,0 +1,43 @@
+
+.head_txt {
+    background-color: #fff;
+    height: 36px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+.head_txt img {
+    width: 20px;
+    margin: 8px 10px;
+}
+.search {
+    width: 80%;
+    height: 35px;
+    border-width: 0;
+    font-size: 16px;
+}
+.left_img {
+    width: 13%;
+}
+.head_txt {
+    width: 70%;
+}
+.right_img {
+    width: 17%;
+}
+.right_img span {
+    line-height: 50px;
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 100;
+    text-align: center;
+}
+
+/*搜索历史*/
+.history {
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #777777;
+    border-bottom: 1px solid #cecece;
+}

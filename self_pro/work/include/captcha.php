@@ -1,4 +1,9 @@
 <?php
+if(!defined('PROJECT_NAME')) die('project empty');
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 //验证码类
 class captcha {
  private $charset = '0123456789';//随机因子

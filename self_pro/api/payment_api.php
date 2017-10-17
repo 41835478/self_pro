@@ -309,7 +309,6 @@ class run{
 			
 			$order_goods_buy = M('order_goods_buy')->where(array('out_trade_no'=>$out_trade_no))->find();
 			
-			
 			if(!empty($order_goods_buy)){
 				foreach($order_goods_buy as $key => $val){
 					$goods = M('goods')->where(array('goods_id'=>$val['goods_id']))->find();

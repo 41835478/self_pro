@@ -1,4 +1,9 @@
 <?php
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
+
 $time1 = microtime();
 //我把提交的字符串中的空格替换成了&nbsp //拿数据的时候如果要修改的话，反替换一下
 require_once 'public.php';

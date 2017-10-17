@@ -1,5 +1,9 @@
 <?php
 if(!defined('PROJECT_NAME')) die('project empty');
+/*
+	time 	2017-10-12
+	auth	李凯
+*/
 class cache{
 	private $path = '';
 	/*

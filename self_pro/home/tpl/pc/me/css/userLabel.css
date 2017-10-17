@@ -1,0 +1,96 @@
+
+body {
+    background-color: #EEEEEE;
+}
+/*标题*/
+.container {
+    padding: 0 10px 10px 10px;
+    background-color: #fff;
+}
+.title {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+}
+.title span {
+    font-size: 18px;
+    width: 100%;
+}
+.resource-title input {
+    font-size: 19px;
+    color: gray;
+}
+
+/*自定义标签*/
+.custom-tag{
+    line-height: 50px;
+}
+.custom-tag span {
+    font-size: 17px;
+    width: 20%;
+    color: gray;
+}
+.custom-tag input {
+    font-size: 18px;
+    background-color: #EEEEEE;
+    border:0;
+    height: 40px;
+    padding-left: 10px;
+}
+
+/*选定标签*/
+.tag-wrapper {
+    height: 100px;
+    margin: 15px 10px 10px 10px;
+    background-color: #EEEEEE;
+}
+.tag-wrapper .span-wrapper {
+    padding: 20px 10px;
+}
+.tag-category ul {
+
+}
+.parent {
+    margin-right: 10px;
+    font-size: 17px;
+    line-height: 40px;
+    background: url(../../images/down.png) no-repeat right 20px;
+    background-size: .8rem;
+}
+.child {
+    margin: 5px 0;
+    line-height: 40px;
+}
+.child span ,.span-wrapper span {
+    margin: 5px 3px;
+    font-size: 14px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    word-break:normal;
+    word-wrap:break-word;
+    white-space:pre-wrap;
+    overflow:hidden;
+}
+
+/*保存*/
+.footer {
+    position: fixed;
+    background-color: #fff;
+    height: 70px;
+    line-height: 50px;
+    text-align: center;
+    color: #ba1712;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.sendBtn {
+    width: 94%;
+    margin: 10px auto;
+    background-color: #0E8EF9;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+}

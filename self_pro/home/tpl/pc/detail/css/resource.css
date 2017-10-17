@@ -1,0 +1,145 @@
+
+
+.head {
+    position: fixed;
+    z-index: 999;
+}
+.left_img img, .right_img img {
+    width: 30px;
+}
+
+.main-image img {
+    top: 0;
+    width: 100%;
+}
+.main {
+    margin-bottom: 60px;
+}
+/*社长*/
+.shezhang-title {
+    margin:10px 0;
+}
+.user-icon {
+    margin: 0 10px 0 10px;
+}
+.user-icon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.title {
+    font-size: 18px;
+}
+.time {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #777777;
+}
+.fav {
+    margin: -15px 20px 0 0;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background-color: #0E8EF9;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/*资源*/
+.resource-title {
+    margin:15px 10px;
+}
+.resource-title .price {
+    color: #f00;
+    margin-top: 10px;
+}
+.resource-title .score {
+    border-top: 1px solid #cecece;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+/*资源介绍*/
+.resource-detail {
+    margin:10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cecece;
+}
+.content {
+    margin: 10px 10px 10px 10px;
+}
+.content img {
+    width: 100%;
+    margin-top: 10px;
+}
+.pictures {
+    width: 94%;
+    margin:0 3%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cecece;
+}
+.pictures img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.resource-data {
+    margin: 10px;
+}
+
+/*评论信息*/
+.comment {
+    margin: 0 10px 10px 10px;
+}
+.comment-title {
+    line-height: 50px;
+    border-bottom: 1px solid #cecece;
+}
+.comment-li {
+    margin: 10px;
+    border-bottom: 1px solid #cecece;
+}
+.comment-wrapper .user-icon {
+    margin: 0 10px 0 0;
+}
+.comment-wrapper .user-icon img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.comment-wrapper .title {
+    margin-top: 5px;
+    font-size: 16px;
+}
+.comment-content {
+    margin: 0 10px 5px 45px;
+}
+.comment-wrapper .time {
+    margin: 5px 10px 15px 55px;
+}
+
+/*footer*/
+.footer {
+    /*margin: 0 0 0 10px;*/
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+}
+.footer img {
+    width: 20px;
+    margin: 15px 10px 10px 15px;
+}
+.footer span {
+    line-height: 50px;
+}
+.footer .tel {
+    color: #fff;
+    background-color: #E14948;
+    text-align: center;
+}
+.footer .liuyan {
+    color: #fff;
+    background-color: #ff0000;
+    text-align: center;
+}
